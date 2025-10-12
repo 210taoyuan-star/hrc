@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #019875, #e9f7f4);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            color: #019875;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: #019875;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #006e5a;
+            transform: translateY(-2px);
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9f7f4;
+            border-radius: 10px;
+            border-left: 4px solid #019875;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤱 祈孕顧問測試頁面</h1>
+        <p>這是一個測試頁面，用來檢查網站是否正常運行。如果您看到這個頁面，說明基本的網頁服務是正常的。</p>
+        <a href="/" class="btn">返回主頁</a>
+        <div class="status">
+            <strong>狀態：</strong> 測試頁面正常顯示 ✅<br>
+            <strong>時間：</strong> <span id="time"></span><br>
+            <strong>URL：</strong> <span id="url"></span>
+        </div>
+    </div>
+
+    <script>
+        // 顯示當前時間
+        document.getElementById('time').textContent = new Date().toLocaleString('zh-TW');
+        
+        // 顯示當前 URL
+        document.getElementById('url').textContent = window.location.href;
+        
+        // 檢查主頁是否可訪問
+        fetch('/')
+            .then(response => {
+                if (response.ok) {
+                    console.log('主頁響應正常');
+                } else {
+                    console.error('主頁響應異常:', response.status);
+                }
+            })
+            .catch(error => {
+                console.error('無法訪問主頁:', error);
+            });
+    </script>
+</body>
+</html>

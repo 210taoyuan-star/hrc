@@ -1,0 +1,27 @@
+代孕服務網站 - 手機訪問資訊
+=================================
+
+📱 手機直接訪問網址：
+https://surrogacy-landing-86tmyphlp-tommys-projects-420f7887.vercel.app
+
+🔗 生成 QR Code 的方式：
+1. 前往 qr-code-generator.com
+2. 輸入上述網址
+3. 下載 QR Code 圖片
+4. 分享給需要的人掃描
+
+📲 手機瀏覽器支援：
+- Safari (iPhone)
+- Chrome (Android)
+- Firefox 
+- Edge
+- 微信內建瀏覽器
+- LINE 內建瀏覽器
+
+✅ 手機功能完整支援：
+- 響應式設計
+- 觸控導覽
+- 中英文切換
+- 表單填寫
+- 圖片瀏覽
+- 平滑滾動
