@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視頻測試頁面</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .video-test { margin: 20px 0; }
+        video { width: 100%; max-width: 600px; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>視頻載入測試</h1>
+    
+    <div class="video-test">
+        <h2>醫療顧問團 (HRC.mp4)</h2>
+        <video controls preload="metadata" onloadstart="log('HRC.mp4 開始載入')" oncanplay="log('HRC.mp4 可以播放')" onerror="log('HRC.mp4 載入錯誤', true)">
+            <source src="/videos/HRC.mp4" type="video/mp4">
+            您的瀏覽器不支援影片播放。
+        </video>
+    </div>
+
+    <div class="video-test">
+        <h2>法律顧問團 (HRCDR.mp4)</h2>
+        <video controls preload="metadata" onloadstart="log('HRCDR.mp4 開始載入')" oncanplay="log('HRCDR.mp4 可以播放')" onerror="log('HRCDR.mp4 載入錯誤', true)">
+            <source src="/videos/HRCDR.mp4" type="video/mp4">
+            您的瀏覽器不支援影片播放。
+        </video>
+    </div>
+
+    <div class="video-test">
+        <h2>專案管理團 (HRCDR2.mp4)</h2>
+        <video controls preload="metadata" onloadstart="log('HRCDR2.mp4 開始載入')" oncanplay="log('HRCDR2.mp4 可以播放')" onerror="log('HRCDR2.mp4 載入錯誤', true)">
+            <source src="/videos/HRCDR2.mp4" type="video/mp4">
+            您的瀏覽器不支援影片播放。
+        </video>
+    </div>
+
+    <div id="log">
+        <h3>載入日誌：</h3>
+        <div id="messages"></div>
+    </div>
+
+    <script>
+        function log(message, isError = false) {
+            const messagesDiv = document.getElementById('messages');
+            const p = document.createElement('p');
+            p.textContent = new Date().toLocaleTimeString() + ': ' + message;
+            p.className = isError ? 'error' : 'success';
+            messagesDiv.appendChild(p);
+            console.log(message);
+        }
+
+        // 檢查視頻檔案是否存在
+        async function checkVideoFiles() {
+            const videos = ['/videos/HRC.mp4', '/videos/HRCDR.mp4', '/videos/HRCDR2.mp4'];
+            
+            for (const video of videos) {
+                try {
+                    const response = await fetch(video, { method: 'HEAD' });
+                    if (response.ok) {
+                        log(`${video} 檔案存在 (${Math.round(response.headers.get('content-length') / 1024 / 1024 * 100) / 100}MB)`);
+                    } else {
+                        log(`${video} 檔案不存在或無法存取 (狀態: ${response.status})`, true);
+                    }
+                } catch (error) {
+                    log(`${video} 檢查失敗: ${error.message}`, true);
+                }
+            }
+        }
+
+        // 頁面載入後檢查視頻檔案
+        window.addEventListener('load', checkVideoFiles);
+    </script>
+</body>
+</html>
