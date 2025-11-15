@@ -3,10 +3,9 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
-Disallow: /zh-hant/
 
 # Host
-Host: http://localhost:3000
+Host: https://ownbabytw.com
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://ownbabytw.com/sitemap.xml
