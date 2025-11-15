@@ -1,41 +1,50 @@
 # Copilot Instructions for Surrogacy Landing Page (React/Vite/Tailwind)
 
 ## Core Architecture
-- **Single-file app**: `index.html` → `src/main.jsx` → `LandingTemplateFixed.jsx` (~4600 lines)
-- Everything lives in `LandingTemplateFixed.jsx` - treat it as the monolithic source of truth
-- Legacy files exist (`多語行銷型單頁《網站模板》_react_tailwind_shadcn_ui.jsx`, `LandingTemplateMinimal.jsx`) but are unused
-- `GlobalStyles` component injects fonts, CSS variables, and responsive typography; modify there for brand/layout changes
-- Hand-rolled UI primitives (Button, Card, Input) are defined inline; reuse patterns instead of adding external UI libraries
+- **Monolithic SPA**: `index.html` → `src/main.jsx` → `LandingTemplateFixed.jsx` (~4531 lines)
+- **Single source of truth**: All functionality consolidated in `LandingTemplateFixed.jsx`
+- **Legacy artifacts**: Files like `多語行銷型單頁《網站模板》_react_tailwind_shadcn_ui.jsx`, `LandingTemplateMinimal.jsx` exist but are unused - avoid editing
+- **Build chain**: Vite + React + Tailwind with minimal dependencies (framer-motion, lucide-react only)
+- **GlobalStyles component**: Injectable CSS variables and responsive typography system - modify here for brand/layout changes
 
-## File Structure & Templates
-- **Active**: `LandingTemplateFixed.jsx` (current production template)
-- **Legacy**: `多語行銷型單頁《網站模板》_react_tailwind_shadcn_ui.jsx`, `LandingTemplateMinimal.jsx`, `MinimalTest.jsx`
-- **Documentation**: Multiple `.md` files track feature changes and deployment guides
-- **Assets**: `public/images/**` for static assets, referenced as `/images/...` in code
+## File Organization & Entry Points
+- **Production template**: `LandingTemplateFixed.jsx` (4531 lines, actively maintained)
+- **Build config**: `vite.config.js` (dev port 3000), `tailwind.config.js` (scans root `.jsx` files)
+- **Package scripts**: `npm run dev|build|preview`, `npm run deploy` (GitHub Pages via gh-pages)
+- **Documentation trail**: 30+ `.md` files document feature evolution - read before major changes
+- **Asset structure**: `public/images/` → `/images/...` in code, `surrogacy-deploy/` contains build artifacts
 
-## Data & State Management
-- **i18n**: `lang` state toggles between `zh`/`en`; content stored in `useMemo` dictionaries within constants (`NAV`, `FEATURES`, `FAQS`, `PHYSICIAN_DATA`)
-- **Routing**: Custom `useHashRoute` hook manages section navigation; section IDs must match `NAV[].path` values
-- **Carousel**: Hero images rotate via `heroIndex` state + `useEffect` timer using `HERO_IMAGES` array
-- **Interactive modules**: `SurrogacyScreeningModule` demonstrates multi-step pattern with index-based state and conditional rendering
-- **Data constants**: All content lives in large constant objects near top of file; update these for content changes
+## Data Architecture & Internationalization  
+- **Bilingual state**: `lang` toggles `zh`/`en`, all content in `useMemo` dictionaries
+- **Content constants**: `NAV` (line ~629), `FEATURES` (~651), `FAQS` (~1803), `HERO_IMAGES` (~578)
+- **Routing pattern**: Hash-based navigation via custom `useHashRoute` hook (~line 2223)
+- **Section mapping**: Navigation `path` values must match DOM element IDs exactly
+- **Content updates**: Modify constant objects near top of file, not scattered JSX
 
-## Forms & External Services
-- **Contact form**: Posts to Formspree (`https://formspree.io/f/mjkvgqyb`) with honeypot field `hp` for spam protection
-- **Form state**: Uses `sent`/`loading` boolean states; preserve these patterns when modifying forms
-- **Setup required**: See `FORMSPREE-SETUP.md` - form currently needs reconfiguration for `jctommyliu@gmail.com`
-- **CTAs**: Most buttons use hash anchors (`<a href="#section">`) rather than JavaScript navigation
+## Component Patterns & State Management
+- **Inline primitives**: Hand-rolled Button, Card, Input components - reuse existing patterns vs external libraries
+- **Carousel system**: `heroIndex` + `useEffect` timer rotates `HERO_IMAGES` array
+- **Multi-step flows**: Follow `SurrogacyScreeningModule` pattern (index-based state, conditional rendering)
+- **Form handling**: `sent`/`loading` booleans, Formspree integration with honeypot `hp` field
+- **Navigation**: Hash anchors preferred over JavaScript navigation
 
-## Styling System
-- **CSS Variables**: Comprehensive design tokens in `:root` (brand colors, gradients, shadows) - modify in `GlobalStyles`
-- **Layout**: `.section-shell` utility provides consistent max-width/padding; used throughout for section containers
-- **Responsive**: Multi-breakpoint font scaling via CSS `font-size` on `html` element
-- **Theme**: Teal-based color palette (`--brand: #0F766E`, gradients, shadows) with careful contrast ratios
-- **Animation**: Minimal `framer-motion` usage for hero badges and scroll reveals
+## External Integrations & Services
+- **Form backend**: Formspree endpoint `https://formspree.io/f/mjkvgqyb` (needs reconfiguration for `jctommyliu@gmail.com`)
+- **HRC Fertility**: Recently integrated partner content with dedicated navigation section
+- **Fonts**: Google Fonts (Inter, Noto Sans TC) loaded in GlobalStyles component
+- **Icons**: Lucide React library for consistent iconography
 
-## Development Workflow
-- **Commands**: `npm run dev` (port 3000), `npm run build`, `npm run preview`
-- **No testing**: Manual QA focuses on bilingual content, hash navigation, form submissions, responsive design
-- **Deployment**: Vercel-optimized (`vercel.json` SPA rewrites), also supports GitHub Pages (`gh-pages` script)
-- **Assets**: Vite copies `public/` to dist root; use absolute paths like `/images/hero/image.jpg`
-- **Documentation**: Check `.md` files for recent changes and deployment instructions before modifying
+## Styling System & Design Tokens
+- **CSS variables**: Comprehensive design system in `:root` (brand colors, gradients, shadows)
+- **Layout utility**: `.section-shell` provides consistent max-width/padding across sections
+- **Responsive typography**: HTML font-size scaling (14px→18px) across 5 breakpoints
+- **Animation**: Minimal framer-motion for hero badges and scroll reveals only
+- **Theme consistency**: Teal-based palette with calculated contrast ratios
+
+## Development & Deployment Workflow
+- **Local development**: `npm run dev` (port 3000), file watching enabled with polling
+- **Build process**: `npm run build` outputs to `dist/`, Vercel-optimized SPA rewrites in `vercel.json`
+- **Deployment options**: Vercel (recommended), GitHub Pages, Netlify - see `DEPLOYMENT-GUIDE.md`
+- **No testing framework**: Manual QA on bilingual content, hash navigation, form submissions, responsive behavior
+- **Asset management**: Absolute paths `/images/...`, Vite copies `public/` to build root
+- **Change tracking**: Feature changes documented in timestamped `.md` files

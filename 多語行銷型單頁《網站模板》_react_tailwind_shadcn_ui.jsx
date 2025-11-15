@@ -970,6 +970,31 @@ export default function LandingTemplate() {
                       {lang === "zh" ? zh : en}
                     </h3>
                   </div>
+                  {/* Add illustration for first three surrogacy types */}
+                  {index === 0 && (
+                    <img
+                      src="/images/gallery/parent.webp"
+                      alt="夫妻代孕插圖"
+                      className="mt-4 mb-2 w-full max-w-[120px] mx-auto rounded-xl shadow"
+                      loading="lazy"
+                    />
+                  )}
+                  {index === 1 && (
+                    <img
+                      src="/images/gallery/girls.webp"
+                      alt="同志代孕插圖"
+                      className="mt-4 mb-2 w-full max-w-[120px] mx-auto rounded-xl shadow"
+                      loading="lazy"
+                    />
+                  )}
+                  {index === 2 && (
+                    <img
+                      src="/images/gallery/son.webp"
+                      alt="單身代孕插圖"
+                      className="mt-4 mb-2 w-full max-w-[120px] mx-auto rounded-xl shadow"
+                      loading="lazy"
+                    />
+                  )}
                   <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
                     {lang === "zh" ? descZh : descEn}
                   </p>

@@ -545,9 +545,9 @@ function GlobalStyles() {
 // === Config ===
 const BRAND = {
   name: "祈孕顧問",
-  tagline: "用專業與溫度，陪你迎接新生命",
+  tagline: "以專業與信賴，圓您擁有孩子的夢想",
   phone: "+886-2-1234-8888",
-  email: "service@qiyun.com.tw",
+  email: "qiyunsolution@gmail.com",
   address: "台北市松山區復興北路58號10樓",
 };
 
@@ -631,9 +631,10 @@ const NAV = [
   { 
     id: "services", 
     path: "#services", 
-    zh: "美國代孕服務", 
+    zh: "美國試管與代孕", 
     en: "US Surrogacy Services",
     subItems: [
+      { id: "ivf-services", path: "#ivf-services", zh: "夫妻或單身試管", en: "IVF Services" },
       { id: "couple-surrogacy", path: "#couple-surrogacy", zh: "夫妻代孕", en: "Couple Surrogacy" },
       { id: "lgbtq-surrogacy", path: "#lgbtq-surrogacy", zh: "同志代孕", en: "LGBTQ+ Surrogacy" },
       { id: "single-surrogacy", path: "#single-surrogacy", zh: "單身代孕", en: "Single Parent Surrogacy" }
@@ -641,7 +642,6 @@ const NAV = [
   },
   { id: "hrc-fertility", path: "#hrc-fertility", zh: "HRC Fertility 生育中心", en: "HRC Fertility Center" },
   { id: "process", path: "#process", zh: "詳細流程", en: "Process" },
-  { id: "legal", path: "#legal", zh: "法律資訊", en: "Legal Info" },
   { id: "knowledge", path: "#knowledge", zh: "代孕知識與案例", en: "Knowledge & Cases" },
   { id: "team", path: "#team", zh: "團隊", en: "Team" },
   { id: "faq", path: "#faq", zh: "FAQ", en: "FAQ" },
@@ -649,118 +649,81 @@ const NAV = [
 ];
 
 const FEATURES = [
-  { id: "couple-surrogacy", icon: HeartHandshake, zh: "夫妻代孕", en: "Couple Surrogacy", descZh: "為已婚夫妻提供專業美國代孕服務，圓滿家庭夢想。", descEn: "Professional US surrogacy services for married couples to fulfill their family dreams.", image: "/images/gallery/parent.webp", hasDetail: true },
+  { id: "ivf-services", icon: ShieldCheck, zh: "夫妻或單身試管", en: "IVF Services", descZh: "提供夫妻或單身人士專業試管嬰兒服務，實現生育夢想。", descEn: "Professional IVF services for couples and single individuals to achieve fertility dreams.", image: "/images/gallery/son.webp", hasDetail: true },
+  { id: "couple-surrogacy", icon: HeartHandshake, zh: "夫妻代孕", en: "Couple Surrogacy", descZh: "為已婚夫妻提供專業美國試管與代孕，圓滿家庭夢想。", descEn: "Professional US surrogacy services for married couples to fulfill their family dreams.", image: "/images/gallery/parent.webp", hasDetail: true },
   { id: "lgbtq-surrogacy", icon: Users2, zh: "同志代孕", en: "LGBTQ+ Surrogacy", descZh: "支援同志伴侶代孕需求，提供包容性專業服務。", descEn: "Supporting LGBTQ+ couples with inclusive and professional surrogacy services.", image: "/images/gallery/girls.webp", hasDetail: true },
-  { id: "single-surrogacy", icon: User, zh: "單身代孕", en: "Single Parent Surrogacy", descZh: "協助單身人士實現為人父母的夢想，提供全方位支援與陪伴。", descEn: "Helping single individuals achieve their dreams of becoming parents with comprehensive support and guidance.", image: "/images/gallery/son.webp", hasDetail: true },
-  { id: "legal-protection", icon: ShieldCheck, zh: "法律保障", en: "Legal Protection", descZh: "提供完整的法律文件與程序保障，確保權益。", descEn: "Comprehensive legal documentation and procedural protection to ensure rights." },
-  { id: "cross-border", icon: Globe2, zh: "跨境醫療聯盟", en: "Cross-Border Clinics", descZh: "串接美國生殖中心與法務，透明流程與費用。", descEn: "Trusted US clinics & attorneys with transparent steps and fees." },
+  { id: "single-surrogacy", icon: User, zh: "單身代孕", en: "Single Parent Surrogacy", descZh: "協助單身人士實現為人父母的夢想，提供全方位支援與陪伴。", descEn: "Helping single individuals achieve their dreams of becoming parents with comprehensive support and guidance.", image: "/images/gallery/son.webp", hasDetail: true }
 ];
 
 // 夫妻代孕詳細內容
 const COUPLE_SURROGACY_DETAIL = {
   zh: {
-    title: "夫妻代孕（自精自卵＋代孕）",
+    title: "夫妻代孕（自精自卵、捐精自卵、自精捐卵+代孕）",
     subtitle: "從評估到分娩，一站式陪伴",
-    overview: {
+    processOverview: {
       title: "流程總覽",
       phases: [
         {
-          phase: "前期準備階段",
+          phase: "準備階段",
           items: [
-            "醫療評估：確認夫妻雙方皆可提供健康的精子與卵子，並完成必要檢查。",
-            "合規與文件：了解美台兩地法規、準備授權與同意文件、保險與費用預估。",
-            "代孕媒合：與美國合作機構進行配對，安排代理孕母（GC）線上面試並完成背景審核。"
+            "台灣醫療體檢評估：確認夫妻精子與卵子健康狀況。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國精子與卵子銀行選擇捐贈精子或卵子。",
+            "精子與卵子遺傳基因篩查，過濾可能的遺傳疾病基因。"
           ]
         },
         {
-          phase: "IVF 醫療階段",
+          phase: "孕母配對階段",
           items: [
-            "取精、取卵 → 體外受精與胚胎培養。",
-            "胚胎基因篩檢：進行胚胎染色體篩檢（PGS／PGT-A）。",
-            "冷凍保存與運輸（視方案而定）：精子／卵子／胚胎之國際運輸。"
+            "孕母選擇、懷孕史與健康史評估。",
+            "安排雙方視訊溝通、確認彼此認同與意向。",
+            "孕母通過醫療評估、心理評估，確認符合代孕條件。"
+          ]
+        },
+        {
+          phase: "法律程序階段",
+          items: [
+            "合同起草：代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+            "雙方律師審查、合約談判、確認合約",
+            "正式簽約:律師公證、支付代孕費用、信託管理"
+          ]
+        },
+        {
+          phase: "試管（IVF）醫療階段",
+          items: [
+            "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
+            "體外人工受精：受精與胚胎培養（一周）",
+            "胚胎基因篩檢：進行胚胎染色體篩檢（PGS／PGT-A）、等級分類。",
+            "胚胎植入：選擇植入胚胎、孕母週期前至醫院進行內膜準備後植入。",
+            "著床監測：植入後第10-12天，赴醫院進行HCG抽血驗孕，確認是否成功懷孕。",
+            "胎心監測： 植入6周監測到胎心、孕母就固定在其居住地進行後續產檢。"
           ]
         },
         {
           phase: "代孕階段",
           items: [
-            "代理孕母內膜準備與胚胎植入。",
-            "孕期追蹤、產檢與生產安排。",
-            "新生兒文件處理與返台流程。"
+            "定期產檢： 定期提供產檢狀況與報告、大排畸檢查與結果。",
+            "親權判決：律師向法院提出親權認定，法院判決孩子歸屬准父母所有。",
+            "分娩前準備：孕母預產期前兩周抵達美國，居住地以孕母分娩醫院附近之酒店。",
+            "產後照顧：完成分娩後，寶寶可安排在月子中心或月嫂協助照顧。",
+            "返國文件準備： 完成反台必要之法律文件，入境台灣即可設籍。"
           ]
         }
-      ]
-    },
-    plans: {
-      title: "三種跨境執行方案",
-      subtitle: "醫療×法務×運輸×媒合",
-      options: [
-        {
-          name: "方案一｜夫妻親自赴美",
-          description: "夫妻雙方親赴美國生殖醫學中心完成取精、取卵與 IVF；胚胎完成 PGS／PGT-A 後，植入代理孕母子宮。代理孕母以線上面試方式完成媒合。",
-          highlights: [
-            "IVF 與植入皆在美國",
-            "減少跨境運輸變因",
-            "適合：希望全程在美國醫療體系的家庭"
-          ]
-        },
-        {
-          name: "方案二｜胚胎國際運輸至美國",
-          description: "夫妻在台灣完成取精、取卵與 IVF，於台灣培養胚胎；再將胚胎以國際運輸送至美國生殖醫學中心，在美國完成代理孕母植入。代理孕母以線上面試方式完成媒合。",
-          highlights: [
-            "台灣完成取卵取精與IVF，胚胎運至美國植入",
-            "適合：希望多數醫療在台、結合法務友善的美國代孕"
-          ]
-        },
-        {
-          name: "方案三｜精卵國際運輸至美國",
-          description: "夫妻在台灣取精、取卵，將精子與卵子分別運送到美國生殖醫學中心；在美國完成 IVF 與胚胎 PGS／PGT-A，之後植入代理孕母子宮。代理孕母以線上面試方式完成媒合。",
-          highlights: [
-            "台灣採集精卵→美國完成IVF與PGS／PGT-A→植入",
-            "適合：希望在美國端掌握胚胎培養與篩檢品質"
-          ]
-        }
-      ]
-    },
-    guarantees: {
-      title: "三大保證",
-      items: [
-        {
-          title: "跨域整合",
-          description: "IVF 醫療、代孕媒合、跨境運輸與法務同步管理。"
-        },
-        {
-          title: "透明里程碑",
-          description: "明確時程、費用拆項與關鍵節點提醒。"
-        },
-        {
-          title: "風險控管",
-          description: "冷鏈標準、文件審核、孕期追蹤與分娩安排。"
-        }
-      ]
-    },
-    timeline: {
-      title: "流程與時間軸",
-      phases: [
-        {
-          duration: "1–3月",
-          title: "前期準備",
-          items: ["評估", "合規文件", "代孕媒合與面試"]
-        },
-        {
-          duration: "1–2月",
-          title: "IVF",
-          items: ["促排與取卵／取精", "受精培養", "PGS／PGT-A", "凍存"]
-        },
-        {
-          duration: "9–10月",
-          title: "植入與孕期",
-          items: ["代孕內膜準備", "植入", "產檢", "分娩與返台文件"]
-        }
-      ]
+      ],
+      timeEstimate: {
+        title: "流程所需時間預估",
+        phases: [
+          { phase: "準備階段", duration: "3~4個月" },
+          { phase: "孕母配對階段", duration: "3~5個月" },
+          { phase: "法律程序階段", duration: "1個月" },
+          { phase: "試管IVF階段", duration: "3~5個月" },
+          { phase: "代孕階段", duration: "10個月" }
+        ]
+      }
     }
   },
   en: {
-    title: "Couple Surrogacy (Own Sperm + Egg + Surrogate)",
+    title: "Couple Surrogacy (Own Sperm+Egg+Surrogate)(Donor Sperm+Egg+Surrogate)(Own Sperm+Donor Egg+Surrogate)",
     subtitle: "Comprehensive support from assessment to delivery",
     overview: {
       title: "Process Overview",
@@ -768,96 +731,154 @@ const COUPLE_SURROGACY_DETAIL = {
         {
           phase: "Preparation Phase",
           items: [
-            "Medical Assessment: Confirm both partners can provide healthy sperm and eggs, complete necessary tests.",
-            "Compliance & Documentation: Understand Taiwan-US regulations, prepare authorization and consent documents, insurance and cost estimation.",
-            "Surrogate Matching: Coordinate with US partner agencies, arrange online interviews with gestational carrier (GC) and complete background checks."
+            "Taiwan medical evaluation: Confirm sperm and egg health status of the couple.",
+            "US clinic video consultation: Provide Taiwan medical reports and complete US medical questionnaire, sign contract after US physician confirms eligibility for US IVF.",
+            "US sperm and egg bank selection for donor sperm or eggs.",
+            "Genetic screening of sperm and eggs to filter potential genetic diseases."
+          ]
+        },
+        {
+          phase: "Surrogate Matching Phase",
+          items: [
+            "Surrogate selection, pregnancy history and health history assessment.",
+            "Arrange video communication between both parties, confirm mutual acceptance and intentions.",
+            "Surrogate passes medical evaluation, psychological assessment, confirms eligibility for surrogacy."
+          ]
+        },
+        {
+          phase: "Legal Process Phase",
+          items: [
+            "Contract drafting: Surrogacy contract, compensation system, emergency procedures, special medical expense list",
+            "Legal review by both parties' attorneys, contract negotiation, contract confirmation",
+            "Official signing: Attorney notarization, surrogacy fee payment, trust management"
           ]
         },
         {
           phase: "IVF Medical Phase",
           items: [
-            "Sperm & egg retrieval → In vitro fertilization and embryo culture.",
-            "Genetic Screening: Preimplantation genetic screening (PGS/PGT-A).",
-            "Cryopreservation & Transport (varies by plan): International transport of sperm/eggs/embryos."
+            "Sperm/egg retrieval: Women (own or donor eggs) travel to US before cycle as instructed; men providing sperm need to arrive 2 days before egg retrieval",
+            "In vitro fertilization: Fertilization and embryo culture (one week)",
+            "Embryo genetic screening: Chromosomal screening (PGS/PGT-A), grading classification.",
+            "Embryo transfer: Select embryos for transfer, surrogate prepares endometrium at clinic before transfer.",
+            "Implantation monitoring: 10-12 days after transfer, HCG blood test at clinic to confirm pregnancy.",
+            "Fetal heartbeat monitoring: After detecting heartbeat at 6 weeks, surrogate continues prenatal care at her residence."
           ]
         },
         {
           phase: "Surrogacy Phase",
           items: [
-            "Endometrial preparation and embryo transfer.",
-            "Pregnancy monitoring, prenatal care, and delivery arrangements.",
-            "Newborn documentation and return to Taiwan procedures."
+            "Regular prenatal checkups: Regular provision of prenatal status and reports, major anomaly screenings and results.",
+            "Parental rights judgment: Attorney files parental rights recognition with court, court decides child belongs to intended parents.",
+            "Pre-delivery preparation: Surrogate arrives in US two weeks before due date, stays at hotel near delivery hospital.",
+            "Postpartum care: After delivery, baby can be arranged for confinement center or nanny care.",
+            "Return documentation: Complete necessary legal documents for return to Taiwan, can register upon entry to Taiwan."
           ]
         }
       ]
     },
-    plans: {
-      title: "Three Cross-Border Execution Plans",
-      subtitle: "Medical × Legal × Transport × Matching",
-      options: [
-        {
-          name: "Plan 1 | Couple Travels to US",
-          description: "Couple travels to US reproductive medical center for sperm/egg retrieval and IVF; after embryo PGS/PGT-A, transfer to surrogate. Surrogate matching via online interview.",
-          highlights: [
-            "IVF and transfer both in US",
-            "Minimizes cross-border transport variables",
-            "Suitable for: Families preferring full US medical system"
-          ]
-        },
-        {
-          name: "Plan 2 | Embryo International Transport to US",
-          description: "Couple completes sperm/egg retrieval and IVF in Taiwan, embryos cultured in Taiwan; embryos transported internationally to US reproductive center for surrogate transfer. Surrogate matching via online interview.",
-          highlights: [
-            "Taiwan egg/sperm retrieval and IVF, embryo transport to US for transfer",
-            "Suitable for: Majority medical procedures in Taiwan, combined with US surrogacy-friendly legal environment"
-          ]
-        },
-        {
-          name: "Plan 3 | Sperm & Egg International Transport to US",
-          description: "Couple retrieves sperm/eggs in Taiwan, transported separately to US reproductive center; IVF and embryo PGS/PGT-A completed in US, then transferred to surrogate. Surrogate matching via online interview.",
-          highlights: [
-            "Taiwan collection → US IVF and PGS/PGT-A → Transfer",
-            "Suitable for: Control of embryo culture and screening quality in US"
-          ]
-        }
-      ]
-    },
-    guarantees: {
-      title: "Three Guarantees",
-      items: [
-        {
-          title: "Cross-Domain Integration",
-          description: "IVF medical, surrogate matching, cross-border transport, and legal services managed synchronously."
-        },
-        {
-          title: "Transparent Milestones",
-          description: "Clear timeline, itemized costs, and key milestone reminders."
-        },
-        {
-          title: "Risk Management",
-          description: "Cold chain standards, document review, pregnancy tracking, and delivery arrangements."
-        }
-      ]
-    },
-    timeline: {
-      title: "Process Timeline",
+    timeEstimate: {
+      title: "Process Time Estimation",
       phases: [
         {
-          duration: "1–3 months",
-          title: "Preparation",
-          items: ["Assessment", "Compliance Documents", "Surrogate Matching & Interview"]
+          phase: "Preparation Phase",
+          duration: "3-4 months"
         },
         {
-          duration: "1–2 months",
-          title: "IVF",
-          items: ["Ovarian Stimulation & Retrieval", "Fertilization & Culture", "PGS/PGT-A", "Cryopreservation"]
+          phase: "Surrogate Matching Phase",
+          duration: "3-5 months"
         },
         {
-          duration: "9–10 months",
-          title: "Transfer & Pregnancy",
-          items: ["Endometrial Preparation", "Transfer", "Prenatal Care", "Delivery & Return Documentation"]
+          phase: "Legal Process Phase",
+          duration: "1 month"
+        },
+        {
+          phase: "IVF Phase",
+          duration: "3-5 months"
+        },
+        {
+          phase: "Surrogacy Phase",
+          duration: "10 months"
         }
       ]
+    },
+
+
+
+  }
+};
+
+// 試管嬰兒服務詳細內容
+const IVF_SERVICES_DETAIL = {
+  zh: {
+    title: "夫妻試管（自精自卵、捐精自卵、自精捐卵）",
+    subtitle: "單身女性（捐精自卵）",
+    processOverview: {
+      title: "流程總覽",
+      phases: [
+        {
+          phase: "準備階段",
+          items: [
+            "台灣醫療體檢評估：確認精子與卵子健康狀況與子宮懷孕條件；單身女性卵子健康狀況與子宮懷孕條件。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國精子與卵子銀行選擇捐贈精子或卵子。",
+            "精子與卵子遺傳基因篩查（約4周），過濾可能的遺傳疾病基因。"
+          ]
+        },
+        {
+          phase: "試管（IVF）階段",
+          items: [
+            "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
+            "體外受精與胚胎培養（一周）。",
+            "胚胎基因篩檢：胚胎染色體篩檢（PGS／PGT-A）、等級分類。",
+            "選擇植入的胚胎，自懷女士週期前到美國進行內膜準備後植入。",
+            "著床監測：植入後第10-12天，赴醫院進行HCG抽血驗孕，確認是否成功懷孕。",
+            "胎心監測：植入6周監測到胎心便可"
+          ]
+        }
+      ],
+      timeEstimate: {
+        title: "流程所需時間預估",
+        phases: [
+          { phase: "前期準備階段", duration: "3~4個月" },
+          { phase: "試管IVF階段", duration: "3-5個月", note: "（含胚胎準備與後續植入安排）" }
+        ]
+      }
+    }
+  },
+  en: {
+    title: "IVF Services (Own/Donor Sperm & Eggs)",
+    subtitle: "Single Women (Donor Sperm)",
+    processOverview: {
+      title: "Process Overview",
+      phases: [
+        {
+          phase: "Preparation Phase",
+          items: [
+            "Taiwan medical examination assessment: Confirm sperm and egg health status and uterine pregnancy conditions; for single women, egg health status and uterine pregnancy conditions.",
+            "US hospital video consultation: Provide Taiwan medical reports and complete US medical questionnaire, US physician confirms eligibility for US IVF treatment before signing contract.",
+            "US sperm and egg bank selection for donor sperm or eggs.",
+            "Sperm and egg genetic screening (about 4 weeks) to filter potential genetic disease genes."
+          ]
+        },
+        {
+          phase: "IVF Phase",
+          items: [
+            "Sperm/egg retrieval: Women (own or donor eggs) travel to US before cycle as instructed; men providing sperm need to arrive 2 days before egg retrieval",
+            "In vitro fertilization and embryo culture (one week).",
+            "Embryo genetic screening: chromosomal screening (PGS/PGT-A), grading classification.",
+            "Select embryos for transfer, self-carrying women travel to US before cycle for endometrial preparation and transfer.",
+            "Implantation monitoring: 10-12 days after transfer, HCG blood test at hospital to confirm pregnancy.",
+            "Fetal heartbeat monitoring: Can proceed after detecting heartbeat at 6 weeks"
+          ]
+        }
+      ],
+      timeEstimate: {
+        title: "Process Time Estimation",
+        phases: [
+          { phase: "Preparation Phase", duration: "3-4 months" },
+          { phase: "IVF Phase", duration: "3-5 months", note: "(including embryo preparation and subsequent transfer arrangements)" }
+        ]
+      }
     }
   }
 };
@@ -865,418 +886,320 @@ const COUPLE_SURROGACY_DETAIL = {
 // 同志代孕詳細內容
 const PARTNER_SURROGACY_DETAIL = {
   zh: {
-    title: "同志伴侶生育方案（美國）",
+    title: "男同志伴侶代孕（自精+捐卵+代孕）\n女同志伴侶代孕（捐精+自卵+代孕）",
     subtitle: "多元家庭的美國生育解決方案",
-    process: [
-      "前期準備：初談與評估 → 體檢與傳染病篩檢 → 法務諮詢與路線確認 → 挑選捐精/捐卵來源與（必要時）代理孕母機構。",
-      "IVF 醫療階段：取精/取卵（於美國進行，或在台灣完成後依法規冷凍國際運輸）。受精、胚胎培養與 PGT A（俗稱 PGS）染色體篩檢與胚胎評分。",
-      "植入與懷孕：代孕方案：與代理孕母完成法務與醫審後安排移植與產檢。自懷方案：本人完成內膜準備與移植、產檢與待產。",
-      "跨境運輸提醒：依美國 FDA 與進出口規範，精/卵/胚之運輸流程與文件審核常見約需 ≈4 個月，時程請預留彈性。"
-    ],
-    plans: [
-      {
-        category: "男同志伴侶｜自精＋捐卵＋代孕",
-        method: "男同志伴侶可使用一方或雙方精子，於美國生殖醫學中心進行 IVF；卵源來自美國卵子庫或捐贈者。完成 PGT A 篩檢後，將胚胎植入代理孕母子宮。",
-        options: [
-          "親自赴美：赴美取精並完成建胚與後續流程。",
-          "台灣取精＋國際運輸：於台灣取精冷凍後，符合法規辦理運輸至美國 IVF 中心。"
-        ],
-        timeline: [
-          { type: "親自赴美", duration: "12–14個月", description: "取精停留約 3–7 天；整體約 12–14 個月 完成。" },
-          { type: "國際運輸", duration: "16–18個月", description: "含 FDA 規範檢查與進出口文件約 ≈4 個月；整體約 16–18 個月。" }
-        ],
-        faqs: [
-          { q: "一定要親自赴美取精嗎？", a: "不一定，可在台灣取精後依法規冷凍運輸至美國。" },
-          { q: "台灣需做哪些檢測？", a: "常見含傳染病篩檢（如 HIV、HBV、HCV、梅毒等）與精液分析；實際以醫療院所規範為準。" },
-          { q: "如何挑選卵子？", a: "透過卵子庫檢視年齡、健康與遺傳篩檢報告、外貌與背景資料等；可選匿名/半匿名/開放身分（依卵子庫政策）。" },
-          { q: "代理孕母要見面嗎？", a: "多以線上面談為主；是否實體會面視雙方意願與機構安排。" },
-          { q: "寶寶國籍？", a: "若在美國出生，通常依當地法律取得美國公民身分；返台與認領程序需依相關法令並諮詢律師。" }
-        ]
-      },
-      {
-        category: "女同志伴侶｜捐精＋自卵＋代孕",
-        method: "女同志伴侶於美國 IVF 取卵建胚（或在台灣取卵後依規定運輸），捐精來源多由美國精子庫選擇；胚胎經 PGT A 篩檢後植入代理孕母。",
-        options: [
-          "親自赴美：取卵停留約 2–3 週；其餘流程視醫囑安排。",
-          "台灣取卵＋國際運輸：依法規完成冷凍與文件後運送至美國。"
-        ],
-        timeline: [
-          { type: "親自赴美", duration: "12–14個月", description: "整體約 12–14 個月。" },
-          { type: "國際運輸", duration: "16–18個月", description: "因文件與法規流程，整體約 16–18 個月。" }
-        ],
-        faqs: [
-          { q: "要去美國幾趟？", a: "視方案而定；一般至少一次取卵，若非代孕自懷者還需赴美完成植入。" },
-          { q: "親取 vs. 國運差異？", a: "親取流程掌控度高、時程可壓縮；國運可減少停留，但增加文件與等待時間與成本。" },
-          { q: "代理孕母費用為何有差異？", a: "受州別法規、保險方案、孕母經驗與醫療史、是否多胎/剖腹可能性等影響。" },
-          { q: "寶寶國籍？", a: "在美國出生多依當地法取得美國公民；返台與認領請依法辦理並尋求法律意見。" }
-        ]
-      },
-      {
-        category: "女同志伴侶｜捐精＋自卵＋自懷",
-        method: "於美國 IVF 以捐精與自卵建胚，完成 PGT A 後植入本人子宮，由伴侶共同迎接孕期與生產。",
-        options: [
-          "親自赴美：取卵與（之後）植入一般各需停留 2–3 週（可分次進行）。",
-          "台灣取卵＋國際運輸：完成運輸與建胚後，再赴美完成植入。"
-        ],
-        timeline: [
-          { type: "親自赴美", duration: "12–14個月", description: "整體約 12–14 個月。" },
-          { type: "國際運輸", duration: "16–18個月", description: "含文件與法規流程，整體約 16–18 個月。" }
-        ]
-      }
-    ],
-    faqs: [
-      { q: "必須見面才可與代理孕母配對嗎？", a: "多數機構以視訊面談為主；是否實體會面視雙方意願與安排。" },
-      { q: "代孕契約包含哪些關鍵條款？", a: "醫療決策權、產檢頻率、雙胞胎／減胎條款、產假與補助、保險、突發醫療費分擔、分娩地點、法律親權確立流程等。" },
-      { q: "為何同一州費用也可能不同？", a: "孕母經驗、保險方案、醫療史、是否需要多次植入、律師費用差異等都會影響。" },
-      { q: "親權如何確立？", a: "依州法透過預先或產後法院命令（pre-/post-birth order）等程序，由律師辦理。" }
-    ]
+    overview: {
+      title: "流程總覽",
+      phases: [
+        {
+          phase: "準備階段",
+          items: [
+            "台灣醫療體檢評估：確認精子與卵子健康狀況。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國精子與卵子銀行選擇捐精或捐卵。",
+            "精子與卵子遺傳基因篩查，過濾可能的遺傳疾病。"
+          ]
+        },
+        {
+          phase: "孕母配對階段",
+          items: [
+            "孕母選擇、懷孕史與健康史評估。",
+            "安排雙方視訊溝通、確認彼此認同與意向。",
+            "孕母通過醫療評估、心理評估，確認符合代孕條件。"
+          ]
+        },
+        {
+          phase: "法律程序階段",
+          items: [
+            "合同起草：代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+            "雙方律師審查、合約談判、確認合約",
+            "正式簽約:律師公證、支付代孕費用、信託管理"
+          ]
+        },
+        {
+          phase: "試管（IVF）醫療階段",
+          items: [
+            "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
+            "體外人工受精：受精與胚胎培養（一周）",
+            "胚胎基因篩檢：進行胚胎染色體篩檢（PGS／PGT-A）、等級分類。",
+            "胚胎植入：選擇植入胚胎、孕母週期前至醫院進行內膜準備後植入。",
+            "著床監測：植入後第10-12天，赴醫院進行HCG抽血驗孕，確認是否成功懷孕。",
+            "胎心監測： 植入6周監測到胎心、孕母就固定在其居住地進行後續產檢。"
+          ]
+        },
+        {
+          phase: "代孕階段",
+          items: [
+            "定期產檢： 定期提供產檢狀況與報告、大排畸檢查與結果。",
+            "親權判決：律師向法院提出親權認定，法院判決孩子歸屬准父母所有。",
+            "分娩前準備：孕母預產期前兩周抵達美國，居住地以孕母分娩醫院附近之酒店。",
+            "產後照顧：完成分娩後，寶寶可安排在月子中心或月嫂協助照顧。",
+            "返國文件準備： 完成反台必要之法律文件，入境台灣即可設籍。"
+          ]
+        }
+      ]
+    },
+    timeEstimate: {
+      title: "流程所需時間預估",
+      phases: [
+        {
+          phase: "準備階段",
+          duration: "3~4個月"
+        },
+        {
+          phase: "孕母配對階段",
+          duration: "3~5個月"
+        },
+        {
+          phase: "法律程序階段",
+          duration: "1個月"
+        },
+        {
+          phase: "試管IVF階段",
+          duration: "3~5個月"
+        },
+        {
+          phase: "代孕階段",
+          duration: "10個月"
+        }
+      ]
+    }
   },
   en: {
-    title: "LGBTQ+ Partner Fertility Plans (US)",
+    title: "Male Same-Sex Surrogacy (Own Sperm+Donor Egg+Surrogate)\nFemale Same-Sex Surrogacy (Donor Sperm+Own Egg+Surrogate)",
     subtitle: "US fertility solutions for diverse families",
-    process: [
-      "Preparation: Initial consultation & assessment → medical exam & infectious disease screening → legal consultation & route planning → select sperm/egg donor and (if needed) surrogacy agency.",
-      "IVF Medical Phase: Sperm/egg retrieval (in US or in Taiwan with compliant freezing & international transport). Fertilization, embryo culture, and PGT A (chromosome screening & grading).",
-      "Transfer & Pregnancy: Surrogacy plan: arrange transfer & prenatal care after legal and medical review. Self-carry plan: complete endometrial prep, transfer, prenatal care, and delivery.",
-      "Transport Reminder: US FDA & import/export rules mean sperm/egg/embryo transport and documentation typically require ≈4 months; allow flexible timeline."
-    ],
-    plans: [
-      {
-        category: "Male Couple | Own Sperm + Egg Donor + Surrogate",
-        method: "Male couples can use one or both partners' sperm for IVF at US fertility center; eggs from US egg bank or donor. After PGT A, embryo is transferred to surrogate.",
-        options: [
-          "Travel to US: sperm collection & embryo creation, complete process in US.",
-          "Taiwan sperm collection + international transport: collect & freeze sperm in Taiwan, transport to US IVF center per regulations."
-        ],
-        timeline: [
-          { type: "Travel to US", duration: "12–14 months", description: "Sperm collection stay approx. 3–7 days; total process 12–14 months." },
-          { type: "International Transport", duration: "16–18 months", description: "Includes FDA compliance & import/export docs ≈4 months; total process 16–18 months." }
-        ],
-        faqs: [
-          { q: "Is US sperm collection required?", a: "Not required; can collect in Taiwan and freeze/transport to US per regulations." },
-          { q: "What tests are needed in Taiwan?", a: "Common: infectious disease screening (HIV, HBV, HCV, syphilis, etc.) and semen analysis; actual requirements per medical center." },
-          { q: "How to select egg donor?", a: "Review age, health, genetic screening, appearance, background; choose anonymous/semi/open ID per egg bank policy." },
-          { q: "Do we need to meet the surrogate?", a: "Mostly online interviews; in-person meetings depend on both parties and agency." },
-          { q: "Baby's citizenship?", a: "Born in US usually gets US citizenship per local law; returning to Taiwan and recognition require legal consultation." }
-        ]
-      },
-      {
-        category: "Female Couple | Sperm Donor + Own Egg + Surrogate",
-        method: "Female couples retrieve eggs & create embryos via IVF in US (or retrieve in Taiwan and transport per regulations); sperm donor usually selected from US sperm bank; after PGT A, embryo transferred to surrogate.",
-        options: [
-          "Travel to US: egg retrieval stay approx. 2–3 weeks; other steps per medical advice.",
-          "Taiwan egg retrieval + international transport: freeze & document per regulations, then transport to US."
-        ],
-        timeline: [
-          { type: "Travel to US", duration: "12–14 months", description: "Total process 12–14 months." },
-          { type: "International Transport", duration: "16–18 months", description: "Due to documentation & regulations, total process 16–18 months." }
-        ],
-        faqs: [
-          { q: "How many US trips?", a: "Depends on plan; usually at least one for egg retrieval, more if not surrogacy/self-carry." },
-          { q: "Travel vs. transport difference?", a: "Travel offers more control, faster timeline; transport reduces stay but adds documentation, wait time, and cost." },
-          { q: "Why do surrogate costs vary?", a: "Affected by state law, insurance, surrogate experience/medical history, twins/C-section possibility, etc." },
-          { q: "Baby's citizenship?", a: "Born in US usually gets US citizenship; returning to Taiwan and recognition require legal advice." }
-        ]
-      },
-      {
-        category: "Female Couple | Sperm Donor + Own Egg + Self-Carry",
-        method: "IVF in US with sperm donor & own egg, after PGT A transfer to own uterus; couple shares pregnancy & birth experience.",
-        options: [
-          "Travel to US: egg retrieval & (later) transfer each require 2–3 week stay (can be separate trips).",
-          "Taiwan egg retrieval + international transport: after transport & embryo creation, travel to US for transfer."
-        ],
-        timeline: [
-          { type: "Travel to US", duration: "12–14 months", description: "Total process 12–14 months." },
-          { type: "International Transport", duration: "16–18 months", description: "Includes documentation & regulations, total process 16–18 months." }
-        ]
-      }
-    ],
-    faqs: [
-      { q: "Is in-person meeting required for surrogate matching?", a: "Most agencies use video interviews; in-person depends on both parties and arrangements." },
-      { q: "What key terms are in surrogacy contracts?", a: "Medical decision rights, prenatal check frequency, twins/reduction clauses, leave/support, insurance, emergency medical cost sharing, delivery location, legal parentage process, etc." },
-      { q: "Why do costs vary within the same state?", a: "Surrogate experience, insurance, medical history, multiple transfers, lawyer fees, etc. all affect cost." },
-      { q: "How is parentage established?", a: "Per state law via pre-/post-birth court order, handled by lawyer." }
-    ]
+    overview: {
+      title: "Process Overview",
+      phases: [
+        {
+          phase: "Preparation Phase",
+          items: [
+            "Taiwan medical evaluation: Confirm sperm and egg health conditions.",
+            "US clinic video consultation: Provide Taiwan medical reports and complete US medical questionnaire, sign contract after US physician confirms eligibility.",
+            "US sperm and egg banks selection for donor sperm or eggs.",
+            "Genetic screening of sperm and eggs to filter potential genetic diseases."
+          ]
+        },
+        {
+          phase: "Surrogate Matching Phase",
+          items: [
+            "Surrogate selection, pregnancy and health history evaluation.",
+            "Arrange video communication between both parties, confirm mutual agreement and intentions.",
+            "Surrogate passes medical evaluation and psychological assessment, confirming suitability for surrogacy."
+          ]
+        },
+        {
+          phase: "Legal Process Phase",
+          items: [
+            "Contract drafting: surrogacy contract, compensation system, emergency handling, special medical expense list",
+            "Lawyers from both parties review, contract negotiation, contract confirmation",
+            "Official signing: lawyer notarization, surrogacy payment, trust management"
+          ]
+        },
+        {
+          phase: "IVF Medical Phase",
+          items: [
+            "Sperm/egg retrieval: Women (own or donor eggs) travel to US before cycle as instructed; men providing sperm need to arrive 2 days before egg retrieval",
+            "In vitro fertilization: fertilization and embryo culture (one week)",
+            "Embryo genetic screening: chromosomal screening (PGS/PGT-A), grading classification.",
+            "Embryo transfer: select embryos for transfer, surrogate prepares endometrium at hospital before transfer.",
+            "Implantation monitoring: 10-12 days after transfer, HCG blood test at hospital to confirm pregnancy.",
+            "Fetal heartbeat monitoring: After detecting heartbeat at 6 weeks, surrogate continues prenatal care at her location."
+          ]
+        },
+        {
+          phase: "Surrogacy Phase",
+          items: [
+            "Regular prenatal checkups: Regular provision of prenatal examination status and reports, major anomaly screening and results.",
+            "Parental rights judgment: Lawyer submits parental rights determination to court, court rules child belongs to intended parents.",
+            "Pre-delivery preparation: Surrogate arrives in US two weeks before due date, staying at hotel near delivery hospital.",
+            "Postpartum care: After delivery, baby can be arranged at confinement center or with postpartum care assistance.",
+            "Return documents preparation: Complete necessary legal documents for return to Taiwan, can register upon entry to Taiwan."
+          ]
+        }
+      ]
+    },
+    timeEstimate: {
+      title: "Process Time Estimation",
+      phases: [
+        {
+          phase: "Preparation Phase",
+          duration: "3-4 months"
+        },
+        {
+          phase: "Surrogate Matching Phase",
+          duration: "3-5 months"
+        },
+        {
+          phase: "Legal Process Phase",
+          duration: "1 month"
+        },
+        {
+          phase: "IVF Phase",
+          duration: "3-5 months"
+        },
+        {
+          phase: "Surrogacy Phase",
+          duration: "10 months"
+        }
+      ]
+    }
   }
 };
 
 // 單身代孕詳細內容
 const SINGLE_SURROGACY_DETAIL = {
   zh: {
-    title: "單身生育方案（美國IVF／代孕）",
+    title: "單身男士（自精捐卵+代孕）\n單身女士（捐精自卵+代孕）",
     subtitle: "為單身人士提供完整的生育解決方案",
     plans: [
       {
-        category: "單身男性｜自精與捐卵＋代孕",
-        method: {
-          title: "方法",
-          description: "單身男士可選擇「自精與捐卵＋代孕」生子服務。可選擇親自赴美取精，或在台灣取精後以國際運輸送至美國生殖醫學中心；於美國挑選卵子來源，由生殖中心完成IVF流程，並於線上面試代理孕母。胚胎經過 PGS 檢測篩選胚胎等級後，植入代理孕母子宮生子。"
-        },
-        phases: [
-          {
-            phase: "前期準備階段",
-            items: [
-              "初診評估：病史、感染性疾病檢驗、精液分析。",
-              "方案規劃：選定生殖中心、卵子庫、代孕機構與法律顧問。",
-              "法務合規：意向諮詢、合約草擬、保險與託管帳戶（escrow）設置。",
-              "捐卵媒合：確認捐贈者條件（表型、教育、基因攜帶者報告等）。",
-              "若採國際運輸：同步啟動FDA檢驗與進出口文件。"
-            ]
-          },
-          {
-            phase: "IVF醫療階段",
-            items: [
-              "取精：親赴美（約3～7天）或於台取精後冷鏈運輸。",
-              "捐卵者刺激與取卵：受精培養至囊胚，第5～6天冷凍保存。",
-              "PGS檢測：送檢並出具報告（約2～3週）。",
-              "代理孕母醫學篩檢與模擬週期（mock cycle）。"
-            ]
-          },
-          {
-            phase: "代孕階段",
-            items: [
-              "胚胎移植（FET）：完成法務、保險與escrow後安排移植。",
-              "懷孕追蹤：β hCG、6～7週胎心、常規產檢。",
-              "產前法務：出生前命令（PBO）／親權文件（依州別）。",
-              "生產接寶寶：出生證件辦理、返台旅行安排。"
-            ]
-          }
-        ],
-        timeline: [
-          { type: "親自赴美", duration: "12～14個月", description: "取精停留時間約 3～7天；可先選好卵子來源，完成胚胎與PGS後植入代理孕母。" },
-          { type: "國際運輸", duration: "16～18個月", description: "在台取精後以國際運輸送至美國；精子運送約需 4個月 完成FDA規範檢查與進出口文件申請。" }
-        ]
+        category: "單身男士（自精捐卵+代孕）",
+        description: "適合需要捐卵和代孕服務的單身男性"
       },
       {
-        category: "單身女性｜捐精與自卵＋代孕",
-        method: {
-          title: "方法",
-          description: "單身女士可選擇「捐精與自卵＋代孕」。可親自赴美取卵，或在台灣取卵後以國際運輸送至美國；先於美國精子庫選擇捐精來源，由生殖醫學中心完成IVF與PGS，線上面試代理孕母後安排移植。"
-        },
-        phases: [
-          {
-            phase: "前期準備階段",
-            items: [
-              "初診與卵巢儲備評估（AMH、AFC）。",
-              "方案規劃：生殖中心、精子庫、代孕機構與法律顧問。",
-              "法務合規與保險、託管帳戶設置。",
-              "若採國際運輸：同步啟動FDA檢驗與進出口文件。"
-            ]
-          },
-          {
-            phase: "IVF醫療階段",
-            items: [
-              "取卵：親赴美停留約 2～3週 完成刺激與取卵；或在台取卵後運輸。",
-              "受精培養：ICSI受精→囊胚冷凍。",
-              "PGS檢測：報告約 2～3週 出具。",
-              "代理孕母醫學篩檢與模擬週期。"
-            ]
-          },
-          {
-            phase: "代孕階段",
-            items: [
-              "冷凍胚胎移植→懷孕追蹤→產前法務→赴美接寶寶。"
-            ]
-          }
-        ],
-        timeline: [
-          { type: "親自赴美", duration: "12～14個月", description: "親自赴美取卵停留約 2～3週；同時於精子庫選擇捐精；生殖中心完成胚胎流程並經PGS後植入代理孕母。" },
-          { type: "國際運輸", duration: "16～18個月", description: "在台取卵後以國際運輸送至美國；卵子運送約需 4個月 完成FDA規範檢查與進出口文件申請。" }
-        ]
-      },
-      {
-        category: "單身女性｜捐精與自卵＋自懷",
-        method: {
-          title: "方法",
-          description: "單身女士可選擇「捐精與自卵＋自懷」。可親自赴美取卵，或在台取卵後以國際運輸送至美國；於精子庫選擇捐精，在美國生殖醫學中心完成IVF。胚胎經 PGS 檢測篩選後，植入自己的子宮生子。"
-        },
-        phases: [
-          {
-            phase: "前期準備階段",
-            items: [
-              "初診與卵巢儲備評估（AMH、AFC），規劃取卵與FET時程。",
-              "精子庫挑選與下單、醫療文件與行程安排。",
-              "若採國際運輸：同步啟動FDA檢驗與進出口文件。"
-            ]
-          },
-          {
-            phase: "IVF醫療階段",
-            items: [
-              "取卵：親赴美停留約 2～3週 完成刺激與取卵；或在台取卵後運輸。",
-              "受精培養與PGS檢測：報告約 2～3週 出具。",
-              "胚胎植入（FET）：可採一次長期停留（4～6週）連同取卵＋FET完成，或分兩趟（取卵→回台待PGS→再赴美2～3週完成FET）。",
-              "植入後：10～12天驗孕、6～7週胎心確認。"
-            ]
-          }
-        ],
-        timeline: [
-          { type: "親自赴美", duration: "12～14個月", description: "親自赴美取卵停留約 2～3週；同時於精子庫選擇捐精；生殖中心完成胚胎流程並經PGS後植入自己的子宮。進行胚胎流程期間可先回台，待通知再赴美進行植入（FET約 2～3週）。" },
-          { type: "國際運輸", duration: "16～18個月", description: "在台取卵後以國際運輸送至美國；卵子運送約需 4個月 完成FDA規範檢查與進出口文件；胚胎完成後需赴美植入子宮。" }
-        ]
+        category: "單身女士（捐精自卵+代孕）",
+        description: "適合需要捐精和代孕服務的單身女性"
       }
     ],
-    faqs: [
-      {
-        question: "單身女性選擇「捐精自卵＋自懷」，需要赴美幾次？親赴與國際運輸差異是什麼？",
-        answer: [
-          "親赴：通常 2趟（取卵2～3週；FET 2～3週），或一次長期停留（約4～6週）完成兩步。",
-          "國際運輸：先在台取卵並啟動約 4個月 的合規運輸流程；胚胎完成後再赴美 1趟 完成FET。",
-          "差異：時程（國際運輸較久）、費用（增加運輸與檢驗成本）、便利性（親赴需較長停留）。"
-        ]
-      },
-      {
-        question: "一共需要去美國幾趟？",
-        answer: [
-          "單身男性代孕：親赴取精 1趟 ＋接寶寶 1趟；若走國際運輸，多數只需接寶寶 1趟。",
-          "單身女性代孕：親赴取卵 1趟 ＋接寶寶 1趟；若走國際運輸，多數只需接寶寶 1趟。",
-          "單身女性自懷：親赴多為 2趟（取卵與FET），國際運輸多為 1趟（FET）。"
-        ]
-      },
-      {
-        question: "為什麼不選擇在台灣完成試管或代孕？",
-        answer: [
-          "單身與第三方生殖（捐精／捐卵／代孕）在不同地區有法規限制與流程差異；赴美可獲得較完整的醫療、法務與保險配套。實務請依當地現行法規並與專業律師、醫療團隊確認。"
+    processOverview: {
+      title: "流程總覽",
+      phases: [
+        {
+          phase: "準備階段",
+          items: [
+            "台灣醫療體檢評估：確認精子與卵子健康狀況。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國精子與卵子銀行選擇捐精或捐卵。",
+            "精子與卵子遺傳基因篩查，過濾可能的遺傳疾病。"
+          ]
+        },
+        {
+          phase: "孕母配對階段",
+          items: [
+            "孕母選擇、懷孕史與健康史評估",
+            "安排雙方視訊溝通、確認彼此認同與意向。",
+            "孕母通過醫療評估、心理評估，確認符合代孕條件。"
+          ]
+        },
+        {
+          phase: "法律程序階段",
+          items: [
+            "合同起草：代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+            "雙方律師審查、合約談判、確認合約",
+            "正式簽約:律師公證、支付代孕費用、信託管理"
+          ]
+        },
+        {
+          phase: "試管（IVF）醫療階段",
+          items: [
+            "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
+            "體外人工受精：受精與胚胎培養（一周）",
+            "胚胎基因篩檢：進行胚胎染色體篩檢（PGS／PGT-A）、等級分類。",
+            "胚胎植入：選擇植入胚胎、孕母週期前至醫院進行內膜準備後植入。",
+            "著床監測：植入後第10-12天，赴醫院進行HCG抽血驗孕，確認是否成功懷孕。",
+            "胎心監測： 植入6周監測到胎心、孕母就固定在其居住地進行後續產檢。"
+          ]
+        },
+        {
+          phase: "代孕階段",
+          items: [
+            "定期產檢： 定期提供產檢狀況與報告、大排畸檢查與結果。",
+            "親權判決：律師向法院提出親權認定，法院判決孩子歸屬准父母所有。",
+            "分娩前準備：孕母預產期前兩周抵達美國，居住地以孕母分娩醫院附近之酒店。",
+            "產後照顧：完成分娩後，寶寶可安排在月子中心或月嫂協助照顧。",
+            "返國文件準備： 完成反台必要之法律文件，入境台灣即可設籍。"
+          ]
+        }
+      ],
+      timeEstimate: {
+        title: "流程所需時間預估",
+        phases: [
+          { phase: "準備階段", duration: "3~4個月" },
+          { phase: "孕母配對階段", duration: "3~5個月" },
+          { phase: "法律程序階段", duration: "1個月" },
+          { phase: "試管IVF階段", duration: "3~5個月" },
+          { phase: "代孕階段", duration: "10個月" }
         ]
       }
-    ]
+    },
+    faqs: []
   },
   en: {
-    title: "Single Parent Fertility Plans (US IVF/Surrogacy)",
+    title: "Single Male (Own Sperm + Egg Donor + Surrogate)\nSingle Female (Sperm Donor + Own Egg + Surrogate)",
     subtitle: "Complete fertility solutions for single individuals",
     plans: [
       {
-        category: "Single Male | Own Sperm + Egg Donor + Surrogate",
-        method: {
-          title: "Method",
-          description: "Single men can choose 'Own Sperm + Egg Donor + Surrogate' services. Options include traveling to the US for sperm collection or collecting in Taiwan with international transport to US fertility center; select egg donor in US, complete IVF process, and conduct online surrogate interviews. After PGS screening, embryo is transferred to surrogate."
-        },
-        phases: [
-          {
-            phase: "Preparation Phase",
-            items: [
-              "Initial assessment: medical history, infectious disease screening, semen analysis.",
-              "Plan design: select fertility center, egg bank, surrogacy agency, and legal counsel.",
-              "Legal compliance: consultation, contract drafting, insurance and escrow account setup.",
-              "Egg donor matching: confirm donor criteria (phenotype, education, genetic carrier reports, etc.).",
-              "If international transport: initiate FDA testing and import/export documentation."
-            ]
-          },
-          {
-            phase: "IVF Medical Phase",
-            items: [
-              "Sperm collection: travel to US (3-7 days) or collect in Taiwan with cold chain transport.",
-              "Egg donor stimulation & retrieval: fertilization to blastocyst, cryopreservation days 5-6.",
-              "PGS testing: submit and receive report (approx. 2-3 weeks).",
-              "Surrogate medical screening and mock cycle."
-            ]
-          },
-          {
-            phase: "Surrogacy Phase",
-            items: [
-              "Embryo transfer (FET): arrange transfer after legal, insurance, and escrow completion.",
-              "Pregnancy monitoring: β hCG, 6-7 week heartbeat, routine prenatal care.",
-              "Pre-birth legal: Pre-Birth Order (PBO) / parental rights documents (state-dependent).",
-              "Birth & baby pickup: birth certificate processing, return travel arrangements."
-            ]
-          }
-        ],
-        timeline: [
-          { type: "Travel to US", duration: "12-14 months", description: "Sperm collection stay approx. 3-7 days; pre-select egg donor, complete embryo & PGS then transfer to surrogate." },
-          { type: "International Transport", duration: "16-18 months", description: "Collect sperm in Taiwan with international transport to US; sperm transport requires approx. 4 months for FDA compliance and import/export documentation." }
-        ]
+        category: "Single Male (Own Sperm + Egg Donor + Surrogate)",
+        description: "Suitable for single men who need egg donor and surrogacy services"
       },
       {
-        category: "Single Female | Sperm Donor + Own Egg + Surrogate",
-        method: {
-          title: "Method",
-          description: "Single women can choose 'Sperm Donor + Own Egg + Surrogate'. Options include traveling to US for egg retrieval or retrieving in Taiwan with international transport; select sperm donor from US sperm bank, complete IVF & PGS at fertility center, conduct online surrogate interview then arrange transfer."
-        },
-        phases: [
-          {
-            phase: "Preparation Phase",
-            items: [
-              "Initial consultation & ovarian reserve assessment (AMH, AFC).",
-              "Plan design: fertility center, sperm bank, surrogacy agency, and legal counsel.",
-              "Legal compliance, insurance, and escrow account setup.",
-              "If international transport: initiate FDA testing and import/export documentation."
-            ]
-          },
-          {
-            phase: "IVF Medical Phase",
-            items: [
-              "Egg retrieval: travel to US for approx. 2-3 weeks for stimulation & retrieval; or retrieve in Taiwan then transport.",
-              "Fertilization & culture: ICSI fertilization → blastocyst cryopreservation.",
-              "PGS testing: report issued in approx. 2-3 weeks.",
-              "Surrogate medical screening and mock cycle."
-            ]
-          },
-          {
-            phase: "Surrogacy Phase",
-            items: [
-              "Frozen embryo transfer → pregnancy monitoring → pre-birth legal → travel to US for baby pickup."
-            ]
-          }
-        ],
-        timeline: [
-          { type: "Travel to US", duration: "12-14 months", description: "Travel to US for egg retrieval approx. 2-3 weeks; select sperm donor simultaneously; fertility center completes embryo process & PGS then transfers to surrogate." },
-          { type: "International Transport", duration: "16-18 months", description: "Retrieve eggs in Taiwan with international transport to US; egg transport requires approx. 4 months for FDA compliance and import/export documentation." }
-        ]
-      },
-      {
-        category: "Single Female | Sperm Donor + Own Egg + Self-Carry",
-        method: {
-          title: "Method",
-          description: "Single women can choose 'Sperm Donor + Own Egg + Self-Carry'. Options include traveling to US for egg retrieval or retrieving in Taiwan with international transport; select sperm donor from sperm bank, complete IVF at US fertility center. After PGS screening, embryo is transferred to own uterus."
-        },
-        phases: [
-          {
-            phase: "Preparation Phase",
-            items: [
-              "Initial consultation & ovarian reserve assessment (AMH, AFC), plan egg retrieval & FET timeline.",
-              "Sperm bank selection & order, medical documentation & travel arrangements.",
-              "If international transport: initiate FDA testing and import/export documentation."
-            ]
-          },
-          {
-            phase: "IVF Medical Phase",
-            items: [
-              "Egg retrieval: travel to US for approx. 2-3 weeks for stimulation & retrieval; or retrieve in Taiwan then transport.",
-              "Fertilization, culture & PGS testing: report issued in approx. 2-3 weeks.",
-              "Embryo transfer (FET): option for one extended stay (4-6 weeks) for retrieval + FET, or two trips (retrieval → return to Taiwan for PGS → return to US for 2-3 weeks for FET).",
-              "Post-transfer: pregnancy test 10-12 days, heartbeat confirmation 6-7 weeks."
-            ]
-          }
-        ],
-        timeline: [
-          { type: "Travel to US", duration: "12-14 months", description: "Travel to US for egg retrieval approx. 2-3 weeks; select sperm donor simultaneously; fertility center completes embryo process & PGS then transfers to own uterus. Can return to Taiwan during embryo process, then return to US for transfer (FET approx. 2-3 weeks)." },
-          { type: "International Transport", duration: "16-18 months", description: "Retrieve eggs in Taiwan with international transport to US; egg transport requires approx. 4 months for FDA compliance and documentation; must travel to US for embryo transfer after completion." }
-        ]
+        category: "Single Female (Sperm Donor + Own Egg + Surrogate)",
+        description: "Suitable for single women who need sperm donor and surrogacy services"
       }
     ],
-    faqs: [
-      {
-        question: "For single women choosing 'Sperm Donor + Own Egg + Self-Carry', how many US trips are needed? What's the difference between traveling vs. international transport?",
-        answer: [
-          "Travel to US: Usually 2 trips (egg retrieval 2-3 weeks; FET 2-3 weeks), or one extended stay (approx. 4-6 weeks) for both steps.",
-          "International transport: Retrieve eggs in Taiwan and initiate approx. 4-month compliance transport process; travel to US 1 trip for FET after embryo completion.",
-          "Differences: Timeline (international transport takes longer), cost (additional transport & testing costs), convenience (travel requires longer stays)."
-        ]
-      },
-      {
-        question: "How many US trips are required in total?",
-        answer: [
-          "Single male surrogacy: Travel for sperm collection 1 trip + baby pickup 1 trip; with international transport, mostly only baby pickup 1 trip needed.",
-          "Single female surrogacy: Travel for egg retrieval 1 trip + baby pickup 1 trip; with international transport, mostly only baby pickup 1 trip needed.",
-          "Single female self-carry: Travel mostly 2 trips (egg retrieval & FET), international transport mostly 1 trip (FET)."
-        ]
-      },
-      {
-        question: "Why not complete IVF or surrogacy in Taiwan?",
-        answer: [
-          "Single individuals and third-party reproduction (sperm/egg donation/surrogacy) have regulatory restrictions and process variations in different regions; going to the US provides more comprehensive medical, legal, and insurance support. Please verify current local regulations with professional attorneys and medical teams."
+    processOverview: {
+      title: "Process Overview",
+      phases: [
+        {
+          phase: "Preparation Phase",
+          items: [
+            "Taiwan medical examination assessment: Confirm sperm and egg health status.",
+            "US hospital video consultation: Provide Taiwan medical reports and complete US medical questionnaire, US physician confirms eligibility for US IVF treatment before signing contract.",
+            "US sperm and egg bank selection for sperm donation or egg donation.",
+            "Sperm and egg genetic screening to filter potential genetic diseases."
+          ]
+        },
+        {
+          phase: "Surrogate Matching Phase",
+          items: [
+            "Surrogate selection, pregnancy history and health history assessment",
+            "Arrange video communication between both parties, confirm mutual understanding and intentions.",
+            "Surrogate passes medical evaluation and psychological assessment, confirming suitability for surrogacy."
+          ]
+        },
+        {
+          phase: "Legal Process Phase",
+          items: [
+            "Contract drafting: surrogacy contract, compensation system, emergency handling, special medical expense list",
+            "Lawyers from both parties review, contract negotiation, contract confirmation",
+            "Official signing: lawyer notarization, surrogacy payment, trust management"
+          ]
+        },
+        {
+          phase: "IVF Medical Phase",
+          items: [
+            "Sperm/egg retrieval: Women (own or donor eggs) travel to US before cycle as instructed; men providing sperm need to arrive 2 days before egg retrieval",
+            "In vitro fertilization: fertilization and embryo culture (one week)",
+            "Embryo genetic screening: chromosomal screening (PGS/PGT-A), grading classification.",
+            "Embryo transfer: select embryos for transfer, surrogate prepares endometrium at hospital before transfer.",
+            "Implantation monitoring: 10-12 days after transfer, HCG blood test at hospital to confirm pregnancy.",
+            "Fetal heartbeat monitoring: After detecting heartbeat at 6 weeks, surrogate continues prenatal care at her location."
+          ]
+        },
+        {
+          phase: "Surrogacy Phase",
+          items: [
+            "Regular prenatal checkups: Regular provision of prenatal examination status and reports, major anomaly screening and results.",
+            "Parental rights judgment: Lawyer submits parental rights determination to court, court rules child belongs to intended parents.",
+            "Pre-delivery preparation: Surrogate arrives in US two weeks before due date, staying at hotel near delivery hospital.",
+            "Postpartum care: After delivery, baby can be arranged at confinement center or with postpartum care assistance.",
+            "Return documents preparation: Complete necessary legal documents for return to Taiwan, can register upon entry to Taiwan."
+          ]
+        }
+      ],
+      timeEstimate: {
+        title: "Process Time Estimation",
+        phases: [
+          { phase: "Preparation Phase", duration: "3-4 months" },
+          { phase: "Surrogate Matching Phase", duration: "3-5 months" },
+          { phase: "Legal Process Phase", duration: "1 month" },
+          { phase: "IVF Phase", duration: "3-5 months" },
+          { phase: "Surrogacy Phase", duration: "10 months" }
         ]
       }
-    ]
+    },
+    faqs: []
   }
 };
 
@@ -1285,303 +1208,175 @@ const DETAILED_PROCESS = [
   {
     phase: "準備階段",
     phaseEn: "Preparation Phase",
-    duration: "1-2個月",
-    durationEn: "1-2 months",
+    duration: "3-4個月",
+    durationEn: "3-4 months",
     steps: [
       {
-        title: "初步評估",
-        titleEn: "Initial Assessment",
-        description: "醫療史審查、生育能力評估、心理準備度評估",
-        descriptionEn: "Medical history review, fertility assessment, psychological readiness evaluation",
-        timeline: "第1-2週",
-        timelineEn: "Week 1-2"
+        title: "台灣醫療體檢評估",
+        titleEn: "Taiwan Medical Examination",
+        description: "確認精子與卵子健康狀況",
+        descriptionEn: "Confirm sperm and egg health status"
       },
       {
-        title: "州別選擇",
-        titleEn: "State Selection",
-        description: "分析各州代孕法律、費用差異、流程複雜度",
-        descriptionEn: "Analyze state surrogacy laws, cost differences, process complexity",
-        timeline: "第2-3週",
-        timelineEn: "Week 2-3"
+        title: "美國醫院視訊問診",
+        titleEn: "US Hospital Video Consultation",
+        description: "提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約",
+        descriptionEn: "Provide Taiwan medical reports and complete US medical questionnaire, sign contract after US doctor confirms IVF eligibility"
       },
       {
-        title: "資料準備",
-        titleEn: "Documentation Prep",
-        description: "準備醫療記錄、財務證明、身份文件",
-        descriptionEn: "Prepare medical records, financial proof, identity documents",
-        timeline: "第3-4週",
-        timelineEn: "Week 3-4"
+        title: "美國精子與卵子銀行選擇",
+        titleEn: "US Sperm & Egg Bank Selection",
+        description: "捐精或捐卵選擇",
+        descriptionEn: "Sperm or egg donor selection"
+      },
+      {
+        title: "遺傳基因篩查",
+        titleEn: "Genetic Screening",
+        description: "精子與卵子遺傳基因篩查，過濾可能的遺傳疾病",
+        descriptionEn: "Genetic screening of sperm and eggs to filter potential hereditary diseases"
       }
     ]
   },
   {
-    phase: "配對階段",
-    phaseEn: "Matching Phase",
-    duration: "2-4個月",
-    durationEn: "2-4 months",
+    phase: "孕母配對階段",
+    phaseEn: "Surrogate Matching Phase",
+    duration: "3-5個月",
+    durationEn: "3-5 months",
     steps: [
       {
-        title: "代孕母篩選",
-        titleEn: "Surrogate Screening",
-        description: "健康檢查、心理評估、背景調查、生活習慣評估",
-        descriptionEn: "Health screening, psychological evaluation, background check, lifestyle assessment",
-        timeline: "第1-6週",
-        timelineEn: "Week 1-6"
+        title: "孕母選擇",
+        titleEn: "Surrogate Selection",
+        description: "孕母選擇、懷孕史與健康史評估",
+        descriptionEn: "Surrogate selection, pregnancy history and health history assessment"
       },
       {
-        title: "配對會面",
-        titleEn: "Match Meeting",
-        description: "視訊或實體會面、雙方期望討論、建立信任關係",
-        descriptionEn: "Video or in-person meeting, expectation discussion, trust building",
-        timeline: "第6-8週",
-        timelineEn: "Week 6-8"
+        title: "雙方溝通",
+        titleEn: "Communication Setup",
+        description: "安排雙方視訊溝通、確認彼此認同與意向",
+        descriptionEn: "Arrange video communication between both parties, confirm mutual understanding and intentions"
       },
       {
-        title: "確認配對",
-        titleEn: "Match Confirmation",
-        description: "雙方同意配對、簽署初步意向書",
-        descriptionEn: "Mutual agreement, preliminary intent letter signing",
-        timeline: "第8-10週",
-        timelineEn: "Week 8-10"
+        title: "資格確認",
+        titleEn: "Qualification Confirmation", 
+        description: "孕母通過醫療評估、心理評估，確認符合代孕條件",
+        descriptionEn: "Surrogate passes medical evaluation and psychological assessment, confirming suitability for surrogacy"
       }
     ]
   },
   {
     phase: "法律程序階段",
     phaseEn: "Legal Process Phase",
-    duration: "1-2個月",
-    durationEn: "1-2 months",
+    duration: "1個月",
+    durationEn: "1 month",
     steps: [
       {
-        title: "合約起草",
+        title: "合同起草",
         titleEn: "Contract Drafting",
-        description: "代孕合約、補償協議、醫療決策權、緊急情況處理",
-        descriptionEn: "Surrogacy contract, compensation agreement, medical decision rights, emergency protocols",
-        timeline: "第1-3週",
-        timelineEn: "Week 1-3"
+        description: "代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+        descriptionEn: "Surrogacy contract, compensation system, emergency handling, special medical expense list"
       },
       {
-        title: "法律審查",
+        title: "律師審查",
         titleEn: "Legal Review",
-        description: "雙方律師審查、條款協商、修訂確認",
-        descriptionEn: "Attorney review by both parties, term negotiation, revision confirmation",
-        timeline: "第3-5週",
-        timelineEn: "Week 3-5"
+        description: "雙方律師審查、合約談判、確認合約",
+        descriptionEn: "Lawyers from both parties review, contract negotiation, contract confirmation"
       },
       {
         title: "正式簽約",
         titleEn: "Contract Execution",
-        description: "最終合約簽署、公證、保險安排",
-        descriptionEn: "Final contract signing, notarization, insurance arrangements",
-        timeline: "第5-6週",
-        timelineEn: "Week 5-6"
+        description: "律師公證、支付代孕費用、信託管理",
+        descriptionEn: "Lawyer notarization, surrogacy payment, trust management"
       }
     ]
   },
   {
-    phase: "醫療程序階段",
-    phaseEn: "Medical Process Phase", 
-    duration: "9-10個月",
-    durationEn: "9-10 months",
+    phase: "試管（IVF）醫療階段",
+    phaseEn: "IVF Medical Phase", 
+    duration: "3~5個月",
+    durationEn: "3-5 months",
     steps: [
       {
-        title: "胚胎移植準備",
-        titleEn: "Embryo Transfer Prep",
-        description: "代孕母身體調理、激素治療、子宮內膜準備",
-        descriptionEn: "Surrogate body preparation, hormone therapy, endometrial preparation",
-        timeline: "第1-4週",
-        timelineEn: "Week 1-4"
+        title: "取精取卵",
+        titleEn: "Sperm/Egg Retrieval",
+        description: "女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
+        descriptionEn: "Women (own or donor eggs) travel to US before cycle as instructed; men providing sperm need to arrive 2 days before egg retrieval"
       },
       {
-        title: "胚胎移植",
+        title: "體外人工受精",
+        titleEn: "In Vitro Fertilization",
+        description: "受精與胚胎培養（一周）",
+        descriptionEn: "Fertilization and embryo culture (one week)"
+      },
+      {
+        title: "胚胎基因篩檢",
+        titleEn: "Embryo Genetic Screening",
+        description: "進行胚胎染色體篩檢（PGS／PGT-A）、等級分類",
+        descriptionEn: "Chromosomal screening (PGS/PGT-A), grading classification"
+      },
+      {
+        title: "胚胎植入",
         titleEn: "Embryo Transfer",
-        description: "IVF診所進行胚胎移植手術、確認著床",
-        descriptionEn: "IVF clinic embryo transfer procedure, implantation confirmation",
-        timeline: "第4-6週",
-        timelineEn: "Week 4-6"
+        description: "選擇植入胚胎、孕母週期前至醫院進行內膜準備後植入",
+        descriptionEn: "Select embryos for transfer, surrogate prepares endometrium at hospital before transfer"
       },
       {
-        title: "懷孕監護",
-        titleEn: "Pregnancy Monitoring",
-        description: "定期產檢、健康監測、與委託父母溝通",
-        descriptionEn: "Regular prenatal care, health monitoring, communication with intended parents",
-        timeline: "第6-36週",
-        timelineEn: "Week 6-36"
+        title: "著床監測",
+        titleEn: "Implantation Monitoring",
+        description: "植入後第10-12天，赴醫院進行HCG抽血驗孕，確認是否成功懷孕",
+        descriptionEn: "10-12 days after transfer, HCG blood test at hospital to confirm pregnancy"
       },
       {
-        title: "分娩準備",
-        titleEn: "Delivery Preparation",
-        description: "分娩計劃、醫院安排、法律文件準備",
-        descriptionEn: "Birth plan, hospital arrangements, legal document preparation",
-        timeline: "第36-40週",
-        timelineEn: "Week 36-40"
+        title: "胎心監測",
+        titleEn: "Fetal Heartbeat Monitoring",
+        description: "植入6周監測到胎心、孕母就固定在其居住地進行後續產檢",
+        descriptionEn: "After detecting heartbeat at 6 weeks, surrogate continues prenatal care at her location"
       }
     ]
   },
   {
-    phase: "完成階段",
-    phaseEn: "Completion Phase",
-    duration: "1-2個月",
-    durationEn: "1-2 months",
+    phase: "代孕階段",
+    phaseEn: "Surrogacy Phase",
+    duration: "10個月",
+    durationEn: "10 months",
     steps: [
       {
-        title: "新生兒出生",
-        titleEn: "Baby Birth",
-        description: "分娩過程支援、醫療照護、初步健康檢查",
-        descriptionEn: "Birth process support, medical care, initial health screening",
-        timeline: "第1週",
-        timelineEn: "Week 1"
+        title: "定期產檢",
+        titleEn: "Regular Prenatal Checkups",
+        description: "定期提供產檢狀況與報告、大排畸檢查與結果",
+        descriptionEn: "Regular provision of prenatal examination status and reports, major anomaly screening and results"
       },
       {
-        title: "法律移交",
-        titleEn: "Legal Transfer",
-        description: "父母權確立、出生證明申請、法院程序",
-        descriptionEn: "Parental rights establishment, birth certificate application, court procedures",
-        timeline: "第1-4週",
-        timelineEn: "Week 1-4"
+        title: "親權判決",
+        titleEn: "Parental Rights Judgment",
+        description: "律師向法院提出親權認定，法院判決孩子歸屬准父母所有",
+        descriptionEn: "Lawyer submits parental rights determination to court, court rules child belongs to intended parents"
       },
       {
-        title: "後續支援",
-        titleEn: "Post-Birth Support",
-        description: "代孕母產後照護、關係維護、經驗分享",
-        descriptionEn: "Surrogate postpartum care, relationship maintenance, experience sharing",
-        timeline: "第4-8週",
-        timelineEn: "Week 4-8"
+        title: "分娩前準備",
+        titleEn: "Pre-delivery Preparation",
+        description: "孕母預產期前兩周抵達美國，居住地以孕母分娩醫院附近之酒店",
+        descriptionEn: "Surrogate arrives in US two weeks before due date, staying at hotel near delivery hospital"
+      },
+      {
+        title: "產後照顧",
+        titleEn: "Postpartum Care",
+        description: "完成分娩後，寶寶可安排在月子中心或月嫂協助照顧",
+        descriptionEn: "After delivery, baby can be arranged at confinement center or with postpartum care assistance"
+      },
+      {
+        title: "返國文件準備",
+        titleEn: "Return Documents Preparation",
+        description: "完成反台必要之法律文件，入境台灣即可設籍",
+        descriptionEn: "Complete necessary legal documents for return to Taiwan, can register upon entry to Taiwan"
       }
     ]
   }
 ];
 
-// Legal Information by State
-const LEGAL_INFO = {
-  friendly: {
-    title: "代孕友善州",
-    titleEn: "Surrogacy-Friendly States",
-    states: ["加州", "伊利諾州", "康州", "德拉瓦州", "緬因州", "新罕布夏州", "羅德島州", "華盛頓州"],
-    statesEn: ["California", "Illinois", "Connecticut", "Delaware", "Maine", "New Hampshire", "Rhode Island", "Washington"],
-    characteristics: [
-      "法律明確支持代孕",
-      "程序相對簡單",
-      "委託父母權利保障完善",
-      "無需額外法院程序"
-    ],
-    characteristicsEn: [
-      "Clear legal support for surrogacy",
-      "Relatively simple procedures", 
-      "Strong protection for intended parents' rights",
-      "No additional court procedures required"
-    ]
-  }
-};
 
-// California Specific Legal Information
-const CALIFORNIA_LEGAL_DETAILS = {
-  overview: {
-    title: "加州代孕法律概覽",
-    titleEn: "California Surrogacy Legal Overview",
-    description: "加州是全美最友善的代孕州，擁有最完善的法律框架和保護機制",
-    descriptionEn: "California is the most surrogacy-friendly state in the US with the most comprehensive legal framework and protection mechanisms"
-  },
-  keyLaws: [
-    {
-      law: "California Family Code Section 7960-7962",
-      title: "代孕協議法",
-      titleEn: "Surrogacy Agreement Act",
-      description: "明確規定代孕協議的有效性和執行標準",
-      descriptionEn: "Clearly defines the validity and enforcement standards of surrogacy agreements"
-    },
-    {
-      law: "Assembly Bill 2273 (2012)",
-      title: "代孕父母權法",
-      titleEn: "Surrogacy Parental Rights Act", 
-      description: "簡化委託父母的親權確立程序",
-      descriptionEn: "Streamlines parental rights establishment procedures for intended parents"
-    },
-    {
-      law: "California Civil Code Section 56.10",
-      title: "醫療資訊保護法",
-      titleEn: "Medical Information Protection Act",
-      description: "保護代孕過程中的醫療隱私",
-      descriptionEn: "Protects medical privacy during the surrogacy process"
-    }
-  ],
-  advantages: [
-    {
-      title: "Pre-Birth Orders (PBO)",
-      titleEn: "Pre-Birth Orders",
-      description: "可在嬰兒出生前即確立法律親權，避免出生後的法律複雜性",
-      descriptionEn: "Legal parental rights can be established before birth, avoiding post-birth legal complexities"
-    },
-    {
-      title: "無居住要求",
-      titleEn: "No Residency Requirements", 
-      description: "委託父母無需是加州居民即可進行代孕",
-      descriptionEn: "Intended parents do not need to be California residents to pursue surrogacy"
-    },
-    {
-      title: "同性伴侶友善",
-      titleEn: "LGBTQ+ Friendly",
-      description: "完全支持同性伴侶和單身人士的代孕需求",
-      descriptionEn: "Fully supports surrogacy needs of same-sex couples and single individuals"
-    },
-    {
-      title: "商業代孕合法",
-      titleEn: "Commercial Surrogacy Legal",
-      description: "明確允許有償代孕，合約受法律保護",
-      descriptionEn: "Clearly permits compensated surrogacy with legal contract protection"
-    }
-  ],
-  procedures: [
-    {
-      step: "合約起草階段",
-      stepEn: "Contract Drafting Phase",
-      details: [
-        "雙方律師獨立代表",
-        "詳細補償條款規劃",
-        "醫療決策權明確分配",
-        "緊急情況處理預案"
-      ],
-      detailsEn: [
-        "Independent legal representation for both parties",
-        "Detailed compensation clause planning", 
-        "Clear allocation of medical decision rights",
-        "Emergency situation handling protocols"
-      ]
-    },
-    {
-      step: "法院程序階段",
-      stepEn: "Court Procedures Phase", 
-      details: [
-        "Pre-Birth Order 申請",
-        "親權確立聽證會",
-        "法院令核准程序",
-        "出生證明預備文件"
-      ],
-      detailsEn: [
-        "Pre-Birth Order application",
-        "Parental rights establishment hearing",
-        "Court order approval process",
-        "Birth certificate preparation documents"
-      ]
-    },
-    {
-      step: "醫院分娩階段",
-      stepEn: "Hospital Delivery Phase",
-      details: [
-        "醫院法律文件提交",
-        "委託父母姓名登記",
-        "即時親權移交",
-        "出生證明直接簽發"
-      ],
-      detailsEn: [
-        "Hospital legal document submission",
-        "Intended parents name registration",
-        "Immediate parental rights transfer",
-        "Direct birth certificate issuance"
-      ]
-    }
-  ]
-};
+
+
+
 
 // HRC Fertility Detailed Information
 const HRC_FERTILITY_INFO = {
@@ -1718,33 +1513,7 @@ const HRC_FERTILITY_INFO = {
   }
 };
 
-// Key Legal Considerations
-const LEGAL_CONSIDERATIONS = [
-  {
-    category: "風險管理",
-    categoryEn: "Risk Management",
-    items: [
-      {
-        title: "法律風險",
-        titleEn: "Legal Risks",
-        description: "州法變化、合約爭議、親權挑戰",
-        descriptionEn: "State law changes, contract disputes, parental rights challenges"
-      },
-      {
-        title: "醫療風險",
-        titleEn: "Medical Risks",
-        description: "懷孕併發症、保險覆蓋、醫療費用",
-        descriptionEn: "Pregnancy complications, insurance coverage, medical expenses"
-      },
-      {
-        title: "關係風險",
-        titleEn: "Relationship Risks",
-        description: "溝通問題、期望差異、情感糾紛",
-        descriptionEn: "Communication issues, expectation differences, emotional disputes"
-      }
-    ]
-  }
-];
+
 
 // HRC Knowledge Articles
 const HRC_KNOWLEDGE_ARTICLES = [
@@ -1764,22 +1533,7 @@ const HRC_KNOWLEDGE_ARTICLES = [
     tags: ["IVF", "成功率", "年齡", "胚胎篩檢"]
     , video: null
   },
-  {
-    id: "surrogacy-legal-guide",
-    title: "代孕法律指南：加州法律優勢全解析",
-    titleEn: "Surrogacy Legal Guide: Complete Analysis of California Law Advantages",
-    category: "法律資訊",
-    categoryEn: "Legal Information",
-    author: "HRC Legal Team",
-    date: "2024-08-22",
 
-    summary: "詳細解說加州代孕法律的優勢，包括Pre-Birth Order程序和國際客戶的權益保障。",
-    summaryEn: "Detailed explanation of California surrogacy law advantages, including Pre-Birth Order procedures and rights protection for international clients.",
-    content: "加州作為全美最友善的代孕州，提供了完整的法律保護框架。Pre-Birth Order制度讓委託父母在嬰兒出生前就確立法律親權，避免了其他州可能面臨的法律風險...",
-    contentEn: "California, as the most surrogacy-friendly state in the US, provides a comprehensive legal protection framework. The Pre-Birth Order system allows intended parents to establish legal parentage before birth, avoiding legal risks that may be faced in other states...",
-    tags: ["代孕法律", "加州", "Pre-Birth Order", "國際客戶"]
-    , video: null
-  },
   {
     id: "frozen-embryo-transfer",
     title: "冷凍胚胎移植：提高代孕成功率的關鍵技術",
@@ -1976,7 +1730,7 @@ const HRC_SUCCESS_CASES = [
     clientProfileEn: "Australian couple with one son, eager for daughter",
     challenge: "二胎困難，希望生女兒",
     challengeEn: "Second child difficulties, hoping for daughter",
-    solution: "性別選擇+美國代孕服務",
+    solution: "性別選擇+美國試管與代孕",
     solutionEn: "Gender selection + surrogacy services",
     duration: "13個月",
     durationEn: "13 months",
@@ -2497,10 +2251,11 @@ export default function LandingTemplate() {
   const [showCoupleDetail, setShowCoupleDetail] = useState(false);
   const [showSingleDetail, setShowSingleDetail] = useState(false);
   const [showPartnerDetail, setShowPartnerDetail] = useState(false);
+  const [showIvfDetail, setShowIvfDetail] = useState(false);
 
   const t = useMemo(() => ({
     heroTitle: {
-      zh: "以專業與溫度，完成你的家庭藍圖",
+      zh: "以專業與信賴，陪您迎接新生命的到來",
       en: "Professional, compassionate support for your family journey",
     },
     heroCTA: { zh: "免費諮詢", en: "Free Consultation" },
@@ -2508,7 +2263,7 @@ export default function LandingTemplate() {
       zh: BRAND.tagline || "高信任、可落地的跨國生育顧問服務",
       en: BRAND.tagline || "Trusted, end‑to‑end cross‑border fertility consulting",
     },
-    servicesTitle: { zh: "祈孕顧問．美國代孕服務", en: "Qiyun Consulting · Services" },
+    servicesTitle: { zh: "祈孕顧問．美國試管與代孕", en: "Qiyun Consulting · Services" },
     knowledgeTitle: { zh: "祈孕顧問．代孕知識與案例", en: "Qiyun Consulting · Knowledge & Cases" },
     processTitle: { zh: "流程", en: "Process" },
     teamTitle: { zh: "團隊", en: "Team" },
@@ -2538,7 +2293,7 @@ export default function LandingTemplate() {
     setActive("home");
 
     // Dynamic title & meta for single page
-    const pageTitle = lang === 'zh' ? `${BRAND.name}｜美國代孕服務專家` : `${BRAND.name} | US Surrogacy Services`;
+    const pageTitle = lang === 'zh' ? `${BRAND.name}｜美國試管與代孕專家` : `${BRAND.name} | US Surrogacy Services`;
     document.title = pageTitle;
 
     const pageDesc = lang === 'zh' ? t.heroSub.zh : t.heroSub.en;
@@ -2586,7 +2341,7 @@ export default function LandingTemplate() {
     "@type": "Organization",
     "name": BRAND.name,
     "description": lang === 'zh' 
-      ? "祈孕顧問提供專業美國代孕服務，包含夫妻代孕、同志代孕等，擁有合法醫療聯盟與一對一專屬顧問服務。"
+      ? "祈孕顧問提供專業美國試管與代孕，包含夫妻代孕、同志代孕等，擁有合法醫療聯盟與一對一專屬顧問服務。"
       : "Qi Yun Consulting provides professional US surrogacy services, including couple and LGBTQ+ surrogacy, with legal medical alliance and one-on-one dedicated consulting services.",
     "url": typeof window !== 'undefined' ? window.location.origin : 'https://qiyun.com.tw',
     "logo": typeof window !== 'undefined' ? `${window.location.origin}/images/logos/logo.png` : 'https://qiyun.com.tw/images/logos/logo.png',
@@ -2620,8 +2375,8 @@ export default function LandingTemplate() {
     "name": BRAND.name,
     "url": typeof window !== 'undefined' ? window.location.origin : 'https://qiyun.com.tw',
     "description": lang === 'zh' 
-      ? "用專業與溫度，陪你迎接新生命。提供美國合法代孕、一對一專屬顧問、跨境醫療聯盟服務。"
-      : "With professionalism and warmth, we accompany you in welcoming new life. Providing legal US surrogacy, one-on-one dedicated consulting, and cross-border medical alliance services.",
+      ? "以專業與信賴，圓您擁有孩子的夢想。提供美國合法代孕、一對一專屬顧問服務。"
+      : "With professionalism and warmth, we accompany you in welcoming new life. Providing legal US surrogacy and one-on-one dedicated consulting services.",
     "inLanguage": ["zh-TW", "en-US"],
     "publisher": {
       "@type": "Organization",
@@ -2640,7 +2395,7 @@ export default function LandingTemplate() {
       lang === 'zh' ? "代孕諮詢" : "Surrogacy Consultation",
       lang === 'zh' ? "醫療聯盟" : "Medical Alliance", 
       lang === 'zh' ? "法律諮詢" : "Legal Consultation",
-      lang === 'zh' ? "跨境醫療" : "Cross-border Medical Services"
+      lang === 'zh' ? "專業醫療" : "Professional Medical Services"
     ],
     "areaServed": [
       {
@@ -3024,7 +2779,7 @@ export default function LandingTemplate() {
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-[1.7] px-4">
               {lang === "zh" 
-                ? "我們提供專業、可信賴的美國代孕服務，陪伴您完成家庭夢想的每一步旅程。"
+                ? "我們提供專業、可信賴的美國試管與代孕，陪伴您完成家庭夢想的每一步旅程。"
                 : "We provide professional, trusted US surrogacy services, accompanying you through every step of your family journey."}
             </p>
             
@@ -3097,6 +2852,7 @@ export default function LandingTemplate() {
                         if (index === 0) setShowCoupleDetail(true);
                         if (index === 1) setShowPartnerDetail(true);
                         if (index === 2) setShowSingleDetail(true);
+                        if (index === 3) setShowIvfDetail(true);
                       }}
                       className="inline-flex items-center gap-2 text-[var(--brand)] hover:text-[var(--brand-600)] font-semibold transition-colors duration-300 group/btn pt-1 sm:pt-2 text-sm sm:text-base"
                     >
@@ -3525,11 +3281,12 @@ export default function LandingTemplate() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
               {lang === "zh" ? "詳細代孕流程" : "Detailed Surrogacy Process"}
             </h2>
-            <p className="responsive-text-lg sm:responsive-text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="responsive-text-lg sm:responsive-text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-8">
               {lang === "zh" 
                 ? "透明完整的代孕流程說明，讓您清楚了解每個階段的重要步驟與時程安排。"
                 : "Transparent and comprehensive surrogacy process explanation, helping you understand key steps and timeline arrangements for each phase."}
             </p>
+
           </motion.div>
 
           <div className="space-y-16">
@@ -3589,218 +3346,11 @@ export default function LandingTemplate() {
         </div>
       </section>
 
-      {/* Legal Information Section */}
-      <section id="legal" className="section-shell">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-800)] mb-6">
-              {lang === "zh" ? "代孕法律資訊" : "Surrogacy Legal Information"}
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              {lang === "zh" 
-                ? "了解美國各州代孕法律差異，選擇最適合您的州別進行代孕程序。"
-                : "Understand surrogacy law differences across US states and choose the most suitable state for your surrogacy journey."}
-            </p>
-          </motion.div>
-        </div>
 
-        {/* State Legal Categories */}
-        <div className="max-w-2xl mx-auto mb-16">
-          {Object.entries(LEGAL_INFO).map(([key, info], idx) => (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              className="p-8 rounded-2xl border-2 bg-green-50 border-green-200"
-            >
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-green-500">
-                  <span className="text-white font-bold text-lg">✓</span>
-                </div>
-                <h3 className="text-xl font-bold text-slate-800">
-                  {lang === "zh" ? info.title : info.titleEn}
-                </h3>
-              </div>
 
-              <div className="mb-6">
-                <h4 className="font-semibold text-slate-700 mb-2">
-                  {lang === "zh" ? "主要州別：" : "Main States:"}
-                </h4>
-                <div className="flex flex-wrap gap-1">
-                  {(lang === "zh" ? info.states : info.statesEn).map((state, i) => (
-                    <span key={i} className="text-xs bg-white/70 px-2 py-1 rounded-full text-slate-700">
-                      {state}
-                    </span>
-                  ))}
-                </div>
-              </div>
 
-              <div>
-                <h4 className="font-semibold text-slate-700 mb-2">
-                  {lang === "zh" ? "特徵：" : "Characteristics:"}
-                </h4>
-                <ul className="space-y-1">
-                  {(lang === "zh" ? info.characteristics : info.characteristicsEn).map((char, i) => (
-                    <li key={i} className="text-sm text-slate-600 flex items-start">
-                      <span className="mr-2 mt-1">•</span>
-                      {char}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
-        {/* Legal Considerations */}
-        <div className="space-y-12">
-          {LEGAL_CONSIDERATIONS.map((category, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200"
-            >
-              <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
-                {lang === "zh" ? category.category : category.categoryEn}
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                {category.items.map((item, itemIdx) => (
-                  <div key={itemIdx} className="p-6 bg-gradient-to-br from-[var(--brand-50)] to-white rounded-xl border border-[var(--brand-200)]">
-                    <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3">
-                      {lang === "zh" ? item.title : item.titleEn}
-                    </h4>
-                    <p className="text-slate-700 leading-relaxed">
-                      {lang === "zh" ? item.description : item.descriptionEn}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
-      {/* California Legal Details Section */}
-      <section id="california-legal" className="section-shell bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-800)] mb-6">
-              {lang === "zh" ? CALIFORNIA_LEGAL_DETAILS.overview.title : CALIFORNIA_LEGAL_DETAILS.overview.titleEn}
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              {lang === "zh" ? CALIFORNIA_LEGAL_DETAILS.overview.description : CALIFORNIA_LEGAL_DETAILS.overview.descriptionEn}
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Key California Laws */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
-            {lang === "zh" ? "關鍵法律條文" : "Key Legal Statutes"}
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {CALIFORNIA_LEGAL_DETAILS.keyLaws.map((law, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-2xl shadow-lg border border-blue-200"
-              >
-                <div className="text-xs font-mono text-blue-600 mb-2">{law.law}</div>
-                <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3">
-                  {lang === "zh" ? law.title : law.titleEn}
-                </h4>
-                <p className="text-slate-600 leading-relaxed">
-                  {lang === "zh" ? law.description : law.descriptionEn}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* California Advantages */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
-            {lang === "zh" ? "加州代孕優勢" : "California Surrogacy Advantages"}
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {CALIFORNIA_LEGAL_DETAILS.advantages.map((advantage, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200"
-              >
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-white font-bold text-lg">✓</span>
-                </div>
-                <h4 className="text-lg font-bold text-green-800 mb-3">
-                  {lang === "zh" ? advantage.title : advantage.titleEn}
-                </h4>
-                <p className="text-green-700 text-sm leading-relaxed">
-                  {lang === "zh" ? advantage.description : advantage.descriptionEn}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Legal Procedures */}
-        <div>
-          <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
-            {lang === "zh" ? "加州代孕法律流程" : "California Surrogacy Legal Process"}
-          </h3>
-          <div className="space-y-8">
-            {CALIFORNIA_LEGAL_DETAILS.procedures.map((procedure, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-[var(--brand)] text-white rounded-full flex items-center justify-center font-bold mr-4">
-                    {idx + 1}
-                  </div>
-                  <h4 className="text-xl font-bold text-[var(--brand-800)]">
-                    {lang === "zh" ? procedure.step : procedure.stepEn}
-                  </h4>
-                </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {(lang === "zh" ? procedure.details : procedure.detailsEn).map((detail, detailIdx) => (
-                    <div key={detailIdx} className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-[var(--brand)] rounded-full mt-2 flex-shrink-0"></span>
-                      <span className="text-slate-700 text-sm">{detail}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Knowledge & Cases Section */}
       <section id="knowledge" className="section-shell bg-gradient-to-r from-[var(--brand-50)]/30 to-white">
@@ -3996,7 +3546,7 @@ export default function LandingTemplate() {
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               {lang === "zh" 
-                ? "專業的醫師團隊和顧問，為您提供全方位的美國代孕服務支援。"
+                ? "專業的醫師團隊和顧問，為您提供全方位的美國試管與代孕支援。"
                 : "Professional medical team and consultants providing comprehensive surrogacy service support."}
             </p>
           </motion.div>
@@ -4130,7 +3680,7 @@ export default function LandingTemplate() {
                 {lang === "zh" ? "年經驗" : "Years Experience"}
               </h4>
               <p className="text-sm text-slate-600">
-                {lang === "zh" ? "豐富的跨境美國代孕服務經驗" : "Rich cross-border US surrogacy experience"}
+                {lang === "zh" ? "豐富的跨境美國試管與代孕經驗" : "Rich cross-border US surrogacy experience"}
               </p>
             </div>
             
@@ -4576,102 +4126,56 @@ export default function LandingTemplate() {
                 </p>
               </div>
 
-              {/* 流程總覽 */}
-              <div className="mb-12">
-                <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-6 flex items-center gap-3">
-                  <div className="w-2 h-8 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></div>
-                  {lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.overview.title : COUPLE_SURROGACY_DETAIL.en.overview.title}
-                </h3>
-                <div className="space-y-6">
-                  {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.overview.phases : COUPLE_SURROGACY_DETAIL.en.overview.phases).map((phase, idx) => (
-                    <div key={idx} className="p-6 glass-effect rounded-2xl border-l-4 border-[var(--brand)]">
-                      <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4">{phase.phase}</h4>
-                      <ul className="space-y-2">
-                        {phase.items.map((item, itemIdx) => (
-                          <li key={itemIdx} className="flex items-start gap-3 text-slate-600">
-                            <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[var(--brand)] mt-2"></span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* Process Overview */}
+              {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh : COUPLE_SURROGACY_DETAIL.en).processOverview && (
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
+                    {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh : COUPLE_SURROGACY_DETAIL.en).processOverview.title}
+                  </h3>
+                  
+                  <div className="space-y-8">
+                    {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh : COUPLE_SURROGACY_DETAIL.en).processOverview.phases.map((phase, index) => (
+                      <div key={index} className="bg-gradient-to-r from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                        <h4 className="text-xl font-bold text-[var(--brand-700)] mb-4 flex items-center gap-3">
+                          <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                            {index + 1}
+                          </div>
+                          {phase.phase}
+                        </h4>
+                        <ul className="space-y-3">
+                          {phase.items.map((item, itemIndex) => (
+                            <li key={itemIndex} className="flex items-start gap-3 text-slate-700">
+                              <div className="w-2 h-2 bg-[var(--brand)] rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
 
-              {/* 三種方案 */}
-              <div className="mb-12">
-                <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-3 flex items-center gap-3">
-                  <div className="w-2 h-8 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></div>
-                  {lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.plans.title : COUPLE_SURROGACY_DETAIL.en.plans.title}
-                </h3>
-                <p className="text-[var(--brand)] font-semibold mb-6">
-                  {lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.plans.subtitle : COUPLE_SURROGACY_DETAIL.en.plans.subtitle}
-                </p>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.plans.options : COUPLE_SURROGACY_DETAIL.en.plans.options).map((plan, idx) => (
-                    <div key={idx} className="group p-6 glass-effect rounded-2xl hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-2 border-transparent hover:border-[var(--brand-50)]">
-                      <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3 group-hover:text-[var(--brand)] transition-colors duration-300">
-                        {plan.name}
+                  {/* Time Estimate */}
+                  {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh : COUPLE_SURROGACY_DETAIL.en).processOverview.timeEstimate && (
+                    <div className="mt-8 bg-gradient-to-br from-[var(--brand-50)] to-white rounded-2xl p-8 border border-[var(--brand-200)]">
+                      <h4 className="text-xl font-bold text-[var(--brand-800)] mb-6 text-center">
+                        {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh : COUPLE_SURROGACY_DETAIL.en).processOverview.timeEstimate.title}
                       </h4>
-                      <p className="text-sm text-slate-600 mb-4 leading-relaxed">{plan.description}</p>
-                      <div className="space-y-2">
-                        {plan.highlights.map((highlight, hIdx) => (
-                          <div key={hIdx} className="flex items-start gap-2 text-sm text-slate-700">
-                            <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--brand)] mt-1.5"></span>
-                            <span>{highlight}</span>
+                      <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh : COUPLE_SURROGACY_DETAIL.en).processOverview.timeEstimate.phases.map((phase, index) => (
+                          <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                            <div className="text-lg font-bold text-[var(--brand-700)] mb-2">
+                              {phase.phase}
+                            </div>
+                            <div className="text-2xl font-bold text-[var(--brand)]">
+                              {phase.duration}
+                            </div>
                           </div>
                         ))}
                       </div>
                     </div>
-                  ))}
+                  )}
                 </div>
-              </div>
-
-              {/* 三大保證 */}
-              <div className="mb-12">
-                <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-6 flex items-center gap-3">
-                  <div className="w-2 h-8 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></div>
-                  {lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.guarantees.title : COUPLE_SURROGACY_DETAIL.en.guarantees.title}
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.guarantees.items : COUPLE_SURROGACY_DETAIL.en.guarantees.items).map((guarantee, idx) => (
-                    <div key={idx} className="p-6 glass-effect rounded-2xl text-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold text-xl">
-                        {idx + 1}
-                      </div>
-                      <h4 className="text-lg font-bold text-[var(--brand-800)] mb-2">{guarantee.title}</h4>
-                      <p className="text-sm text-slate-600">{guarantee.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* 時間軸 */}
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-6 flex items-center gap-3">
-                  <div className="w-2 h-8 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></div>
-                  {lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.timeline.title : COUPLE_SURROGACY_DETAIL.en.timeline.title}
-                </h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {(lang === "zh" ? COUPLE_SURROGACY_DETAIL.zh.timeline.phases : COUPLE_SURROGACY_DETAIL.en.timeline.phases).map((phase, idx) => (
-                    <div key={idx} className="relative p-6 glass-effect rounded-2xl">
-                      <div className="absolute -top-3 left-6 px-3 py-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-600)] text-white text-sm font-bold rounded-full">
-                        {phase.duration}
-                      </div>
-                      <h4 className="text-lg font-bold text-[var(--brand-800)] mb-4 mt-2">{phase.title}</h4>
-                      <div className="space-y-2">
-                        {phase.items.map((item, itemIdx) => (
-                          <div key={itemIdx} className="flex items-center gap-2 text-sm text-slate-600">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand)]"></span>
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              )}
 
               {/* CTA */}
               <div className="text-center pt-8 border-t border-slate-200">
@@ -4721,7 +4225,9 @@ export default function LandingTemplate() {
                   <Users2 className="h-10 w-10 text-white" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-800)] mb-4">
-                  {lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.title : PARTNER_SURROGACY_DETAIL.en.title}
+                  {(lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.title : PARTNER_SURROGACY_DETAIL.en.title).split('\n').map((line, index) => (
+                    <div key={index}>{line}</div>
+                  ))}
                 </h2>
                 <p className="text-lg text-[var(--brand)] font-semibold">
                   {lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.subtitle : PARTNER_SURROGACY_DETAIL.en.subtitle}
@@ -4732,98 +4238,44 @@ export default function LandingTemplate() {
               <div className="mb-12">
                 <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-6 flex items-center gap-3">
                   <div className="w-2 h-8 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></div>
-                  {lang === "zh" ? "流程" : "Process"}
+                  {lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.overview.title : PARTNER_SURROGACY_DETAIL.en.overview.title}
                 </h3>
                 <div className="space-y-6">
-                  {(lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.process : PARTNER_SURROGACY_DETAIL.en.process).map((step, idx) => (
-                    <div key={idx} className="p-6 glass-effect rounded-2xl border-l-4 border-[var(--brand)] text-slate-700">
-                      {step}
+                  {(lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.overview.phases : PARTNER_SURROGACY_DETAIL.en.overview.phases).map((phase, idx) => (
+                    <div key={idx} className="p-6 glass-effect rounded-2xl border-l-4 border-[var(--brand)]">
+                      <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4">{phase.phase}</h4>
+                      <ul className="space-y-2">
+                        {phase.items.map((item, itemIdx) => (
+                          <li key={itemIdx} className="flex items-start gap-3 text-slate-600">
+                            <span className="flex-shrink-0 w-2 h-2 rounded-full bg-[var(--brand)] mt-2"></span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* 各方案詳情 */}
-              {(lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.plans : PARTNER_SURROGACY_DETAIL.en.plans).map((plan, planIdx) => (
-                <div key={planIdx} className="mb-12">
-                  {/* 方案標題 */}
-                  <div className="mb-8 p-6 bg-gradient-to-r from-[var(--brand-50)] to-white rounded-2xl border-l-4 border-[var(--brand)]">
-                    <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-3">{plan.category}</h3>
-                    <div className="space-y-2">
-                      <p className="text-slate-700 leading-relaxed">{plan.method}</p>
-                      {plan.options && (
-                        <ul className="list-disc ml-6 text-slate-600">
-                          {plan.options.map((opt, optIdx) => (
-                            <li key={optIdx}>{opt}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* 時程 */}
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4 flex items-center gap-2">
-                      <span className="w-2 h-6 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></span>
-                      {lang === "zh" ? "時程" : "Timeline"}
-                    </h4>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {plan.timeline.map((time, timeIdx) => (
-                        <div key={timeIdx} className="p-5 glass-effect rounded-xl border-l-4 border-[var(--brand-600)]">
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="px-3 py-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-600)] text-white text-xs font-bold rounded-full">
-                              {time.type}
-                            </div>
-                            <span className="text-[var(--brand)] font-bold">{time.duration}</span>
-                          </div>
-                          <p className="text-sm text-slate-600 leading-relaxed">{time.description}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* FAQ for plan */}
-                  {plan.faqs && plan.faqs.length > 0 && (
-                    <div className="mb-8">
-                      <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4 flex items-center gap-2">
-                        <span className="w-2 h-6 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></span>
-                        {lang === "zh" ? "常見問題" : "FAQs"}
-                      </h4>
-                      <div className="space-y-4">
-                        {plan.faqs.map((faq, faqIdx) => (
-                          <div key={faqIdx} className="p-4 glass-effect rounded-xl">
-                            <div className="font-bold text-[var(--brand-800)] mb-2">Q: {faq.q}</div>
-                            <div className="text-slate-600">A: {faq.a}</div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Divider between plans */}
-                  {planIdx < (lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.plans : PARTNER_SURROGACY_DETAIL.en.plans).length - 1 && (
-                    <div className="border-t-2 border-dashed border-slate-200 my-12"></div>
-                  )}
-                </div>
-              ))}
-
-              {/* FAQ Section */}
-              <div className="mb-8">
+              {/* 流程所需時間預估 */}
+              <div className="mb-12">
                 <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-6 flex items-center gap-3">
                   <div className="w-2 h-8 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></div>
-                  {lang === "zh" ? "常見問題" : "Frequently Asked Questions"}
+                  {lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.timeEstimate.title : PARTNER_SURROGACY_DETAIL.en.timeEstimate.title}
                 </h3>
-                <div className="space-y-6">
-                  {(lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.faqs : PARTNER_SURROGACY_DETAIL.en.faqs).map((faq, faqIdx) => (
-                    <div key={faqIdx} className="p-6 glass-effect rounded-2xl hover:shadow-lg transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3 flex items-start gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 bg-[var(--brand)] text-white rounded-full flex items-center justify-center text-sm font-bold">
-                          Q
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {(lang === "zh" ? PARTNER_SURROGACY_DETAIL.zh.timeEstimate.phases : PARTNER_SURROGACY_DETAIL.en.timeEstimate.phases).map((timePhase, idx) => (
+                    <div key={idx} className="p-6 glass-effect rounded-2xl border-l-4 border-[var(--brand)]">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-xl flex items-center justify-center text-white font-bold">
+                          {idx + 1}
+                        </div>
+                        <h4 className="text-lg font-bold text-[var(--brand-800)]">{timePhase.phase}</h4>
+                      </div>
+                      <div className="ml-14">
+                        <span className="inline-block text-lg text-[var(--brand)] bg-[var(--brand-50)] px-4 py-2 rounded-xl font-semibold">
+                          {timePhase.duration}
                         </span>
-                        <span className="flex-1">{faq.q}</span>
-                      </h4>
-                      <div className="ml-8 space-y-2">
-                        <p className="text-slate-600 leading-relaxed">{faq.a}</p>
                       </div>
                     </div>
                   ))}
@@ -4883,97 +4335,187 @@ export default function LandingTemplate() {
                 </p>
               </div>
 
-              {/* 各方案詳情 */}
-              {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh.plans : SINGLE_SURROGACY_DETAIL.en.plans).map((plan, planIdx) => (
-                <div key={planIdx} className="mb-12">
-                  {/* 方案標題 */}
-                  <div className="mb-8 p-6 bg-gradient-to-r from-[var(--brand-50)] to-white rounded-2xl border-l-4 border-[var(--brand)]">
-                    <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-3">{plan.category}</h3>
-                    <div className="space-y-2">
-                      <h4 className="text-lg font-semibold text-[var(--brand)]">{plan.method.title}</h4>
-                      <p className="text-slate-700 leading-relaxed">{plan.method.description}</p>
-                    </div>
-                  </div>
-
-                  {/* 流程階段 */}
-                  <div className="mb-8">
-                    <div className="grid md:grid-cols-3 gap-6">
-                      {plan.phases.map((phase, phaseIdx) => (
-                        <div key={phaseIdx} className="p-6 glass-effect rounded-2xl border-t-4 border-[var(--brand)]">
-                          <h4 className="text-lg font-bold text-[var(--brand-800)] mb-4">{phase.phase}</h4>
-                          <ul className="space-y-3">
-                            {phase.items.map((item, itemIdx) => (
-                              <li key={itemIdx} className="flex items-start gap-2 text-sm text-slate-600">
-                                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--brand)] mt-2"></span>
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* 時程 */}
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4 flex items-center gap-2">
-                      <span className="w-2 h-6 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></span>
-                      {lang === "zh" ? "時程" : "Timeline"}
-                    </h4>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {plan.timeline.map((time, timeIdx) => (
-                        <div key={timeIdx} className="p-5 glass-effect rounded-xl border-l-4 border-[var(--brand-600)]">
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="px-3 py-1 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-600)] text-white text-xs font-bold rounded-full">
-                              {time.type}
-                            </div>
-                            <span className="text-[var(--brand)] font-bold">{time.duration}</span>
-                          </div>
-                          <p className="text-sm text-slate-600 leading-relaxed">{time.description}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Divider between plans */}
-                  {planIdx < (lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh.plans : SINGLE_SURROGACY_DETAIL.en.plans).length - 1 && (
-                    <div className="border-t-2 border-dashed border-slate-200 my-12"></div>
-                  )}
-                </div>
-              ))}
-
-              {/* FAQ Section */}
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-6 flex items-center gap-3">
-                  <div className="w-2 h-8 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-600)] rounded-full"></div>
-                  {lang === "zh" ? "常見問題" : "Frequently Asked Questions"}
-                </h3>
-                <div className="space-y-6">
-                  {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh.faqs : SINGLE_SURROGACY_DETAIL.en.faqs).map((faq, faqIdx) => (
-                    <div key={faqIdx} className="p-6 glass-effect rounded-2xl hover:shadow-lg transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3 flex items-start gap-2">
-                        <span className="flex-shrink-0 w-6 h-6 bg-[var(--brand)] text-white rounded-full flex items-center justify-center text-sm font-bold">
-                          Q
-                        </span>
-                        <span className="flex-1">{faq.question}</span>
-                      </h4>
-                      <div className="ml-8 space-y-2">
-                        {faq.answer.map((ans, ansIdx) => (
-                          <p key={ansIdx} className="text-slate-600 leading-relaxed">
-                            {ans}
-                          </p>
-                        ))}
-                      </div>
+              {/* 服務方案 */}
+              <div className="mb-12">
+                <div className="grid md:grid-cols-2 gap-6">
+                  {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh.plans : SINGLE_SURROGACY_DETAIL.en.plans).map((plan, planIdx) => (
+                    <div key={planIdx} className="p-6 bg-gradient-to-r from-[var(--brand-50)] to-white rounded-2xl border border-[var(--brand-200)]">
+                      <h3 className="text-xl font-bold text-[var(--brand-800)] mb-3">{plan.category}</h3>
+                      <p className="text-slate-700">{plan.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
+
+              {/* Process Overview */}
+              {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh : SINGLE_SURROGACY_DETAIL.en).processOverview && (
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
+                    {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh : SINGLE_SURROGACY_DETAIL.en).processOverview.title}
+                  </h3>
+                  
+                  <div className="space-y-8">
+                    {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh : SINGLE_SURROGACY_DETAIL.en).processOverview.phases.map((phase, index) => (
+                      <div key={index} className="bg-gradient-to-r from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                        <h4 className="text-xl font-bold text-[var(--brand-700)] mb-4 flex items-center gap-3">
+                          <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                            {index + 1}
+                          </div>
+                          {phase.phase}
+                        </h4>
+                        <ul className="space-y-3">
+                          {phase.items.map((item, itemIndex) => (
+                            <li key={itemIndex} className="flex items-start gap-3 text-slate-700">
+                              <div className="w-2 h-2 bg-[var(--brand)] rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Time Estimate */}
+                  {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh : SINGLE_SURROGACY_DETAIL.en).processOverview.timeEstimate && (
+                    <div className="mt-8 bg-gradient-to-br from-[var(--brand-50)] to-white rounded-2xl p-8 border border-[var(--brand-200)]">
+                      <h4 className="text-xl font-bold text-[var(--brand-800)] mb-6 text-center">
+                        {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh : SINGLE_SURROGACY_DETAIL.en).processOverview.timeEstimate.title}
+                      </h4>
+                      <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        {(lang === "zh" ? SINGLE_SURROGACY_DETAIL.zh : SINGLE_SURROGACY_DETAIL.en).processOverview.timeEstimate.phases.map((phase, index) => (
+                          <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                            <div className="text-lg font-bold text-[var(--brand-700)] mb-2">
+                              {phase.phase}
+                            </div>
+                            <div className="text-2xl font-bold text-[var(--brand)]">
+                              {phase.duration}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+
 
               {/* CTA */}
               <div className="text-center pt-8 border-t border-slate-200">
                 <a
                   href="#contact"
                   onClick={() => setShowSingleDetail(false)}
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-600)] text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                >
+                  <span>{lang === "zh" ? "立即諮詢" : "Contact Us Now"}</span>
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* IVF服務詳細頁面 */}
+      {showIvfDetail && (
+        <div 
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setShowIvfDetail(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            transition={{ duration: 0.3 }}
+            className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setShowIvfDetail(false)}
+              className="sticky top-4 right-4 float-right z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-slate-200 text-slate-600 hover:text-[var(--brand)] hover:bg-[var(--brand-50)] transition-all duration-300"
+              aria-label="Close"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="p-8 md:p-12">
+              {/* Header */}
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-3xl mb-6 shadow-lg">
+                  <ShieldCheck className="h-10 w-10 text-white" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-800)] mb-4">
+                  {lang === "zh" ? IVF_SERVICES_DETAIL.zh.title : IVF_SERVICES_DETAIL.en.title}
+                </h2>
+                <p className="text-3xl md:text-4xl font-bold text-[var(--brand)] mb-2">
+                  {lang === "zh" ? IVF_SERVICES_DETAIL.zh.subtitle : IVF_SERVICES_DETAIL.en.subtitle}
+                </p>
+              </div>
+
+              {/* Process Overview */}
+              {(lang === "zh" ? IVF_SERVICES_DETAIL.zh : IVF_SERVICES_DETAIL.en).processOverview && (
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
+                    {(lang === "zh" ? IVF_SERVICES_DETAIL.zh : IVF_SERVICES_DETAIL.en).processOverview.title}
+                  </h3>
+                  
+                  <div className="space-y-8">
+                    {(lang === "zh" ? IVF_SERVICES_DETAIL.zh : IVF_SERVICES_DETAIL.en).processOverview.phases.map((phase, index) => (
+                      <div key={index} className="bg-gradient-to-r from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                        <h4 className="text-xl font-bold text-[var(--brand-700)] mb-4 flex items-center gap-3">
+                          <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                            {index + 1}
+                          </div>
+                          {phase.phase}
+                        </h4>
+                        <ul className="space-y-3">
+                          {phase.items.map((item, itemIndex) => (
+                            <li key={itemIndex} className="flex items-start gap-3 text-slate-700">
+                              <div className="w-2 h-2 bg-[var(--brand)] rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Time Estimate */}
+                  {(lang === "zh" ? IVF_SERVICES_DETAIL.zh : IVF_SERVICES_DETAIL.en).processOverview.timeEstimate && (
+                    <div className="mt-8 bg-gradient-to-br from-[var(--brand-50)] to-white rounded-2xl p-8 border border-[var(--brand-200)]">
+                      <h4 className="text-xl font-bold text-[var(--brand-800)] mb-6 text-center">
+                        {(lang === "zh" ? IVF_SERVICES_DETAIL.zh : IVF_SERVICES_DETAIL.en).processOverview.timeEstimate.title}
+                      </h4>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {(lang === "zh" ? IVF_SERVICES_DETAIL.zh : IVF_SERVICES_DETAIL.en).processOverview.timeEstimate.phases.map((phase, index) => (
+                          <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                            <div className="text-lg font-bold text-[var(--brand-700)] mb-2">
+                              {phase.phase}
+                            </div>
+                            <div className="text-2xl font-bold text-[var(--brand)] mb-1">
+                              {phase.duration}
+                            </div>
+                            {phase.note && (
+                              <div className="text-sm text-slate-600">
+                                {phase.note}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* CTA */}
+              <div className="text-center pt-8 border-t border-slate-200">
+                <a
+                  href="#contact"
+                  onClick={() => setShowIvfDetail(false)}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-600)] text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                 >
                   <span>{lang === "zh" ? "立即諮詢" : "Contact Us Now"}</span>
