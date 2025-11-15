@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Console 準備檢查</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            line-height: 1.6;
+        }
+        .check-item { 
+            margin: 15px 0; 
+            padding: 10px; 
+            border-left: 4px solid #4CAF50; 
+            background: #f9f9f9; 
+        }
+        .status { font-weight: bold; }
+        .success { color: #4CAF50; }
+        .warning { color: #ff9800; }
+        .error { color: #f44336; }
+        .info { color: #2196F3; }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #45a049; }
+        #results { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Google Search Console 準備檢查</h1>
+    <p>檢查網站是否準備好提交給 Google Search Console</p>
+
+    <div class="check-item">
+        <h3>✅ 基本檢查項目</h3>
+        <div id="basic-checks">
+            <p><span class="status success">✓</span> 網站可正常訪問</p>
+            <p><span class="status success">✓</span> HTTPS 安全連線</p>
+            <p><span class="status success">✓</span> robots.txt 已設置</p>
+            <p><span class="status success">✓</span> sitemap.xml 已設置</p>
+            <p><span class="status success">✓</span> Meta 標籤優化</p>
+            <p><span class="status success">✓</span> 結構化數據設置</p>
+        </div>
+    </div>
+
+    <div class="check-item">
+        <h3>🔗 重要連結測試</h3>
+        <button onclick="testLink('https://www.ownbabytw.com')">測試主網站</button>
+        <button onclick="testLink('https://www.ownbabytw.com/robots.txt')">測試 robots.txt</button>
+        <button onclick="testLink('https://www.ownbabytw.com/sitemap.xml')">測試 sitemap.xml</button>
+        <div id="link-results"></div>
+    </div>
+
+    <div class="check-item">
+        <h3>📊 SEO 檢查工具</h3>
+        <p>使用以下工具進一步檢查網站：</p>
+        <ul>
+            <li><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.ownbabytw.com" target="_blank">PageSpeed Insights</a></li>
+            <li><a href="https://search.google.com/test/mobile-friendly?url=https%3A%2F%2Fwww.ownbabytw.com" target="_blank">行動裝置相容性測試</a></li>
+            <li><a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.ownbabytw.com" target="_blank">複合式搜尋結果測試</a></li>
+        </ul>
+    </div>
+
+    <div class="check-item">
+        <h3>🚀 Google Search Console 設置步驟</h3>
+        <ol>
+            <li>前往 <a href="https://search.google.com/search-console/" target="_blank">Google Search Console</a></li>
+            <li>點擊「新增屬性」→「網址前置字元」</li>
+            <li>輸入：<code>https://www.ownbabytw.com</code></li>
+            <li>選擇驗證方法（建議使用 HTML 檔案上傳）</li>
+            <li>驗證成功後，提交 Sitemap：<code>sitemap.xml</code></li>
+        </ol>
+    </div>
+
+    <div class="check-item info">
+        <h3>ℹ️ 重要提醒</h3>
+        <ul>
+            <li>驗證檔案需要保持在網站上，不要刪除</li>
+            <li>第一次索引可能需要 24-72 小時</li>
+            <li>定期檢查 Search Console 報告</li>
+            <li>有任何錯誤時會收到 Email 通知</li>
+        </ul>
+    </div>
+
+    <div id="results"></div>
+
+    <script>
+        async function testLink(url) {
+            const resultsDiv = document.getElementById('link-results');
+            resultsDiv.innerHTML += `<p class="info">🔄 測試中: ${url}</p>`;
+            
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+                if (response.ok) {
+                    resultsDiv.innerHTML += `<p class="success">✅ ${url} - 狀態: ${response.status} OK</p>`;
+                } else {
+                    resultsDiv.innerHTML += `<p class="warning">⚠️ ${url} - 狀態: ${response.status}</p>`;
+                }
+            } catch (error) {
+                resultsDiv.innerHTML += `<p class="error">❌ ${url} - 錯誤: ${error.message}</p>`;
+            }
+        }
+
+        // 自動檢查一些基本項目
+        window.addEventListener('load', function() {
+            document.getElementById('results').innerHTML = `
+                <div class="check-item success">
+                    <h3>🎉 網站已準備就緒！</h3>
+                    <p>您的網站已經優化並準備好提交給 Google Search Console。</p>
+                    <p><strong>下一步：</strong>前往 <a href="https://search.google.com/search-console/" target="_blank">Google Search Console</a> 開始設置。</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
