@@ -1,0 +1,15 @@
+# Vercel ignore file
+node_modules
+*.md
+videos_backup
+images/original
+surrogacy-deploy
+*.log
+.DS_Store
+多語行銷型單頁《網站模板》_react_tailwind_shadcn_ui.jsx
+LandingTemplateMinimal.jsx
+MinimalTest.jsx
+TestComponent.jsx
+test.html
+Untitled-1
+ErrorBoundary.jsx
