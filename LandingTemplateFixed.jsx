@@ -2552,26 +2552,28 @@ export default function LandingTemplate() {
             {/* 佔位空間 */}
             <div className="w-20"></div>
             
-            {/* 中央 Logo */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center gap-3 rounded-3xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-3 shadow-xl border-2 border-white/30 hover:shadow-2xl transition-all duration-300">
-                {/* 美化的圖標容器 */}
-                <div className="relative">
-                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
-                    <Baby className="h-6 w-6 text-white drop-shadow-sm" />
-                  </div>
-                  {/* 裝飾性光暈 */}
-                  <div className="absolute inset-0 w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-125"></div>
+            {/* 中央 Logo - 單排橫向設計 */}
+            <div className="flex items-center gap-4 rounded-3xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-5 py-3 shadow-xl border-2 border-white/30 hover:shadow-2xl transition-all duration-300">
+              {/* 美化的圖標容器 */}
+              <div className="relative">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
+                  <Baby className="h-6 w-6 text-white drop-shadow-sm" />
                 </div>
-                <span className="font-black tracking-tight text-xl sm:text-2xl bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent drop-shadow-sm">{BRAND.name}</span>
+                {/* 裝飾性光暈 */}
+                <div className="absolute inset-0 w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-125"></div>
               </div>
-              <div className="text-xs text-slate-600 font-semibold px-3 py-1.5 bg-gradient-to-r from-[var(--brand-50)] to-white/80 rounded-xl border border-[var(--brand-100)] shadow-sm">
-                <span className="flex items-center gap-1">
-                  <svg className="w-3 h-3 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  {lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}
-                </span>
+              
+              <span className="font-black tracking-tight text-xl bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent drop-shadow-sm">{BRAND.name}</span>
+              
+              {/* 分隔線 */}
+              <div className="w-px h-6 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
+              
+              {/* HRC 合作標示 */}
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-[var(--brand-50)] to-white/80 rounded-xl border border-[var(--brand-100)] shadow-sm">
+                <svg className="w-4 h-4 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm text-slate-700 font-semibold">{lang === "zh" ? "HRC Fertility 合作" : "HRC Fertility Partner"}</span>
               </div>
             </div>
             
