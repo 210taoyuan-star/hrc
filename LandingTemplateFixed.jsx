@@ -2515,17 +2515,15 @@ export default function LandingTemplate() {
         <div className={cx("mx-auto max-w-7xl px-3 sm:px-6 flex items-center", scrolled ? "h-16 sm:h-18" : "h-18 sm:h-20")}>
           {/* Mobile 版佈局：Logo 居左，Menu 按鈕居右 */}
           <div className="lg:hidden flex items-center justify-between w-full">
-            {/* Logo - 左側，小尺寸單排設計 */}
-            <div className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-white/90 to-white/80 backdrop-blur-lg px-2.5 py-1.5 shadow-md border border-white/20">
+            {/* Logo - 左側，超小尺寸橫向一行 */}
+            <div className="flex items-center gap-1.5 rounded-lg bg-gradient-to-r from-white/85 to-white/75 backdrop-blur-md px-2 py-1 shadow-sm border border-white/30">
               <div className="relative">
-                <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-sm">
-                  <Baby className="h-3.5 w-3.5 text-white drop-shadow-sm" />
+                <div className="w-4 h-4 rounded-md bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-sm">
+                  <Baby className="h-2.5 w-2.5 text-white drop-shadow-sm" />
                 </div>
-                <div className="absolute inset-0 w-6 h-6 rounded-lg bg-gradient-to-br from-[var(--brand)]/15 to-transparent blur-sm scale-105"></div>
+                <div className="absolute inset-0 w-4 h-4 rounded-md bg-gradient-to-br from-[var(--brand)]/10 to-transparent blur-sm"></div>
               </div>
-              <span className="font-semibold tracking-tight text-xs bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
-              <div className="w-px h-3 bg-slate-200"></div>
-              <span className="text-xs text-slate-400 font-medium">{lang === "zh" ? "HRC" : "HRC"}</span>
+              <span className="font-medium tracking-tight text-xs bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent leading-none">{BRAND.name}</span>
             </div>
             
             {/* Menu Button - 右側，加上文字 */}
@@ -2552,29 +2550,21 @@ export default function LandingTemplate() {
             {/* 佔位空間 */}
             <div className="w-20"></div>
             
-            {/* 中央 Logo - 小尺寸單行設計 */}
-            <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-2.5 shadow-lg border border-white/30 hover:shadow-xl transition-all duration-300">
-              {/* 小尺寸圖標容器 */}
-              <div className="relative">
-                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-md transform hover:scale-105 transition-all duration-300">
-                  <Baby className="h-4.5 w-4.5 text-white drop-shadow-sm" />
-                </div>
-                {/* 裝飾性光暈 */}
-                <div className="absolute inset-0 w-8 h-8 rounded-xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-110"></div>
+            {/* 中央 Logo - 完全橫向單行設計 */}
+            <div className="flex flex-row items-center gap-2.5 rounded-2xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-2.5 shadow-lg border border-white/30 hover:shadow-xl transition-all duration-300 whitespace-nowrap">
+              {/* 圖標 */}
+              <div className="flex-shrink-0 w-7 h-7 rounded-xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-md transform hover:scale-105 transition-all duration-300">
+                <Baby className="h-4 w-4 text-white drop-shadow-sm" />
               </div>
               
-              <span className="font-bold tracking-tight text-base bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent drop-shadow-sm">{BRAND.name}</span>
+              {/* 品牌名稱 */}
+              <span className="flex-shrink-0 font-bold text-sm bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
               
               {/* 分隔線 */}
-              <div className="w-px h-4 bg-gradient-to-b from-transparent via-slate-300 to-transparent"></div>
+              <div className="flex-shrink-0 w-px h-3 bg-slate-300"></div>
               
-              {/* HRC 合作標示 */}
-              <div className="flex items-center gap-1.5 px-2.5 py-1 bg-gradient-to-r from-[var(--brand-50)] to-white/80 rounded-lg border border-[var(--brand-100)] shadow-sm">
-                <svg className="w-3 h-3 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-xs text-slate-600 font-medium">{lang === "zh" ? "HRC 合作" : "HRC Partner"}</span>
-              </div>
+              {/* HRC 合作 */}
+              <span className="flex-shrink-0 text-xs text-slate-600 font-medium">{lang === "zh" ? "HRC合作" : "HRC"}</span>
             </div>
             
             {/* 語言切換按鈕 - 桌面版保留 */}
