@@ -2679,84 +2679,58 @@ export default function LandingTemplate() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-50)] via-white to-[var(--brand-50)]">
-          <img src={HERO_IMAGES[heroIndex]} alt="背景圖" className="h-full w-full object-cover opacity-80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/70 to-white/85"></div>
-          {/* 動態圓圈裝飾 */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-[var(--brand-50)] rounded-full opacity-30 animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 bg-[var(--brand-100)] rounded-full opacity-40 animate-bounce"></div>
-          <div className="absolute top-1/2 left-20 w-16 h-16 bg-[var(--brand)] rounded-full opacity-20 animate-ping"></div>
-        </div>
-        
-        <div className="relative section-shell text-center z-10 px-4">
+      {/* Hero Section - 極簡專業風格 */}
+      <section id="hero" className="relative py-20 bg-white text-center">
+        <div className="max-w-5xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-5xl mx-auto space-y-6 sm:space-y-8"
+            transition={{ duration: 0.6 }}
           >
-            <div className="flex justify-center">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-                className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl glass-effect shadow-lg responsive-text-sm font-semibold text-[var(--brand-800)]"
-              >
-                <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-[var(--brand)]" />
-                <span className="whitespace-nowrap">{lang === "zh" ? "專業．可信賴．有溫度" : "Professional · Trusted · Compassionate"}</span>
-              </motion.div>
+            <div className="mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--brand-50)] text-[var(--brand-800)] rounded-full text-sm font-medium">
+                <Sparkles className="h-4 w-4" />
+                {lang === "zh" ? "專業可信賴" : "Professional & Trusted"}
+              </span>
             </div>
             
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent leading-[1.25] px-2"
-            >
-              {t.heroTitle[lang]}
-            </motion.h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6">
+              <span className="text-[var(--brand)]">{lang === "zh" ? "祈孕" : "Fertility"}</span>
+              <span className="text-[var(--text-primary)]">{lang === "zh" ? "顧問" : " Guidance"}</span>
+            </h1>
             
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-[1.75] px-4"
-            >
-              {t.heroSub[lang]}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-stretch sm:items-center pt-2 sm:pt-4 px-4 sm:px-0"
-            >
+            <p className="text-xl md:text-2xl text-[var(--text-secondary)] max-w-3xl mx-auto mb-10 leading-relaxed">
+              {lang === "zh" 
+                ? "以專業與信賴，圓您擁有孩子的夢想" 
+                : "Professional, compassionate support for your family journey"
+              }
+            </p>
+            
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
               <a
-                href="#contact"
-                className="inline-flex items-center gap-2 sm:gap-3 btn-gradient hover-lift px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl text-white font-semibold text-base shadow-lg min-w-[160px] sm:min-w-[200px] justify-center"
+                href="https://page.line.me/293mminh"
+                className="group px-10 py-5 bg-[var(--brand)] text-white rounded-2xl font-bold shadow-lg hover:bg-[var(--brand-800)] transition-all duration-300 hover:shadow-xl"
               >
-                <Baby className="h-5 w-5" />
-                <span>{t.heroCTA[lang]}</span>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                    <ArrowRight className="h-4 w-4" />
+                  </div>
+                  {lang === "zh" ? "開始諮詢" : "Start Consultation"}
+                </div>
               </a>
-              <a
-                href="#services"
-                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl border-2 border-[var(--brand)] text-[var(--brand-800)] font-semibold text-base hover:bg-[var(--brand-50)] transition-all duration-300 min-w-[160px] sm:min-w-[200px] justify-center"
-              >
-                {lang === "zh" ? "了解服務" : "Learn More"}
-              </a>
-            </motion.div>
-          </motion.div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-[var(--brand)] rounded-full flex justify-center"
-          >
-            <div className="w-1 h-3 bg-[var(--brand)] rounded-full mt-2"></div>
+              
+              <div className="flex items-center gap-4 text-[var(--text-muted)]">
+                <div className="flex items-center gap-2">
+                  <Phone className="h-5 w-5 text-[var(--brand)]" />
+                  <span className="font-medium">+886-2-1234-8888</span>
+                </div>
+                <div className="w-1 h-1 bg-[var(--text-muted)] rounded-full"></div>
+                <div className="flex items-center gap-2">
+                  <Mail className="h-5 w-5 text-[var(--brand)]" />
+                  <span className="font-medium">qiyunsolution@gmail.com</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -4526,6 +4500,30 @@ export default function LandingTemplate() {
           </motion.div>
         </div>
       )}
+
+      {/* 浮動 LINE 按鈕 */}
+      <a
+        href="https://page.line.me/293mminh"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl group"
+        aria-label="LINE 諮詢"
+      >
+        {/* LINE 圖標 SVG */}
+        <svg 
+          className="w-9 h-9 group-hover:scale-110 transition-transform duration-300" 
+          viewBox="0 0 512 512" 
+          fill="currentColor"
+        >
+          <path d="M443 233.8c0-84.6-84.6-153.3-188.6-153.3S65.8 149.2 65.8 233.8c0 75.9 67.2 139.4 158.1 151.4 6.2 1.3 14.6 4.1 16.7 9.4 1.9 4.7 1.2 12.1 0.6 16.9 0 0-2.2 13.4-2.7 16.2-0.8 4.9-3.8 19.3 16.9 10.5s112.3-66 153.3-113C424.5 306.6 443 272.1 443 233.8zM203.6 281.1h-49.4c-5.4 0-9.8-4.4-9.8-9.8V190.7c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8v70.8h39.6c5.4 0 9.8 4.4 9.8 9.8S209 281.1 203.6 281.1zM254.3 271.3c0 5.4-4.4 9.8-9.8 9.8s-9.8-4.4-9.8-9.8V190.7c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8V271.3zM327.7 271.3c0 4.6-3.2 8.5-7.5 9.5-1 0.2-2 0.3-3 0.3-3.6 0-6.9-2-8.5-5.2l-27.4-54.1v49.5c0 5.4-4.4 9.8-9.8 9.8s-9.8-4.4-9.8-9.8V190.7c0-4.6 3.2-8.5 7.5-9.5 1-0.2 2-0.3 3-0.3 3.6 0 6.9 2 8.5 5.2l27.4 54.1v-49.5c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8V271.3zM408.9 220.3c5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8h-29.8v21.6h29.8c5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8h-39.6c-5.4 0-9.8-4.4-9.8-9.8V190.7c0-5.4 4.4-9.8 9.8-9.8h39.6c5.4 0 9.8 4.4 9.8 9.8s-4.4 9.8-9.8 9.8h-29.8v19.8H408.9z"/>
+        </svg>
+        
+        {/* 小提示氣泡 */}
+        <div className="absolute right-full mr-3 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+          {lang === "zh" ? "LINE 諮詢" : "LINE Consultation"}
+          <div className="absolute left-full top-1/2 transform -translate-y-1/2 border-4 border-transparent border-l-gray-800"></div>
+        </div>
+      </a>
     </div>
   );
 }
