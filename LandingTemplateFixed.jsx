@@ -2312,13 +2312,10 @@ export default function LandingTemplate() {
   // Mobile menu state
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Contact form - WordPress integration
+  // Contact form - Dual system: Formspree + WordPress integration
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const formRef = React.useRef(null);
-
-  // WordPress form endpoint - 請替換為您的 WordPress 網站 URL
-  const WORDPRESS_FORM_ENDPOINT = "https://your-wordpress-site.com/wp-json/contact/v1/submit";
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -2333,36 +2330,41 @@ export default function LandingTemplate() {
         return;
       }
 
-      // 準備發送到 WordPress 的資料
-      const formData = {
-        name: fd.get("name"),
-        email: fd.get("email"),
-        phone: fd.get("phone"),
-        lineId: fd.get("lineId"),
-        message: fd.get("message"),
-        hp: hp // honeypot 欄位
-      };
-
-      const res = await fetch(WORDPRESS_FORM_ENDPOINT, { 
+      // 主要使用 Formspree（可靠且已設定）
+      const res = await fetch("https://formspree.io/f/mjkvgqyb", { 
         method: "POST", 
-        headers: { 
-          "Content-Type": "application/json",
-          "Accept": "application/json" 
-        }, 
-        body: JSON.stringify(formData)
+        headers: { "Accept": "application/json" }, 
+        body: fd 
       });
 
       if (res.ok) { 
         setSent(true); 
         formRef.current?.reset(); 
-      } else {
-        // 如果 WordPress 端點失效，回退到 Formspree
-        const fallbackRes = await fetch("https://formspree.io/f/mjkvgqyb", { 
-          method: "POST", 
-          headers: { "Accept": "application/json" }, 
-          body: fd 
-        });
-        if (fallbackRes.ok) { setSent(true); formRef.current?.reset(); }
+
+        // 同時嘗試發送到 WordPress（如果已設定）
+        // 這不會影響主要表單功能，只是備份資料到 WordPress
+        try {
+          const formData = {
+            name: fd.get("name"),
+            email: fd.get("email"),
+            phone: fd.get("phone"),
+            lineId: fd.get("lineId"),
+            message: fd.get("message")
+          };
+
+          // TODO: 當您設定好 WordPress 端點時，取消註解下面的代碼
+          // await fetch("https://your-wordpress-site.com/wp-json/contact/v1/submit", {
+          //   method: "POST",
+          //   headers: { 
+          //     "Content-Type": "application/json",
+          //     "Accept": "application/json" 
+          //   },
+          //   body: JSON.stringify(formData)
+          // });
+        } catch (wpError) {
+          // WordPress 端點錯誤不影響主要表單功能
+          console.log("WordPress backup failed:", wpError);
+        }
       }
     } finally {
       setLoading(false);
