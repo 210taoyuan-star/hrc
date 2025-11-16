@@ -1,0 +1,58 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "祈孕顧問",
+  "alternateName": "Own Baby Taiwan",
+  "description": "專業代理孕母服務，提供美國合法代孕、一對一專屬顧問、跨境醫療聯盟服務",
+  "url": "https://ownbabytw.com",
+  "telephone": "+886-2-XXXX-XXXX",
+  "email": "info@ownbabytw.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "TW",
+    "addressLocality": "台北市"
+  },
+  "serviceArea": {
+    "@type": "Place",
+    "name": "台灣、美國"
+  },
+  "medicalSpecialty": [
+    "生殖醫學",
+    "代理孕母服務",
+    "試管嬰兒",
+    "生殖內分泌"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "代孕服務",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "美國代孕服務",
+          "description": "提供美國合法代孕服務，包含醫療、法律、專案管理全方位支援"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "一對一專屬顧問",
+          "description": "專業顧問團隊提供個人化服務與全程陪伴"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "跨境醫療聯盟",
+          "description": "與美國頂尖醫療機構合作，提供世界級醫療服務"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://ownbabytw.com"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "hero-1": {
+      "480": "/images/hero/hero-1-480.webp",
+      "960": "/images/hero/hero-1-960.webp",
+      "1600": "/images/hero/hero-1-1600.webp"
+    },
+    "hero": {
+      "1": "/images/hero/hero-1.webp",
+      "2": "/images/hero/hero-2.webp",
+      "3": "/images/hero/hero-3.webp"
+    },
+    "hero-2": {
+      "480": "/images/hero/hero-2-480.webp",
+      "960": "/images/hero/hero-2-960.webp",
+      "1600": "/images/hero/hero-2-1600.webp"
+    },
+    "hero-3": {
+      "480": "/images/hero/hero-3-480.webp",
+      "960": "/images/hero/hero-3-960.webp",
+      "1600": "/images/hero/hero-3-1600.webp"
+    }
+  },
+  "gallery": {
+    "gallery-1": {
+      "480": "/images/gallery/gallery-1-480.webp",
+      "960": "/images/gallery/gallery-1-960.webp",
+      "1600": "/images/gallery/gallery-1-1600.webp"
+    },
+    "gallery": {
+      "1": "/images/gallery/gallery-1.webp",
+      "2": "/images/gallery/gallery-2.webp",
+      "3": "/images/gallery/gallery-3.webp"
+    },
+    "gallery-2": {
+      "480": "/images/gallery/gallery-2-480.webp",
+      "960": "/images/gallery/gallery-2-960.webp",
+      "1600": "/images/gallery/gallery-2-1600.webp"
+    },
+    "gallery-3": {
+      "480": "/images/gallery/gallery-3-480.webp",
+      "960": "/images/gallery/gallery-3-960.webp",
+      "1600": "/images/gallery/gallery-3-1600.webp"
+    }
+  },
+  "logos": {},
+  "icons": {}
+}
