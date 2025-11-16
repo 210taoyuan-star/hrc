@@ -2312,7 +2312,7 @@ export default function LandingTemplate() {
   // Mobile menu state
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Contact form - Dual system: Formspree + WordPress integration
+  // Contact form - Using Formspree for reliable email delivery
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const formRef = React.useRef(null);
@@ -2323,49 +2323,58 @@ export default function LandingTemplate() {
     try {
       setLoading(true);
       const fd = new FormData(formRef.current);
+      
+      // 調試：輸出所有表單數據
+      console.log("Form data keys:", Array.from(fd.keys()));
+      
       const hp = (fd.get("hp") || ""); // honeypot
       if (hp.trim().length > 0) {
+        console.log("Honeypot triggered - spam detected");
         setSent(true);
         formRef.current?.reset();
         return;
       }
 
-      // 主要使用 Formspree（可靠且已設定）
-      const res = await fetch("https://formspree.io/f/mjkvgqyb", { 
+      // 驗證必填欄位
+      const name = fd.get("name");
+      const email = fd.get("email");
+      const phone = fd.get("phone");
+      const message = fd.get("message");
+      
+      if (!name || !email || !phone || !message) {
+        console.error("Missing required fields:", { name, email, phone, message });
+        alert("Please fill in all required fields");
+        return;
+      }
+
+      console.log("Submitting to Formspree:", { name, email, phone });
+
+      // 使用 Formspree 發送表單到 qiyunsolution@gmail.com
+      // 添加郵件目標地址和回信地址
+      fd.append("_to", "qiyunsolution@gmail.com");
+      fd.append("_replyto", email); // 使用提交者的 email 作為回信地址
+      
+      const res = await fetch("https://formspree.io/f/mwpanbkk", { 
         method: "POST", 
         headers: { "Accept": "application/json" }, 
         body: fd 
       });
 
+      console.log("Formspree response status:", res.status);
+      const responseData = await res.json();
+      console.log("Formspree response:", responseData);
+
       if (res.ok) { 
         setSent(true); 
         formRef.current?.reset(); 
-
-        // 同時嘗試發送到 WordPress（如果已設定）
-        // 這不會影響主要表單功能，只是備份資料到 WordPress
-        try {
-          const formData = {
-            name: fd.get("name"),
-            email: fd.get("email"),
-            phone: fd.get("phone"),
-            lineId: fd.get("lineId"),
-            message: fd.get("message")
-          };
-
-          // TODO: 當您設定好 WordPress 端點時，取消註解下面的代碼
-          // await fetch("https://your-wordpress-site.com/wp-json/contact/v1/submit", {
-          //   method: "POST",
-          //   headers: { 
-          //     "Content-Type": "application/json",
-          //     "Accept": "application/json" 
-          //   },
-          //   body: JSON.stringify(formData)
-          // });
-        } catch (wpError) {
-          // WordPress 端點錯誤不影響主要表單功能
-          console.log("WordPress backup failed:", wpError);
-        }
+        console.log("✓ Form submitted successfully via Formspree");
+      } else {
+        console.error("✗ Form submission failed:", res.status, responseData);
+        alert("Form submission failed. Please try again.");
       }
+    } catch (error) {
+      console.error("✗ Form submission error:", error);
+      alert("Error submitting form: " + error.message);
     } finally {
       setLoading(false);
     }
