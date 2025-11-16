@@ -2513,17 +2513,17 @@ export default function LandingTemplate() {
       {/* Top Bar */}
       <div className={cx("w-full sticky top-0 z-50 transition-all duration-500", scrolled ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-[var(--brand-50)]" : "bg-white/90 backdrop-blur-lg border-b border-white/20")}>
         <div className={cx("mx-auto max-w-7xl px-3 sm:px-6 flex items-center justify-between", scrolled ? "h-16 sm:h-18" : "h-18 sm:h-20")}>
-          {/* Mobile Menu Button - 左側 */}
+          {/* Mobile Menu Button - 左側 - 更顯眼的設計 */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm shadow-md border border-[var(--brand-50)] text-[var(--brand-800)] hover:bg-[var(--brand-50)] transition-all duration-300"
+            className="lg:hidden flex items-center justify-center w-12 h-12 rounded-2xl bg-[var(--brand)] shadow-xl text-white hover:bg-[var(--brand-700)] hover:scale-110 transition-all duration-300 active:scale-95"
             aria-label="選單"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
               {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
@@ -2621,65 +2621,65 @@ export default function LandingTemplate() {
           onClick={() => setMobileMenuOpen(false)}
         ></div>
         
-        {/* Sidebar */}
+        {/* Sidebar - 更現代化設計 */}
         <div className={cx(
-          "absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transition-transform duration-300 flex flex-col",
+          "absolute left-0 top-0 h-full w-80 max-w-[90vw] bg-white shadow-2xl transition-transform duration-500 flex flex-col border-r-4 border-[var(--brand)]",
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}>
-          {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-4 sm:p-6 border-b border-[var(--brand-50)]">
-            <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-2 sm:gap-3">
-                <Baby className="h-7 w-7 sm:h-8 sm:w-8 text-[var(--brand-800)]" />
-                <span className="font-bold text-lg sm:text-xl bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
+          {/* Sidebar Header - 更突出的設計 */}
+          <div className="flex items-center justify-between p-6 border-b-2 border-[var(--brand-100)] bg-gradient-to-r from-[var(--brand-50)] to-white">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-3">
+                <Baby className="h-8 w-8 text-[var(--brand)]" />
+                <span className="font-bold text-xl bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
               </div>
-              <div className="text-xs text-slate-500 font-medium pl-9 sm:pl-11">
+              <div className="text-sm text-slate-600 font-medium pl-11">
                 <span>{lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}</span>
               </div>
             </div>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2 rounded-lg hover:bg-[var(--brand-50)] text-slate-600 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="p-3 rounded-2xl bg-white hover:bg-[var(--brand)] text-slate-600 hover:text-white transition-all duration-300 min-h-[48px] min-w-[48px] flex items-center justify-center shadow-md hover:shadow-lg"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
-          {/* Sidebar Navigation */}
-          <nav className="flex-1 overflow-y-auto py-4 sm:py-6 px-3 sm:px-4">
+          {/* Sidebar Navigation - 垂直單欄排列 */}
+          <nav className="flex-1 overflow-y-auto py-6 px-4 space-y-3">
             {NAV.map((n) => {
               const isActive = active === n.id;
               
               // 如果有子項目，渲染可展開的項目
               if (n.subItems) {
                 return (
-                  <div key={n.id} className="mb-2">
+                  <div key={n.id} className="w-full">
                     <a
                       href={n.path}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cx(
-                        "flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl transition-all duration-300 font-medium text-base sm:text-lg min-h-[50px]",
+                        "w-full flex items-center justify-between px-5 py-4 rounded-2xl transition-all duration-300 font-semibold text-lg border-2 min-h-[58px]",
                         isActive
-                          ? "btn-gradient text-white shadow-md"
-                          : "text-slate-700 hover:bg-[var(--brand-50)] hover:text-[var(--brand-800)]"
+                          ? "bg-[var(--brand)] text-white border-[var(--brand)] shadow-lg"
+                          : "text-slate-700 border-slate-200 hover:border-[var(--brand-300)] hover:bg-[var(--brand-50)] hover:text-[var(--brand-800)]"
                       )}
                     >
-                      {n[lang]}
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <span className="flex-1 text-left">{n[lang]}</span>
+                      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </a>
                     
                     {/* 子項目 */}
-                    <div className="ml-4 mt-1 space-y-1">
+                    <div className="mt-2 ml-4 space-y-2">
                       {n.subItems.map((subItem) => (
                         <a
                           key={subItem.id}
                           href={subItem.path}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block px-4 py-2.5 text-sm text-slate-600 hover:bg-[var(--brand-50)] hover:text-[var(--brand-800)] rounded-lg transition-colors duration-200"
+                          className="block w-full px-4 py-3 text-base text-slate-600 hover:bg-[var(--brand-50)] hover:text-[var(--brand-800)] rounded-xl transition-colors duration-200 border border-slate-100 hover:border-[var(--brand-200)]"
                         >
                           {subItem[lang]}
                         </a>
@@ -2689,20 +2689,20 @@ export default function LandingTemplate() {
                 );
               }
               
-              // 一般導航項目
+              // 一般導航項目 - 垂直單欄排列
               return (
                 <a
                   key={n.id}
                   href={n.path}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cx(
-                    "flex items-center px-4 sm:px-6 py-3.5 sm:py-4 mb-2 rounded-xl transition-all duration-300 font-medium text-base sm:text-lg min-h-[50px]",
+                    "w-full flex items-center px-5 py-4 rounded-2xl transition-all duration-300 font-semibold text-lg border-2 min-h-[58px]",
                     isActive
-                      ? "btn-gradient text-white shadow-md"
-                      : "text-slate-700 hover:bg-[var(--brand-50)] hover:text-[var(--brand-800)]"
+                      ? "bg-[var(--brand)] text-white border-[var(--brand)] shadow-lg"
+                      : "text-slate-700 border-slate-200 hover:border-[var(--brand-300)] hover:bg-[var(--brand-50)] hover:text-[var(--brand-800)]"
                   )}
                 >
-                  {n[lang]}
+                  <span className="flex-1 text-left">{n[lang]}</span>
                 </a>
               );
             })}
