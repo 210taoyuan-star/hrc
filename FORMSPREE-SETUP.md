@@ -21,10 +21,11 @@ To send form submissions to **jctommyliu@gmail.com**, you need to:
 
 ## Form Fields
 The contact form currently sends:
-- `name` - Visitor's name
-- `phone` - Phone number
-- `email` - Email address
-- `message` - Message content
+- `name` - Visitor's name (required)
+- `email` - Email address (required)
+- `phone` - Phone number (required)
+- `lineId` - LINE ID (optional)
+- `message` - Message content (required)
 - `hp` - Honeypot field (spam protection)
 
 All submissions will be sent to **jctommyliu@gmail.com** after setup.

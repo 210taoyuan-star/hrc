@@ -2272,6 +2272,7 @@ export default function LandingTemplate() {
     formName: { zh: "您的姓名", en: "Your Name" },
     formEmail: { zh: "Email", en: "Email" },
     formPhone: { zh: "聯絡電話", en: "Phone Number" },
+    formLineId: { zh: "您的 LINE ID", en: "Your LINE ID" },
     formMsg: { zh: "想了解的重點", en: "What would you like to know?" },
     formSubmit: { zh: "送出表單", en: "Send" },
   }), [lang]);
@@ -3931,6 +3932,21 @@ export default function LandingTemplate() {
                       required
                       className="w-full px-4 py-3.5 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-[var(--brand)] transition-all duration-300 bg-white hover:border-slate-300 responsive-text-base"
                       placeholder={lang === "zh" ? "請輸入您的聯絡電話" : "Enter your phone number"}
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-2 leading-tight">
+                      {t.formLineId[lang]}
+                      <span className="text-slate-500 text-xs ml-1">
+                        {lang === "zh" ? "(選填)" : "(Optional)"}
+                      </span>
+                    </label>
+                    <input
+                      type="text"
+                      name="lineId"
+                      className="w-full px-4 py-3.5 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-[var(--brand)] transition-all duration-300 bg-white hover:border-slate-300 responsive-text-base"
+                      placeholder={lang === "zh" ? "請輸入您的 LINE ID (例如: @abc123)" : "Enter your LINE ID (e.g., @abc123)"}
                     />
                   </div>
                   
