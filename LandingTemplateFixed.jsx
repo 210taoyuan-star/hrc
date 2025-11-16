@@ -2744,7 +2744,9 @@ export default function LandingTemplate() {
             
             <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
               <a
-                href="https://page.line.me/293mminh"
+                href="https://line.me/R/ti/p/@293mminh"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group px-10 py-5 bg-[var(--brand)] text-white rounded-2xl font-bold shadow-lg hover:bg-[var(--brand-800)] transition-all duration-300 hover:shadow-xl"
               >
                 <div className="flex items-center gap-3">
@@ -4554,7 +4556,7 @@ export default function LandingTemplate() {
 
       {/* 浮動 LINE 按鈕 */}
       <a
-        href="https://page.line.me/293mminh"
+        href="https://line.me/R/ti/p/@293mminh"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl group"
