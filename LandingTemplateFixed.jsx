@@ -2512,46 +2512,81 @@ export default function LandingTemplate() {
 
       {/* Top Bar */}
       <div className={cx("w-full sticky top-0 z-50 transition-all duration-500", scrolled ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-[var(--brand-50)]" : "bg-white/90 backdrop-blur-lg border-b border-white/20")}>
-        <div className={cx("mx-auto max-w-7xl px-3 sm:px-6 flex items-center justify-between", scrolled ? "h-16 sm:h-18" : "h-18 sm:h-20")}>
-          {/* Mobile Menu Button - 左側 - 更顯眼的設計 */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden flex items-center justify-center w-12 h-12 rounded-2xl bg-[var(--brand)] shadow-xl text-white hover:bg-[var(--brand-700)] hover:scale-110 transition-all duration-300 active:scale-95"
-            aria-label="選單"
-          >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-
-          <div className="flex flex-col items-center gap-2">
-            <div className="flex items-center gap-3 rounded-3xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-3 shadow-xl border-2 border-white/30 hover:shadow-2xl transition-all duration-300">
-              {/* 美化的圖標容器 */}
-              <div className="relative">
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
-                  <Baby className="h-6 w-6 text-white drop-shadow-sm" />
+        <div className={cx("mx-auto max-w-7xl px-3 sm:px-6 flex items-center", scrolled ? "h-16 sm:h-18" : "h-18 sm:h-20")}>
+          {/* Mobile 版佈局：Logo 居左，Menu 按鈕居右 */}
+          <div className="lg:hidden flex items-center justify-between w-full">
+            {/* Logo - 左側 */}
+            <div className="flex flex-col items-start gap-1">
+              <div className="flex items-center gap-3 rounded-3xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-2.5 shadow-xl border-2 border-white/30">
+                <div className="relative">
+                  <div className="w-9 h-9 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-lg">
+                    <Baby className="h-5 w-5 text-white drop-shadow-sm" />
+                  </div>
+                  <div className="absolute inset-0 w-9 h-9 rounded-2xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-125"></div>
                 </div>
-                {/* 裝飾性光暈 */}
-                <div className="absolute inset-0 w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-125"></div>
+                <span className="font-black tracking-tight text-lg bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
               </div>
-              <span className="font-black tracking-tight text-xl sm:text-2xl bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent drop-shadow-sm">{BRAND.name}</span>
+              <div className="text-xs text-slate-600 font-medium px-2 py-1 bg-white/60 rounded-lg border border-[var(--brand-100)] ml-1">
+                <span className="flex items-center gap-1">
+                  <svg className="w-2.5 h-2.5 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-xs">{lang === "zh" ? "HRC 合作" : "HRC Partner"}</span>
+                </span>
+              </div>
             </div>
-            <div className="text-xs text-slate-600 font-semibold px-3 py-1.5 bg-gradient-to-r from-[var(--brand-50)] to-white/80 rounded-xl border border-[var(--brand-100)] shadow-sm">
-              <span className="flex items-center gap-1">
-                <svg className="w-3 h-3 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                {lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}
+            
+            {/* Menu Button - 右側，加上文字 */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--brand)] shadow-xl text-white hover:bg-[var(--brand-700)] hover:scale-105 transition-all duration-300 active:scale-95"
+              aria-label="選單"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+              <span className="text-sm font-semibold">
+                {mobileMenuOpen ? (lang === "zh" ? "關閉" : "Close") : "Menu"}
               </span>
-            </div>
+            </button>
           </div>
-          
-          {/* Desktop Navigation - 隱藏在手機版 */}
-          <nav className="hidden lg:flex items-center gap-1 sm:gap-2 lg:gap-3 responsive-text-xs sm:responsive-text-sm lg:responsive-text-base font-semibold rounded-2xl glass-effect px-2 sm:px-4 lg:px-6 py-2 shadow-lg">{NAV.map((n) => {
+
+          {/* Desktop 版佈局：原來的三欄式設計 */}
+          <div className="hidden lg:flex items-center justify-between w-full">
+            {/* 佔位空間 */}
+            <div className="w-20"></div>
+            
+            {/* 中央 Logo */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex items-center gap-3 rounded-3xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-3 shadow-xl border-2 border-white/30 hover:shadow-2xl transition-all duration-300">
+                {/* 美化的圖標容器 */}
+                <div className="relative">
+                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
+                    <Baby className="h-6 w-6 text-white drop-shadow-sm" />
+                  </div>
+                  {/* 裝飾性光暈 */}
+                  <div className="absolute inset-0 w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-125"></div>
+                </div>
+                <span className="font-black tracking-tight text-xl sm:text-2xl bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent drop-shadow-sm">{BRAND.name}</span>
+              </div>
+              <div className="text-xs text-slate-600 font-semibold px-3 py-1.5 bg-gradient-to-r from-[var(--brand-50)] to-white/80 rounded-xl border border-[var(--brand-100)] shadow-sm">
+                <span className="flex items-center gap-1">
+                  <svg className="w-3 h-3 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  {lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}
+                </span>
+              </div>
+            </div>
+            
+            {/* 語言切換按鈕 - 桌面版保留 */}
+            <div className="flex items-center gap-4">
+              {/* Desktop Navigation */}
+              <nav className="flex items-center gap-3 text-sm font-semibold rounded-2xl glass-effect px-6 py-2 shadow-lg">{NAV.map((n) => {
               const isActive = active === n.id;
               
               // 如果有子項目，渲染下拉菜單
@@ -2607,15 +2642,18 @@ export default function LandingTemplate() {
                 </a>
               );
             })}
-          </nav>
-          <button
-            onClick={() => setLang(lang === "zh" ? "en" : "zh")}
-            className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl btn-gradient text-white hover:scale-105 transition-all duration-300 shadow-lg responsive-text-sm font-medium flex-shrink-0"
-          >
-            <Languages className="h-3 w-3 sm:h-4 sm:w-4" />
-            <span className="hidden sm:inline">{lang === "zh" ? "EN" : "中文"}</span>
-            <span className="sm:hidden">{lang === "zh" ? "EN" : "中"}</span>
-          </button>
+              </nav>
+              
+              {/* 語言切換按鈕 - 桌面版 */}
+              <button
+                onClick={() => setLang(lang === "zh" ? "en" : "zh")}
+                className="flex items-center gap-2 px-4 py-2 rounded-xl btn-gradient text-white hover:scale-105 transition-all duration-300 shadow-lg text-sm font-medium"
+              >
+                <Languages className="h-4 w-4" />
+                <span>{lang === "zh" ? "EN" : "中文"}</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
