@@ -2515,25 +2515,17 @@ export default function LandingTemplate() {
         <div className={cx("mx-auto max-w-7xl px-3 sm:px-6 flex items-center", scrolled ? "h-16 sm:h-18" : "h-18 sm:h-20")}>
           {/* Mobile 版佈局：Logo 居左，Menu 按鈕居右 */}
           <div className="lg:hidden flex items-center justify-between w-full">
-            {/* Logo - 左側 */}
-            <div className="flex flex-col items-start gap-1">
-              <div className="flex items-center gap-3 rounded-3xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-2.5 shadow-xl border-2 border-white/30">
-                <div className="relative">
-                  <div className="w-9 h-9 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-lg">
-                    <Baby className="h-5 w-5 text-white drop-shadow-sm" />
-                  </div>
-                  <div className="absolute inset-0 w-9 h-9 rounded-2xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-125"></div>
+            {/* Logo - 左側，單排設計 */}
+            <div className="flex items-center gap-2.5 rounded-2xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-3 py-2 shadow-lg border border-white/30">
+              <div className="relative">
+                <div className="w-7 h-7 rounded-xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-md">
+                  <Baby className="h-4 w-4 text-white drop-shadow-sm" />
                 </div>
-                <span className="font-black tracking-tight text-lg bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
+                <div className="absolute inset-0 w-7 h-7 rounded-xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-110"></div>
               </div>
-              <div className="text-xs text-slate-600 font-medium px-2 py-1 bg-white/60 rounded-lg border border-[var(--brand-100)] ml-1">
-                <span className="flex items-center gap-1">
-                  <svg className="w-2.5 h-2.5 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-xs">{lang === "zh" ? "HRC 合作" : "HRC Partner"}</span>
-                </span>
-              </div>
+              <span className="font-bold tracking-tight text-sm bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
+              <div className="w-px h-4 bg-slate-300"></div>
+              <span className="text-xs text-slate-500 font-medium">{lang === "zh" ? "HRC合作" : "HRC"}</span>
             </div>
             
             {/* Menu Button - 右側，加上文字 */}
