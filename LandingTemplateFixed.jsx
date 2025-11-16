@@ -2312,10 +2312,13 @@ export default function LandingTemplate() {
   // Mobile menu state
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Contact form (Formspree) minimal handler
+  // Contact form - WordPress integration
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const formRef = React.useRef(null);
+
+  // WordPress form endpoint - 請替換為您的 WordPress 網站 URL
+  const WORDPRESS_FORM_ENDPOINT = "https://your-wordpress-site.com/wp-json/contact/v1/submit";
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -2329,8 +2332,38 @@ export default function LandingTemplate() {
         formRef.current?.reset();
         return;
       }
-      const res = await fetch("https://formspree.io/f/mjkvgqyb", { method: "POST", headers: { "Accept": "application/json" }, body: fd });
-      if (res.ok) { setSent(true); formRef.current?.reset(); }
+
+      // 準備發送到 WordPress 的資料
+      const formData = {
+        name: fd.get("name"),
+        email: fd.get("email"),
+        phone: fd.get("phone"),
+        lineId: fd.get("lineId"),
+        message: fd.get("message"),
+        hp: hp // honeypot 欄位
+      };
+
+      const res = await fetch(WORDPRESS_FORM_ENDPOINT, { 
+        method: "POST", 
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json" 
+        }, 
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) { 
+        setSent(true); 
+        formRef.current?.reset(); 
+      } else {
+        // 如果 WordPress 端點失效，回退到 Formspree
+        const fallbackRes = await fetch("https://formspree.io/f/mjkvgqyb", { 
+          method: "POST", 
+          headers: { "Accept": "application/json" }, 
+          body: fd 
+        });
+        if (fallbackRes.ok) { setSent(true); formRef.current?.reset(); }
+      }
     } finally {
       setLoading(false);
     }
