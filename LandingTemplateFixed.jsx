@@ -2528,13 +2528,25 @@ export default function LandingTemplate() {
             </svg>
           </button>
 
-          <div className="flex flex-col items-center gap-1 sm:gap-2">
-            <div className="flex items-center gap-2 sm:gap-3 rounded-2xl bg-white/90 backdrop-blur-sm px-3 sm:px-4 py-2 shadow-md border border-[var(--brand-50)]">
-              <Baby className="h-6 w-6 sm:h-7 sm:w-7 text-[var(--brand-800)]" />
-              <span className="font-bold tracking-tight text-lg sm:text-xl lg:text-2xl bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-3 rounded-3xl bg-gradient-to-r from-white/95 to-white/85 backdrop-blur-xl px-4 py-3 shadow-xl border-2 border-white/30 hover:shadow-2xl transition-all duration-300">
+              {/* 美化的圖標容器 */}
+              <div className="relative">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
+                  <Baby className="h-6 w-6 text-white drop-shadow-sm" />
+                </div>
+                {/* 裝飾性光暈 */}
+                <div className="absolute inset-0 w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--brand)]/20 to-transparent blur-sm scale-125"></div>
+              </div>
+              <span className="font-black tracking-tight text-xl sm:text-2xl bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent drop-shadow-sm">{BRAND.name}</span>
             </div>
-            <div className="text-xs text-slate-500 font-medium px-2 py-1 bg-white/60 rounded-lg border border-[var(--brand-50)]">
-              <span>{lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}</span>
+            <div className="text-xs text-slate-600 font-semibold px-3 py-1.5 bg-gradient-to-r from-[var(--brand-50)] to-white/80 rounded-xl border border-[var(--brand-100)] shadow-sm">
+              <span className="flex items-center gap-1">
+                <svg className="w-3 h-3 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                {lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}
+              </span>
             </div>
           </div>
           
@@ -2626,15 +2638,31 @@ export default function LandingTemplate() {
           "absolute left-0 top-0 h-full w-80 max-w-[90vw] bg-white shadow-2xl transition-transform duration-500 flex flex-col border-r-4 border-[var(--brand)]",
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}>
-          {/* Sidebar Header - 更突出的設計 */}
-          <div className="flex items-center justify-between p-6 border-b-2 border-[var(--brand-100)] bg-gradient-to-r from-[var(--brand-50)] to-white">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-3">
-                <Baby className="h-8 w-8 text-[var(--brand)]" />
-                <span className="font-bold text-xl bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
+          {/* Sidebar Header - 美化設計 */}
+          <div className="flex items-center justify-between p-6 border-b-2 border-[var(--brand-200)] bg-gradient-to-br from-[var(--brand-50)] via-white to-[var(--brand-25)]">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-4">
+                {/* 美化的側邊選單圖標 */}
+                <div className="relative">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-700)] flex items-center justify-center shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <Baby className="h-7 w-7 text-white drop-shadow-sm" />
+                  </div>
+                  {/* 裝飾性外框 */}
+                  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[var(--brand)]/30 to-transparent blur-sm"></div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-black text-2xl bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-[var(--brand-600)] bg-clip-text text-transparent drop-shadow-sm">{BRAND.name}</span>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <div className="w-2 h-2 rounded-full bg-[var(--brand)] shadow-sm"></div>
+                    <span className="text-sm text-slate-600 font-semibold">{lang === "zh" ? "專業諮詢服務" : "Professional Consulting"}</span>
+                  </div>
+                </div>
               </div>
-              <div className="text-sm text-slate-600 font-medium pl-11">
-                <span>{lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}</span>
+              <div className="flex items-center gap-2 px-3 py-2 bg-white/70 rounded-xl border border-[var(--brand-200)] shadow-sm ml-1">
+                <svg className="w-4 h-4 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm text-slate-700 font-medium">{lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}</span>
               </div>
             </div>
             <button
@@ -4043,11 +4071,22 @@ export default function LandingTemplate() {
               viewport={{ once: true }}
               className="space-y-5"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-white/20 to-white/10 rounded-2xl flex items-center justify-center">
-                  <Baby className="h-7 w-7 text-white" />
+              <div className="flex items-center gap-4">
+                {/* 美化的頁尾圖標 */}
+                <div className="relative group">
+                  <div className="w-14 h-14 bg-gradient-to-br from-white/30 via-white/20 to-white/10 rounded-3xl flex items-center justify-center shadow-2xl border border-white/20 group-hover:scale-110 transition-all duration-500">
+                    <Baby className="h-8 w-8 text-white drop-shadow-lg" />
+                  </div>
+                  {/* 裝飾光暈效果 */}
+                  <div className="absolute inset-0 w-14 h-14 rounded-3xl bg-gradient-to-br from-white/20 to-transparent blur-xl scale-150 group-hover:scale-125 transition-all duration-500"></div>
                 </div>
-                <span className="text-2xl sm:text-3xl font-black text-black">{BRAND.name}</span>
+                <div className="flex flex-col">
+                  <span className="text-3xl sm:text-4xl font-black text-white drop-shadow-lg">{BRAND.name}</span>
+                  <div className="flex items-center gap-2 mt-1">
+                    <div className="w-2 h-2 rounded-full bg-white/80 shadow-sm"></div>
+                    <span className="text-sm text-white/90 font-medium">{lang === "zh" ? "值得信賴的夢想夥伴" : "Trusted Dream Partner"}</span>
+                  </div>
+                </div>
               </div>
               <p className="text-blue-400/90 leading-[1.7] responsive-text-base pr-4 font-medium">
                 {BRAND.tagline}
