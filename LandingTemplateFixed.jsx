@@ -546,7 +546,6 @@ function GlobalStyles() {
 const BRAND = {
   name: "祈孕顧問",
   tagline: "以專業與信賴，圓您擁有孩子的夢想",
-  phone: "+886-2-1234-8888",
   email: "qiyunsolution@gmail.com",
   address: "台北市松山區復興北路58號10樓",
 };
@@ -2114,7 +2113,6 @@ export default function LandingTemplate() {
     "logo": typeof window !== 'undefined' ? `${window.location.origin}/images/logos/logo.png` : 'https://qiyun.com.tw/images/logos/logo.png',
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": BRAND.phone,
       "contactType": "customer service",
       "email": BRAND.email,
       "availableLanguage": ["zh-TW", "en-US"]
@@ -2176,7 +2174,6 @@ export default function LandingTemplate() {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": BRAND.phone,
       "contactType": "customer service",
       "email": BRAND.email
     }
@@ -2202,7 +2199,6 @@ export default function LandingTemplate() {
       "latitude": "25.0478",
       "longitude": "121.5319"
     },
-    "telephone": BRAND.phone,
     "email": BRAND.email,
     "url": typeof window !== 'undefined' ? window.location.origin : 'https://qiyun.com.tw',
     "openingHours": "Mo-Fr 09:00-18:00",
@@ -2532,11 +2528,6 @@ export default function LandingTemplate() {
               </a>
               
               <div className="flex items-center gap-4 text-[var(--text-muted)]">
-                <div className="flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-[var(--brand)]" />
-                  <span className="font-medium">+886-2-1234-8888</span>
-                </div>
-                <div className="w-1 h-1 bg-[var(--text-muted)] rounded-full"></div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5 text-[var(--brand)]" />
                   <span className="font-medium">qiyunsolution@gmail.com</span>
@@ -3605,57 +3596,6 @@ export default function LandingTemplate() {
         </div>
 
         {/* 團隊特色 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-16 p-8 bg-gradient-to-r from-[var(--brand-50)] to-white rounded-2xl"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-semibold text-[var(--brand-800)] mb-4">
-              {lang === "zh" ? "為什麼選擇我們的團隊？" : "Why Choose Our Team?"}
-            </h3>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <h4 className="font-semibold text-[var(--brand-800)] mb-2">
-                {lang === "zh" ? "年經驗" : "Years Experience"}
-              </h4>
-              <p className="text-sm text-slate-600">
-                {lang === "zh" ? "豐富的跨境美國試管與代孕經驗" : "Rich cross-border US surrogacy experience"}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h4 className="font-semibold text-[var(--brand-800)] mb-2">
-                {lang === "zh" ? "州別專家" : "State Specialists"}
-              </h4>
-              <p className="text-sm text-slate-600">
-                {lang === "zh" ? "熟悉美國加州與台灣相關法律" : "Familiar with California and Taiwan related laws"}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h4 className="font-semibold text-[var(--brand-800)] mb-2">
-                {lang === "zh" ? "線上與面對面雙軌" : "Online & In-Person Dual Track"}
-              </h4>
-              <p className="text-sm text-slate-600">
-                {lang === "zh" ? "靈活選擇服務方式" : "Flexible service delivery options"}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h4 className="font-semibold text-[var(--brand-800)] mb-2">
-                {lang === "zh" ? "成功保障" : "Success Guarantee"}
-              </h4>
-              <p className="text-sm text-slate-600">
-                {lang === "zh" ? "專業保障每個環節" : "Professional guarantee for every step"}
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </section>
 
       {/* FAQ Section */}
@@ -4051,10 +3991,6 @@ export default function LandingTemplate() {
                 {lang === "zh" ? "聯絡資訊" : "Contact Information"}
               </h4>
               <div className="space-y-2 sm:space-y-3 text-blue-400">
-                <div className="flex items-center gap-3 hover:text-blue-300 transition-colors duration-300">
-                  <Phone className="h-5 w-5 flex-shrink-0 text-[var(--brand-200)]" />
-                  <span className="responsive-text-sm font-medium">{BRAND.phone}</span>
-                </div>
                 <div className="flex items-center gap-3 hover:text-blue-300 transition-colors duration-300">
                   <Mail className="h-5 w-5 flex-shrink-0 text-[var(--brand-200)]" />
                   <span className="responsive-text-sm break-all font-medium">{BRAND.email}</span>
