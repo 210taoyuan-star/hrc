@@ -2562,36 +2562,6 @@ export default function LandingTemplate() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-purple-600 bg-clip-text text-transparent leading-[1.25] px-2">
               {t.servicesTitle[lang]}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-[1.7] px-4">
-              {lang === "zh" 
-                ? "我們提供專業、可信賴的美國試管與代孕，陪伴您完成家庭夢想的每一步旅程。"
-                : "We provide professional, trusted US surrogacy services, accompanying you through every step of your family journey."}
-            </p>
-            
-            {/* 快速導航連結 */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 pt-4 px-4">
-              <a
-                href="#couple-surrogacy"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-[var(--brand-50)] rounded-xl text-sm font-medium text-[var(--brand-800)] hover:bg-[var(--brand-50)] hover:scale-105 transition-all duration-300 shadow-sm"
-              >
-                <HeartHandshake className="h-4 w-4" />
-                <span>{lang === "zh" ? "夫妻代孕" : "Couple Surrogacy"}</span>
-              </a>
-              <a
-                href="#lgbtq-surrogacy"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-[var(--brand-50)] rounded-xl text-sm font-medium text-[var(--brand-800)] hover:bg-[var(--brand-50)] hover:scale-105 transition-all duration-300 shadow-sm"
-              >
-                <Users2 className="h-4 w-4" />
-                <span>{lang === "zh" ? "同志代孕" : "LGBTQ+ Surrogacy"}</span>
-              </a>
-              <a
-                href="#single-surrogacy"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-[var(--brand-50)] rounded-xl text-sm font-medium text-[var(--brand-800)] hover:bg-[var(--brand-50)] hover:scale-105 transition-all duration-300 shadow-sm"
-              >
-                <User className="h-4 w-4" />
-                <span>{lang === "zh" ? "單身代孕" : "Single Parent Surrogacy"}</span>
-              </a>
-            </div>
           </motion.div>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
