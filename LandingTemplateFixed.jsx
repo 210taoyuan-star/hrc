@@ -3764,38 +3764,79 @@ export default function LandingTemplate() {
           </motion.div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
+            {/* Line Consultation Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               onClick={() => setShowLineQR(true)}
-              className="group text-center p-6 lg:p-8 glass-effect rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+              className="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-[#00B900] to-[#00A300] rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <MessageCircle className="h-7 w-7 lg:h-8 lg:w-8 text-white" />
+              {/* Background Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00B900] via-[#009900] to-[#00A300]"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Content */}
+              <div className="relative z-10 p-8 lg:p-10 text-center text-white">
+                <div className="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <MessageCircle className="h-8 w-8 lg:h-10 lg:w-10 text-white" />
+                </div>
+                <h4 className="responsive-text-lg font-bold mb-3 leading-snug text-white drop-shadow-md">
+                  {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
+                </h4>
+                <p className="responsive-text-base text-white/90 font-medium">{lang === "zh" ? "掃描 QR Code 或搜尋 ID" : "Scan QR Code or Search ID"}</p>
+                <p className="responsive-text-xs text-white/70 mt-4">@293mminh</p>
+                
+                {/* Arrow Indicator */}
+                <div className="mt-6 flex items-center justify-center gap-2 text-white/80 group-hover:text-white transition-colors">
+                  <span className="responsive-text-sm">{lang === "zh" ? "點擊開啟" : "Click to open"}</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h4 className="responsive-text-base font-bold text-[var(--brand-800)] mb-2.5 group-hover:text-[var(--brand)] transition-colors duration-300 leading-snug">
-                {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
-              </h4>
-              <p className="responsive-text-sm text-slate-600 font-medium">{lang === "zh" ? "掃描 QR Code 或搜尋 ID" : "Scan QR Code or Search ID"}</p>
             </motion.div>
             
+            {/* Email Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="group text-center p-6 lg:p-8 glass-effect rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              className="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Mail className="h-7 w-7 lg:h-8 lg:w-8 text-white" />
+              {/* Background Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand)] via-[var(--brand-700)] to-[var(--brand-800)]"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Content */}
+              <div className="relative z-10 p-8 lg:p-10 text-center text-white">
+                <div className="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Mail className="h-8 w-8 lg:h-10 lg:w-10 text-white" />
+                </div>
+                <h4 className="responsive-text-lg font-bold mb-3 leading-snug text-white drop-shadow-md">
+                  {lang === "zh" ? "電子郵件" : "Email"}
+                </h4>
+                <p className="responsive-text-base text-white/90 font-medium break-all">{BRAND.email}</p>
+                <p className="responsive-text-xs text-white/70 mt-4">{lang === "zh" ? "我們會在24小時內回覆" : "We'll reply within 24 hours"}</p>
+                
+                {/* Copy Email Button */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigator.clipboard.writeText(BRAND.email);
+                    alert(lang === "zh" ? "已複製郵件地址" : "Email copied to clipboard");
+                  }}
+                  className="mt-6 inline-flex items-center justify-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl text-white text-sm font-medium transition-all duration-300 responsive-text-sm"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  <span>{lang === "zh" ? "複製郵件" : "Copy Email"}</span>
+                </button>
               </div>
-              <h4 className="responsive-text-base font-bold text-[var(--brand-800)] mb-2.5 group-hover:text-[var(--brand)] transition-colors duration-300 leading-snug">
-                {lang === "zh" ? "電子郵件" : "Email"}
-              </h4>
-              <p className="responsive-text-sm text-slate-600">{BRAND.email}</p>
             </motion.div>
           </div>
 
