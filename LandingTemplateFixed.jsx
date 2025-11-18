@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import * as React from "react";
-import { Phone, Mail, MapPin, Baby, ShieldCheck, Users2, Globe2, HeartHandshake, Languages, Sparkles, User, Heart, ArrowRight, Building2, Clock, Calendar, Stethoscope } from "lucide-react";
+import { Phone, Mail, MapPin, Baby, ShieldCheck, Users2, Globe2, HeartHandshake, Languages, Sparkles, User, Heart, ArrowRight, Building2, Clock, Calendar, Stethoscope, MessageCircle } from "lucide-react";
 
 // ---- Utility functions ----
 const cx = (...classes) => classes.filter(Boolean).join(" ");
@@ -3771,13 +3771,13 @@ export default function LandingTemplate() {
               viewport={{ once: true }}
               className="group text-center p-6 lg:p-8 glass-effect rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Phone className="h-7 w-7 lg:h-8 lg:w-8 text-white" />
+              <div className="inline-flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-[#00B900] to-[#00A300] rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <MessageCircle className="h-7 w-7 lg:h-8 lg:w-8 text-white" />
               </div>
               <h4 className="responsive-text-base font-bold text-[var(--brand-800)] mb-2.5 group-hover:text-[var(--brand)] transition-colors duration-300 leading-snug">
-                {lang === "zh" ? "電話諮詢" : "Phone Consultation"}
+                {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
               </h4>
-              <p className="responsive-text-sm text-slate-600 font-medium">{BRAND.phone}</p>
+              <p className="responsive-text-sm text-slate-600 font-medium">{lang === "zh" ? "掃描 QR Code 或搜尋 ID" : "Scan QR Code or Search ID"}</p>
             </motion.div>
             
             <motion.div
@@ -3794,20 +3794,6 @@ export default function LandingTemplate() {
                 {lang === "zh" ? "電子郵件" : "Email"}
               </h4>
               <p className="responsive-text-sm text-slate-600">{BRAND.email}</p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center p-6 bg-white rounded-xl border border-slate-200 shadow-sm"
-            >
-              <MapPin className="h-8 w-8 text-[var(--brand)] mx-auto mb-4" />
-              <h4 className="font-semibold text-[var(--brand-800)] mb-2">
-                {lang === "zh" ? "辦公地址" : "Office Address"}
-              </h4>
-              <p className="text-slate-600">{BRAND.address}</p>
             </motion.div>
           </div>
 
