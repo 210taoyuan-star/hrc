@@ -2561,16 +2561,13 @@ export default function LandingTemplate() {
       {/* Services Section */}
       <section id="services" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[var(--brand-50)] via-white to-purple-50">
         <div className="section-shell">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-10 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4 px-4"
           >
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl glass-effect shadow-lg responsive-text-sm font-semibold text-[var(--brand-800)]">
-              <Heart className="h-5 w-5 text-[var(--brand)]" />
-              <span>{lang === "zh" ? "專業服務" : "Professional Services"}</span>
-            </div>
+            {/* Professional Services title hidden */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-purple-600 bg-clip-text text-transparent leading-[1.25] px-2">
               {t.servicesTitle[lang]}
             </h2>
