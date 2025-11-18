@@ -3791,7 +3791,7 @@ export default function LandingTemplate() {
                 
                 {/* Arrow Indicator */}
                 <div className="mt-1.5 flex items-center justify-center gap-0.5 text-white/80 group-hover:text-white transition-colors">
-                  <span className="text-2xs">{lang === "zh" ? "點擊開啟" : "Click"}</span>
+                  <span className="text-3xs lg:text-2xs">{lang === "zh" ? "點擊開啟" : "Click"}</span>
                   <svg className="w-1.5 h-1.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -3821,10 +3821,11 @@ export default function LandingTemplate() {
                   {lang === "zh" ? "諮詢表單" : "Consultation"}
                 </h4>
                 <p className="text-3xs lg:text-2xs text-white/90 font-medium">{lang === "zh" ? "請填寫下方表單" : "Fill Form"}</p>
+                <p className="text-3xs lg:text-2xs text-white/70 mt-1">{lang === "zh" ? "24小時回" : "24h"}</p>
                 
                 {/* Arrow Indicator */}
                 <div className="mt-1.5 flex items-center justify-center gap-0.5 text-white/80 group-hover:text-white transition-colors">
-                  <span className="text-2xs">{lang === "zh" ? "點擊開啟" : "Click"}</span>
+                  <span className="text-3xs lg:text-2xs">{lang === "zh" ? "點擊填寫" : "Click"}</span>
                   <svg className="w-1.5 h-1.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -3861,7 +3862,7 @@ export default function LandingTemplate() {
                     navigator.clipboard.writeText(BRAND.email);
                     alert(lang === "zh" ? "已複製" : "Copied");
                   }}
-                  className="mt-1.5 inline-flex items-center justify-center gap-0.5 px-1.5 py-0.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-md text-white text-2xs font-medium transition-all duration-300"
+                  className="mt-1.5 inline-flex items-center justify-center gap-0.5 px-1.5 py-0.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-md text-white text-3xs lg:text-2xs font-medium transition-all duration-300"
                 >
                   <svg className="w-2 h-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
