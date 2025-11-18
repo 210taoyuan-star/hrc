@@ -2503,13 +2503,6 @@ export default function LandingTemplate() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--brand-50)] text-[var(--brand-800)] rounded-full text-sm font-medium">
-                <Sparkles className="h-4 w-4" />
-                {lang === "zh" ? "專業可信賴" : "Professional & Trusted"}
-              </span>
-            </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6">
               <span className="text-[var(--brand)]">{lang === "zh" ? "祈孕" : "Fertility"}</span>
               <span className="text-[var(--text-primary)]">{lang === "zh" ? "顧問" : " Guidance"}</span>
