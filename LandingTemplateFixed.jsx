@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import * as React from "react";
-import { Phone, Mail, MapPin, Baby, ShieldCheck, Users2, Globe2, HeartHandshake, Languages, Sparkles, User, Heart, ArrowRight, Building2, Clock, Calendar, Stethoscope, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Baby, ShieldCheck, Users2, Globe2, HeartHandshake, Languages, Sparkles, User, Heart, ArrowRight, Building2, Clock, Calendar, Stethoscope, MessageCircle, FileText } from "lucide-react";
 
 // ---- Utility functions ----
 const cx = (...classes) => classes.filter(Boolean).join(" ");
@@ -3764,7 +3764,7 @@ export default function LandingTemplate() {
           </motion.div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
             {/* Line Consultation Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -3779,20 +3779,54 @@ export default function LandingTemplate() {
               <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               {/* Content */}
-              <div className="relative z-10 p-8 lg:p-10 text-center text-white">
-                <div className="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <MessageCircle className="h-8 w-8 lg:h-10 lg:w-10 text-white" />
+              <div className="relative z-10 p-6 lg:p-8 text-center text-white">
+                <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <MessageCircle className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
                 </div>
-                <h4 className="responsive-text-lg font-bold mb-3 leading-snug text-white drop-shadow-md">
+                <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
                   {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
                 </h4>
-                <p className="responsive-text-base text-white/90 font-medium">{lang === "zh" ? "掃描 QR Code 或搜尋 ID" : "Scan QR Code or Search ID"}</p>
-                <p className="responsive-text-xs text-white/70 mt-4">@293mminh</p>
+                <p className="responsive-text-sm text-white/90 font-medium">{lang === "zh" ? "掃描 QR Code" : "Scan QR Code"}</p>
+                <p className="responsive-text-xs text-white/70 mt-3">@293mminh</p>
                 
                 {/* Arrow Indicator */}
-                <div className="mt-6 flex items-center justify-center gap-2 text-white/80 group-hover:text-white transition-colors">
-                  <span className="responsive-text-sm">{lang === "zh" ? "點擊開啟" : "Click to open"}</span>
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mt-5 flex items-center justify-center gap-2 text-white/80 group-hover:text-white transition-colors">
+                  <span className="responsive-text-xs">{lang === "zh" ? "點擊開啟" : "Click"}</span>
+                  <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </motion.div>
+            
+            {/* Contact Form Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              {/* Background Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Content */}
+              <div className="relative z-10 p-6 lg:p-8 text-center text-white">
+                <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <FileText className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
+                </div>
+                <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
+                  {lang === "zh" ? "填寫表單" : "Contact Form"}
+                </h4>
+                <p className="responsive-text-sm text-white/90 font-medium">{lang === "zh" ? "立即聯絡" : "Get in Touch"}</p>
+                <p className="responsive-text-xs text-white/70 mt-3">{lang === "zh" ? "24小時內回覆" : "24h Response"}</p>
+                
+                {/* Arrow Indicator */}
+                <div className="mt-5 flex items-center justify-center gap-2 text-white/80 group-hover:text-white transition-colors">
+                  <span className="responsive-text-xs">{lang === "zh" ? "點擊填寫" : "Click"}</span>
+                  <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
@@ -3803,7 +3837,7 @@ export default function LandingTemplate() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
@@ -3812,35 +3846,36 @@ export default function LandingTemplate() {
               <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               {/* Content */}
-              <div className="relative z-10 p-8 lg:p-10 text-center text-white">
-                <div className="inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Mail className="h-8 w-8 lg:h-10 lg:w-10 text-white" />
+              <div className="relative z-10 p-6 lg:p-8 text-center text-white">
+                <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Mail className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
                 </div>
-                <h4 className="responsive-text-lg font-bold mb-3 leading-snug text-white drop-shadow-md">
+                <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
                   {lang === "zh" ? "電子郵件" : "Email"}
                 </h4>
-                <p className="responsive-text-base text-white/90 font-medium break-all">{BRAND.email}</p>
-                <p className="responsive-text-xs text-white/70 mt-4">{lang === "zh" ? "我們會在24小時內回覆" : "We'll reply within 24 hours"}</p>
+                <p className="responsive-text-sm text-white/90 font-medium break-all">{BRAND.email}</p>
+                <p className="responsive-text-xs text-white/70 mt-3">{lang === "zh" ? "我們會回覆" : "We'll reply"}</p>
                 
                 {/* Copy Email Button */}
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     navigator.clipboard.writeText(BRAND.email);
-                    alert(lang === "zh" ? "已複製郵件地址" : "Email copied to clipboard");
+                    alert(lang === "zh" ? "已複製郵件地址" : "Email copied");
                   }}
-                  className="mt-6 inline-flex items-center justify-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl text-white text-sm font-medium transition-all duration-300 responsive-text-sm"
+                  className="mt-5 inline-flex items-center justify-center gap-2 px-3 py-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl text-white text-xs font-medium transition-all duration-300 responsive-text-xs"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
-                  <span>{lang === "zh" ? "複製郵件" : "Copy Email"}</span>
+                  <span>{lang === "zh" ? "複製" : "Copy"}</span>
                 </button>
               </div>
             </motion.div>
           </div>
 
           <motion.div
+            id="contact-form"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
