@@ -3649,9 +3649,6 @@ export default function LandingTemplate() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--brand)] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">10+</span>
-              </div>
               <h4 className="font-semibold text-[var(--brand-800)] mb-2">
                 {lang === "zh" ? "年經驗" : "Years Experience"}
               </h4>
@@ -3661,9 +3658,6 @@ export default function LandingTemplate() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--brand)] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">50+</span>
-              </div>
               <h4 className="font-semibold text-[var(--brand-800)] mb-2">
                 {lang === "zh" ? "州別專家" : "State Specialists"}
               </h4>
@@ -3673,9 +3667,6 @@ export default function LandingTemplate() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--brand)] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">12/8</span>
-              </div>
               <h4 className="font-semibold text-[var(--brand-800)] mb-2">
                 {lang === "zh" ? "線上與面對面雙軌" : "Online & In-Person Dual Track"}
               </h4>
@@ -3685,9 +3676,6 @@ export default function LandingTemplate() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--brand)] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">100%</span>
-              </div>
               <h4 className="font-semibold text-[var(--brand-800)] mb-2">
                 {lang === "zh" ? "成功保障" : "Success Guarantee"}
               </h4>
