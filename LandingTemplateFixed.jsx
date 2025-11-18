@@ -3367,70 +3367,139 @@ export default function LandingTemplate() {
           </motion.div>
         </div>
 
-        {/* HRC Knowledge Articles */}
+        {/* 影響試管嬰兒成功的主要因素 */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
-            {lang === "zh" ? "HRC 專業知識文章" : "HRC Professional Knowledge Articles"}
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {HRC_KNOWLEDGE_ARTICLES.map((article, idx) => (
-              <motion.article
-                key={article.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-2xl shadow-xl border border-blue-200 p-8 md:p-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--brand-800)] mb-6 text-center">
+              {lang === "zh" ? "影響試管嬰兒成功的主要因素" : "Key Factors Affecting IVF Success"}
+            </h3>
+            
+            <p className="text-slate-700 leading-relaxed mb-8 text-center max-w-4xl mx-auto text-lg">
+              {lang === "zh" 
+                ? "所有進入試管嬰兒的女士而言，最期待就是能成功懷孕，因此我們提別提出以下關鍵因素幫助您獲得更多知識："
+                : "For all women undergoing IVF treatment, successful pregnancy is the ultimate goal. We highlight the following key factors to help you understand what affects your success:"}
+            </p>
+
+            <div className="space-y-5">
+              {/* 因素 1 - 年齡 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300"
+                className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-[var(--brand-100)] text-[var(--brand-800)] text-xs font-medium rounded-full">
-                    {lang === "zh" ? article.category : article.categoryEn}
-                  </span>
-                </div>
-                
-                {/* Video player if video field exists */}
-                {article.video && (
-                  <div className="mb-4 rounded-xl overflow-hidden">
-                    <video 
-                      controls 
-                      className="w-full h-auto"
-                      preload="metadata"
-                    >
-                      <source src={article.video} type="video/mp4" />
-                      {lang === "zh" ? "您的瀏覽器不支援影片播放。" : "Your browser does not support video playback."}
-                    </video>
-                  </div>
-                )}
-                
-                <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3">
-                  {lang === "zh" ? article.title : article.titleEn}
+                <h4 className="text-lg font-bold text-blue-900 mb-3 flex items-center gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                  {lang === "zh" ? "年齡" : "Age"}
                 </h4>
-                
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed">
-                  {lang === "zh" ? article.summary : article.summaryEn}
+                <p className="text-slate-700 leading-relaxed pl-10">
+                  {lang === "zh"
+                    ? "卵子的品質是決定試管成功失敗的第一關鍵因素，因此我們建議使用的卵子最好是在 35 歲之前就凍好的卵子，這樣高品質的卵子帶來的成功率也會大幅提升。"
+                    : "Egg quality is the first critical factor determining IVF success. We recommend using eggs frozen before age 35 to maximize success rates through high-quality egg preservation."}
                 </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="text-xs text-slate-500">
-                    <span className="font-medium">作者: {article.author}</span>
-                    <span className="ml-2">{article.date}</span>
-                  </div>
-                </div>
-                
-                <div className="flex flex-wrap gap-1 mt-3">
-                  {article.tags.map((tag, tagIdx) => (
-                    <span key={tagIdx} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.article>
-            ))}
-          </div>
+              </motion.div>
+
+              {/* 因素 2 - 生殖與內分泌系統 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-md border-l-4 border-indigo-600"
+              >
+                <h4 className="text-lg font-bold text-indigo-900 mb-3 flex items-center gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 bg-indigo-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                  {lang === "zh" ? "母體的生殖與內分泌系統健康" : "Reproductive & Endocrine System Health"}
+                </h4>
+                <p className="text-slate-700 leading-relaxed pl-10">
+                  {lang === "zh"
+                    ? "生殖異常、子宮內膜異位症和多囊卵巢綜合征（PCOS）、甲亢等都會影響試管成功率，因此在試管前必須先排除處理這些問題，才有助於好的結果。"
+                    : "Reproductive abnormalities, endometriosis, PCOS, hyperthyroidism and other conditions affect success rates. These must be addressed before treatment to optimize outcomes."}
+                </p>
+              </motion.div>
+
+              {/* 因素 3 - 生活方式 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-600"
+              >
+                <h4 className="text-lg font-bold text-green-900 mb-3 flex items-center gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                  {lang === "zh" ? "生活方式因素" : "Lifestyle Factors"}
+                </h4>
+                <p className="text-slate-700 leading-relaxed pl-10">
+                  {lang === "zh"
+                    ? "酒精、吸煙和肥胖等會影響試管嬰兒治療的療效和女性的受孕能力。在開始治療之前，養成健康的習慣可能會增加成功的可能性。"
+                    : "Alcohol, smoking, and obesity affect IVF effectiveness and fertility. Adopting healthy habits before treatment can significantly increase success chances."}
+                </p>
+              </motion.div>
+
+              {/* 因素 4 - 既往妊娠史 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-600"
+              >
+                <h4 className="text-lg font-bold text-purple-900 mb-3 flex items-center gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                  {lang === "zh" ? "既往妊娠史" : "Previous Pregnancy History"}
+                </h4>
+                <p className="text-slate-700 leading-relaxed pl-10">
+                  {lang === "zh"
+                    ? "就先前的懷孕困難或流產的女性，試管成功幾率也可能收到影響。"
+                    : "Women with previous pregnancy difficulties or miscarriage history may have affected IVF success rates."}
+                </p>
+              </motion.div>
+
+              {/* 因素 5 - 心理健康 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl shadow-md border-l-4 border-pink-600"
+              >
+                <h4 className="text-lg font-bold text-pink-900 mb-3 flex items-center gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 bg-pink-600 text-white rounded-full flex items-center justify-center text-sm font-bold">5</span>
+                  {lang === "zh" ? "心理健康與壓力管理" : "Mental Health & Stress Management"}
+                </h4>
+                <p className="text-slate-700 leading-relaxed pl-10">
+                  {lang === "zh"
+                    ? "試管嬰兒的結果可能會受到壓力水準和情緒穩定性的影響。通過諮詢或放鬆技巧減輕壓力可能會獲得更好的結果。"
+                    : "IVF outcomes can be affected by stress levels and emotional stability. Stress reduction through counseling or relaxation techniques may improve results."}
+                </p>
+              </motion.div>
+            </div>
+
+            {/* 摘要框 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="mt-8 bg-gradient-to-r from-blue-100 to-indigo-100 p-6 rounded-xl border-2 border-blue-300"
+            >
+              <p className="text-blue-900 font-semibold text-center">
+                {lang === "zh" 
+                  ? "🎯 了解這些因素有助於您制定更好的治療計畫，與 HRC 專業醫療團隊合作可以最大化您的成功機率。"
+                  : "🎯 Understanding these factors helps create a better treatment plan. Working with HRC's professional team can maximize your success potential."}
+              </p>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
-
-      {/* Team Section */}
       <section id="team" className="section-shell">
         <div className="text-center mb-16">
           <motion.div
