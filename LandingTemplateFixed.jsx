@@ -1973,6 +1973,7 @@ export default function LandingTemplate() {
   const [showSingleDetail, setShowSingleDetail] = useState(false);
   const [showPartnerDetail, setShowPartnerDetail] = useState(false);
   const [showIvfDetail, setShowIvfDetail] = useState(false);
+  const [showLineQR, setShowLineQR] = useState(false);
 
   const t = useMemo(() => ({
     heroTitle: {
@@ -3769,7 +3770,8 @@ export default function LandingTemplate() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="group text-center p-6 lg:p-8 glass-effect rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              onClick={() => setShowLineQR(true)}
+              className="group text-center p-6 lg:p-8 glass-effect rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
               <div className="inline-flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-[#00B900] to-[#00A300] rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <MessageCircle className="h-7 w-7 lg:h-8 lg:w-8 text-white" />
@@ -4467,6 +4469,79 @@ export default function LandingTemplate() {
                   <span>{lang === "zh" ? "立即諮詢" : "Contact Us Now"}</span>
                   <ArrowRight className="h-5 w-5" />
                 </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Line QR Code Modal */}
+      {showLineQR && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          onClick={() => setShowLineQR(false)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-md mx-4 glass-effect rounded-3xl shadow-2xl overflow-hidden"
+          >
+            {/* 背景裝飾 */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#00B900] to-transparent rounded-full opacity-20 transform translate-x-16 -translate-y-16"></div>
+
+            <div className="relative z-10 p-8">
+              {/* 關閉按鈕 */}
+              <button
+                onClick={() => setShowLineQR(false)}
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <div className="text-center space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-2">
+                    {lang === "zh" ? "加入 Line 諮詢" : "Join Our Line"}
+                  </h3>
+                  <p className="text-slate-600">
+                    {lang === "zh" ? "掃描下方 QR Code 或搜尋 Line ID：@293mminh" : "Scan the QR Code below or search Line ID: @293mminh"}
+                  </p>
+                </div>
+
+                {/* QR Code 圖片 */}
+                <div className="flex justify-center">
+                  <div className="w-48 h-48 bg-white p-4 rounded-lg shadow-lg flex items-center justify-center">
+                    <img 
+                      src="https://qr-official.line.me/sid/M/293mminh.png" 
+                      alt="Line QR Code"
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='white'/%3E%3Ctext x='50%' y='50%' font-size='14' text-anchor='middle' dominant-baseline='middle'%3EQR Code%3C/text%3E%3C/svg%3E";
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* 直接開啟 Line 按鈕 */}
+                <a
+                  href="https://line.me/R/ti/p/@293mminh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-[#00B900] to-[#00A300] text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300"
+                >
+                  {lang === "zh" ? "直接開啟 Line" : "Open Line Directly"}
+                </a>
+
+                <button
+                  onClick={() => setShowLineQR(false)}
+                  className="block w-full px-6 py-2 text-slate-600 hover:text-slate-800 font-semibold transition-colors duration-300"
+                >
+                  {lang === "zh" ? "關閉" : "Close"}
+                </button>
               </div>
             </div>
           </motion.div>
