@@ -3388,6 +3388,133 @@ export default function LandingTemplate() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* 高齡女性生殖的選擇 */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-amber-50 via-white to-orange-50 rounded-2xl shadow-xl border border-amber-200 p-8 md:p-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--brand-800)] mb-6 text-center">
+              {lang === "zh" ? "高齡女性生殖的選擇：自卵、捐卵、自懷或代孕？" : "Fertility Choices for Older Women: Fresh Eggs, Donor Eggs, Surrogacy, or Adoption?"}
+            </h3>
+            
+            <p className="text-slate-700 leading-relaxed mb-8 text-center max-w-4xl mx-auto text-lg">
+              {lang === "zh" 
+                ? "懷孕生子一直是傳統的人生旅程之一，然而隨著現代化社會生活形態的改變，生活節奏的快速與女性工作事業與壓力等等，讓女性婚齡與生育年齡大幅延後，根據台灣衛福部統計台灣女性 2022 年女性生育平均年齡為 32.42 歲，35 歲以上高齡產婦占比更超過 3 成。"
+                : "Pregnancy and childbirth have traditionally been a normal life journey. However, with modern societal changes, faster pace of life, and increased work stress, women are delaying marriage and childbearing. According to Taiwan's Health Ministry statistics, the average female birth age in 2022 was 32.42 years, with over 30% of births to women over 35."}
+            </p>
+
+            <div className="space-y-6 mb-8">
+              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-amber-600">
+                <h4 className="text-lg font-bold text-amber-900 mb-3 flex items-center gap-2">
+                  <span className="text-2xl">📖</span>
+                  {lang === "zh" ? "高齡生育的風險與挑戰" : "Risks and Challenges of Advanced Maternal Age"}
+                </h4>
+                <p className="text-slate-700 leading-relaxed">
+                  {lang === "zh"
+                    ? "上帝創造女性在 15 歲左右青春期後就啟動了生殖能力，然而生育之門也勢必在一定年齡就要關閉，高齡女性必須承受不孕、流產、死產、胎兒染色體異常機會較高；懷孕期間罹患妊娠高血壓、妊娠糖尿病、子癲前症等妊娠合併症的風險也會增加。高齡生孩子往往是在鬼門關走一回。因此醫學專家建議女性最好能在 35 歲前完成生育計劃。"
+                    : "While reproductive ability begins in the early teenage years, the window for natural fertility closes at a certain age. Advanced maternal age increases risks of infertility, miscarriage, stillbirth, and chromosomal abnormalities. Pregnancy complications like gestational hypertension, gestational diabetes, and preeclampsia are also more common. Medical experts recommend completing family planning before age 35 to minimize these risks."}
+                </p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-orange-100 to-amber-100 p-6 rounded-xl border-2 border-orange-300"
+              >
+                <h4 className="text-lg font-bold text-orange-900 mb-4 text-center">
+                  {lang === "zh" ? "高齡女性的四種選擇" : "Four Options for Older Women"}
+                </h4>
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="text-base font-bold text-orange-800 mb-2 flex items-center gap-2">
+                      <span className="text-xl">🥚</span>
+                      {lang === "zh" ? "自卵（年輕時凍卵）" : "Fresh/Frozen Eggs (Egg Freezing in Youth)"}
+                    </h5>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      {lang === "zh"
+                        ? "自卵的優先選擇是年輕時自己的凍卵。超過 40 歲以上的卵子品質已經不堪使用。進行人工生殖取卵受精往往需要超過 20 顆以上才有可能產出 1~2 顆好的胚胎，取卵次數可能要達 4~5 次才能取出足夠卵子。因此建議女性不要執著於用自己高齡的卵，冷凍年輕時的卵子是最聰明的選擇。"
+                        : "The ideal option is to freeze eggs when young. Eggs over age 40 are of poor quality. Advanced reproductive techniques may require 20+ eggs to produce 1-2 good embryos, potentially requiring 4-5 retrieval cycles. Freezing eggs at a younger age is the wisest choice rather than using poor-quality older eggs."}
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="text-base font-bold text-orange-800 mb-2 flex items-center gap-2">
+                      <span className="text-xl">💝</span>
+                      {lang === "zh" ? "捐卵（使用年輕捐卵者的卵子）" : "Donor Eggs (Using Eggs from Young Donors)"}
+                    </h5>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      {lang === "zh"
+                        ? "使用年輕捐卵者的卵子進行人工受精。這是許多高齡女性成功懷孕的關鍵選項。母愛不必是自己的血緣，陪伴孩子的成長與養育是人生幸福的泉源。"
+                        : "Using eggs from younger donors for IVF. This is a key option for many older women to achieve pregnancy. Parenthood and nurturing a child brings greater happiness than genetic connection."
+                      }
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="text-base font-bold text-orange-800 mb-2 flex items-center gap-2">
+                      <span className="text-xl">🤰</span>
+                      {lang === "zh" ? "自懷（自己懷孕）" : "Self-Carrying (Natural Pregnancy)"}
+                    </h5>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      {lang === "zh"
+                        ? "子宮的生育年齡大於卵子適合的生育年齡。卵子雖然不好，但子宮條件仍可懷孕。需要經過謹慎評估子宮肌瘤、子宮肌腺症等因素。高齡自懷需要承受更多妊娠風險，但許多案例如林志玲 47 歲成功產子證明了這是可能的。"
+                        : "The uterus can remain viable for pregnancy longer than eggs. While egg quality declines, uterine function may still support pregnancy if carefully evaluated for fibroids, adenomyosis, and other factors. Advanced maternal age carries increased pregnancy risks, but successful cases like Chiling Lin giving birth at 47 demonstrate this is possible."
+                      }
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg">
+                    <h5 className="text-base font-bold text-orange-800 mb-2 flex items-center gap-2">
+                      <span className="text-xl">👶</span>
+                      {lang === "zh" ? "代孕或領養" : "Surrogacy or Adoption"}
+                    </h5>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      {lang === "zh"
+                        ? "當所有條件都不支持自懷時，代孕是最後的選擇。但需要考慮經濟條件能否支持。作為專業顧問，我們建議客戶不要勉強花這樣龐大的費用。領養孩子也是大愛的表象，這樣的人生一樣很美好。"
+                        : "When natural pregnancy isn't viable, surrogacy is the final option. However, consider if your financial situation can support these significant costs. As professional consultants, we recommend not overextending financially. Adoption is also a beautiful choice and can be equally fulfilling."
+                      }
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <div className="bg-gradient-to-r from-amber-100 to-orange-100 p-6 rounded-xl border-2 border-amber-300">
+              <h5 className="text-lg font-semibold text-amber-900 mb-4 text-center">
+                {lang === "zh" ? "💡 重要建議" : "💡 Key Recommendations"}
+              </h5>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-amber-600 font-bold flex-shrink-0">✓</span>
+                  <span>{lang === "zh" ? "在 35 歲前完成生育計劃是最理想的選擇" : "Completing family planning before age 35 is ideal"}</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-amber-600 font-bold flex-shrink-0">✓</span>
+                  <span>{lang === "zh" ? "年輕時凍卵可以保留最佳的生育機會" : "Freezing eggs at a younger age preserves optimal fertility"}</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-amber-600 font-bold flex-shrink-0">✓</span>
+                  <span>{lang === "zh" ? "高齡女性可以探索多種方式實現母親夢" : "Older women can explore multiple pathways to motherhood"}</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-amber-600 font-bold flex-shrink-0">✓</span>
+                  <span>{lang === "zh" ? "專業醫療團隊的諮詢和評估至關重要" : "Professional medical consultation and evaluation are crucial"}</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-amber-600 font-bold flex-shrink-0">✓</span>
+                  <span>{lang === "zh" ? "無論選擇哪條路，成為孩子的母親都能帶來人生的幸福" : "Regardless of the path chosen, motherhood brings life fulfillment"}</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
       </section>
       <section id="team" className="section-shell">
         <div className="text-center mb-16">
