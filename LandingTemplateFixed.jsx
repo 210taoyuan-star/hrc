@@ -2492,49 +2492,69 @@ export default function LandingTemplate() {
         </div>
       </div>
 
-      {/* Hero Section - 極簡專業風格 */}
-      <section id="hero" className="relative py-20 bg-white text-center">
-        <div className="max-w-5xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-6">
-              <span className="text-[var(--brand)]">{lang === "zh" ? "祈孕" : "Fertility"}</span>
-              <span className="text-[var(--text-primary)]">{lang === "zh" ? "顧問" : " Guidance"}</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-[var(--text-secondary)] max-w-3xl mx-auto mb-10 leading-relaxed">
-              {lang === "zh" 
-                ? "以專業與信賴，圓您擁有孩子的夢想" 
-                : "Professional, compassionate support for your family journey"
-              }
-            </p>
-            
-            <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
-              <a
-                href="https://line.me/R/ti/p/@293mminh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-10 py-5 bg-[var(--brand)] text-white rounded-2xl font-bold shadow-lg hover:bg-[var(--brand-800)] transition-all duration-300 hover:shadow-xl"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                    <ArrowRight className="h-4 w-4" />
-                  </div>
-                  {lang === "zh" ? "開始諮詢" : "Start Consultation"}
-                </div>
-              </a>
+      {/* Hero Section with Illustration */}
+      <section id="hero" className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-[var(--brand-50)]/30 to-white">
+        <div className="section-shell">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+            {/* Left: Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6 sm:space-y-8"
+            >
+              <div className="space-y-4">
+                <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] leading-tight">
+                  <span className="text-[var(--brand)]">{lang === "zh" ? "祈孕" : "Fertility"}</span>
+                  <span className="text-[var(--text-primary)]">{lang === "zh" ? "顧問" : " Guidance"}</span>
+                </h1>
+                
+                <p className="text-lg sm:text-xl md:text-2xl text-[var(--text-secondary)] leading-relaxed">
+                  {lang === "zh" 
+                    ? "以專業與信賴，圓您擁有孩子的夢想" 
+                    : "Professional, compassionate support for your family journey"
+                  }
+                </p>
+              </div>
               
-              <div className="flex items-center gap-4 text-[var(--text-muted)]">
-                <div className="flex items-center gap-2">
-                  <Mail className="h-5 w-5 text-[var(--brand)]" />
-                  <span className="font-medium">qiyunsolution@gmail.com</span>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-4">
+                <a
+                  href="https://line.me/R/ti/p/@293mminh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group px-8 sm:px-10 py-4 sm:py-5 bg-[var(--brand)] text-white rounded-2xl font-bold shadow-lg hover:bg-[var(--brand-800)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                    </div>
+                    {lang === "zh" ? "開始諮詢" : "Start Consultation"}
+                  </div>
+                </a>
+                
+                <div className="flex items-center gap-2 text-sm sm:text-base text-[var(--text-muted)]">
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-[var(--brand)] flex-shrink-0" />
+                  <span className="font-medium break-all">qiyunsolution@gmail.com</span>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+
+            {/* Right: Illustration */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="hidden md:block"
+            >
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src={ILLUSTRATIONS.hero.src}
+                  alt={lang === "zh" ? ILLUSTRATIONS.hero.zhAlt : ILLUSTRATIONS.hero.enAlt}
+                  className="w-full h-auto rounded-2xl sm:rounded-3xl object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
