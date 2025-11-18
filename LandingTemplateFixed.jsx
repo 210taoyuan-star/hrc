@@ -2678,10 +2678,7 @@ export default function LandingTemplate() {
             transition={{ duration: 0.8 }}
             className="text-center mb-10 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4 px-4"
           >
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl glass-effect shadow-lg responsive-text-sm font-semibold text-[var(--brand-800)]">
-              <Globe2 className="h-5 w-5 text-[var(--brand)]" />
-              <span>{lang === "zh" ? "合作夥伴" : "Partner"}</span>
-            </div>
+            {/* Partner badge hidden */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-purple-600 bg-clip-text text-transparent leading-[1.25] px-2">
               {lang === "zh" ? "HRC Fertility 生育中心" : "HRC Fertility Center"}
             </h2>
@@ -3038,10 +3035,7 @@ export default function LandingTemplate() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl glass-effect shadow-lg responsive-text-sm font-semibold text-[var(--brand-800)] mb-6">
-              <ArrowRight className="h-5 w-5 text-[var(--brand)]" />
-              {lang === "zh" ? "完整流程" : "Complete Process"}
-            </div>
+            {/* Complete Process badge hidden */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-slate-600 bg-clip-text text-transparent mb-6 leading-tight">
               {lang === "zh" ? "詳細代孕流程" : "Detailed Surrogacy Process"}
             </h2>
