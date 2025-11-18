@@ -3780,8 +3780,8 @@ export default function LandingTemplate() {
               
               {/* Content */}
               <div className="relative z-10 p-6 lg:p-8 text-center text-white">
-                <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <MessageCircle className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
+                <div className="inline-flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
                   {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
@@ -3814,11 +3814,11 @@ export default function LandingTemplate() {
               
               {/* Content */}
               <div className="relative z-10 p-6 lg:p-8 text-center text-white">
-                <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <FileText className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
+                <div className="inline-flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <FileText className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
-                  {lang === "zh" ? "填寫表單" : "Contact Form"}
+                  {lang === "zh" ? "諮詢表單" : "Contact Form"}
                 </h4>
                 <p className="responsive-text-sm text-white/90 font-medium">{lang === "zh" ? "立即聯絡" : "Get in Touch"}</p>
                 <p className="responsive-text-xs text-white/70 mt-3">{lang === "zh" ? "24小時內回覆" : "24h Response"}</p>
@@ -3847,8 +3847,8 @@ export default function LandingTemplate() {
               
               {/* Content */}
               <div className="relative z-10 p-6 lg:p-8 text-center text-white">
-                <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Mail className="h-6 w-6 lg:h-7 lg:w-7 text-white" />
+                <div className="inline-flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Mail className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
                 </div>
                 <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
                   {lang === "zh" ? "電子郵件" : "Email"}
@@ -3906,7 +3906,7 @@ export default function LandingTemplate() {
                 <>
                   <div className="text-center mb-8 space-y-2">
                     <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand)] bg-clip-text text-transparent leading-[1.2]">
-                      {lang === "zh" ? "免費諮詢表單" : "Free Consultation Form"}
+                      {lang === "zh" ? "諮詢表單" : "Consultation Form"}
                     </h3>
                     <p className="responsive-text-base text-slate-600 leading-[1.6]">
                       {lang === "zh" 
