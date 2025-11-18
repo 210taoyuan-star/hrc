@@ -3783,11 +3783,11 @@ export default function LandingTemplate() {
                 <div className="inline-flex items-center justify-center w-4 h-4 lg:w-5 lg:h-5 bg-white/20 backdrop-blur-sm rounded-lg mb-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <MessageCircle className="h-2 w-2 lg:h-2.5 lg:w-2.5 text-white" />
                 </div>
-                <h4 className="text-2xs lg:text-xs font-bold mb-0.5 leading-tight text-white drop-shadow-md">
+                <h4 className="text-xs lg:text-sm font-bold mb-0.5 leading-tight text-white drop-shadow-md">
                   {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
                 </h4>
-                <p className="text-2xs text-white/90 font-medium">{lang === "zh" ? "掃描 QR Code" : "Scan QR Code"}</p>
-                <p className="text-2xs text-white/70 mt-1">@293mminh</p>
+                <p className="text-3xs lg:text-2xs text-white/90 font-medium">{lang === "zh" ? "掃描 QR Code" : "Scan QR Code"}</p>
+                <p className="text-3xs lg:text-2xs text-white/70 mt-1">@293mminh</p>
                 
                 {/* Arrow Indicator */}
                 <div className="mt-1.5 flex items-center justify-center gap-0.5 text-white/80 group-hover:text-white transition-colors">
@@ -3817,10 +3817,10 @@ export default function LandingTemplate() {
                 <div className="inline-flex items-center justify-center w-4 h-4 lg:w-5 lg:h-5 bg-white/20 backdrop-blur-sm rounded-lg mb-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <FileText className="h-2 w-2 lg:h-2.5 lg:w-2.5 text-white" />
                 </div>
-                <h4 className="text-2xs lg:text-xs font-bold mb-0.5 leading-tight text-white drop-shadow-md">
+                <h4 className="text-xs lg:text-sm font-bold mb-0.5 leading-tight text-white drop-shadow-md">
                   {lang === "zh" ? "諮詢表單" : "Consultation"}
                 </h4>
-                <p className="text-2xs text-white/90 font-medium">{lang === "zh" ? "請填寫下方表單" : "Fill Form"}</p>
+                <p className="text-3xs lg:text-2xs text-white/90 font-medium">{lang === "zh" ? "請填寫下方表單" : "Fill Form"}</p>
                 
                 {/* Arrow Indicator */}
                 <div className="mt-1.5 flex items-center justify-center gap-0.5 text-white/80 group-hover:text-white transition-colors">
@@ -3849,10 +3849,10 @@ export default function LandingTemplate() {
                 <div className="inline-flex items-center justify-center w-4 h-4 lg:w-5 lg:h-5 bg-white/20 backdrop-blur-sm rounded-lg mb-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Mail className="h-2 w-2 lg:h-2.5 lg:w-2.5 text-white" />
                 </div>
-                <h4 className="text-2xs lg:text-xs font-bold mb-0.5 leading-tight text-white drop-shadow-md">
+                <h4 className="text-xs lg:text-sm font-bold mb-0.5 leading-tight text-white drop-shadow-md">
                   {lang === "zh" ? "電子郵件" : "Email"}
                 </h4>
-                <p className="text-2xs text-white/90 font-medium break-all">{BRAND.email}</p>
+                <p className="text-3xs lg:text-2xs text-white/90 font-medium break-all">{BRAND.email}</p>
                 
                 {/* Copy Email Button */}
                 <button
