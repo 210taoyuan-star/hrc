@@ -3780,8 +3780,8 @@ export default function LandingTemplate() {
               
               {/* Content */}
               <div className="relative z-10 p-6 lg:p-8 text-center text-white">
-                <div className="inline-flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
+                <div className="inline-flex items-center justify-center w-6 h-6 lg:w-7 lg:h-7 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <MessageCircle className="h-3 w-3 lg:h-3.5 lg:w-3.5 text-white" />
                 </div>
                 <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
                   {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
@@ -3814,8 +3814,8 @@ export default function LandingTemplate() {
               
               {/* Content */}
               <div className="relative z-10 p-6 lg:p-8 text-center text-white">
-                <div className="inline-flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <FileText className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
+                <div className="inline-flex items-center justify-center w-6 h-6 lg:w-7 lg:h-7 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <FileText className="h-3 w-3 lg:h-3.5 lg:w-3.5 text-white" />
                 </div>
                 <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
                   {lang === "zh" ? "諮詢表單" : "Contact Form"}
@@ -3847,8 +3847,8 @@ export default function LandingTemplate() {
               
               {/* Content */}
               <div className="relative z-10 p-6 lg:p-8 text-center text-white">
-                <div className="inline-flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <Mail className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
+                <div className="inline-flex items-center justify-center w-6 h-6 lg:w-7 lg:h-7 bg-white/20 backdrop-blur-sm rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Mail className="h-3 w-3 lg:h-3.5 lg:w-3.5 text-white" />
                 </div>
                 <h4 className="responsive-text-base font-bold mb-2 leading-snug text-white drop-shadow-md">
                   {lang === "zh" ? "電子郵件" : "Email"}
