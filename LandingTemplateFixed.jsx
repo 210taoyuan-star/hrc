@@ -3164,6 +3164,209 @@ export default function LandingTemplate() {
           </motion.div>
         </div>
 
+        {/* 美國試管嬰兒與代孕的優勢 */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 md:p-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--brand-800)] mb-6 text-center">
+              {lang === "zh" ? "美國試管嬰兒與代孕的優勢" : "Advantages of US IVF and Surrogacy"}
+            </h3>
+            
+            <p className="text-slate-700 leading-relaxed mb-8 text-center max-w-4xl mx-auto">
+              {lang === "zh" 
+                ? "美國醫療技術的進步與創新一直領先全球，試管嬰兒與代孕商業化的成功與法治化的嚴謹，使得美國試管嬰兒技術不斷持續在進步並且帶動代孕產業的蓬勃發展，其優勢分析如下："
+                : "US medical technology continues to lead globally. The success of commercialized IVF and surrogacy, combined with rigorous legal frameworks, drives continuous advancement in fertility treatment and surrogacy services. Key advantages include:"}
+            </p>
+
+            <div className="space-y-8">
+              {/* 優勢 1 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-[var(--brand-50)] to-white p-6 rounded-xl border-l-4 border-[var(--brand)]"
+              >
+                <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4 flex items-start gap-3">
+                  <span className="flex-shrink-0 w-8 h-8 bg-[var(--brand)] text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                  {lang === "zh" 
+                    ? "美國已經全面進入第三代試管嬰兒技術，有效提高試管成功率"
+                    : "3rd Generation IVF Technology - Significantly Higher Success Rates"}
+                </h4>
+                <div className="ml-11 space-y-3 text-slate-700 leading-relaxed">
+                  <p>
+                    {lang === "zh"
+                      ? "PGS/PGD 技術是在移植前進行染色體遺傳篩查，PGS 可以確定胚胎中的細胞是否具有正確數量的染色體。而 PGD 是另一種遺傳篩查，是胚胎植入前遺傳學診斷，它可檢測特定疾病的基因的存在。如果您或您的伴侶家庭中有遺傳病史，並且您想確定您沒有將其傳給孩子，那麼可以通過 PGD 診斷出百余種遺傳性疾病。此外，還可合法的準確獲得寶寶性別，滿足準父母的個性需求。透過第三代試管嬰兒技術有效提高試管嬰兒成功率，有的醫院成功率可高達 75% 以上。"
+                      : "PGS/PGD technology screens for chromosomal and genetic conditions before embryo transfer. PGS determines if embryos have the correct number of chromosomes, while PGD can detect genes for specific inherited diseases. If you or your partner have a family history of genetic conditions, PGD can diagnose over 100 hereditary diseases. Additionally, gender selection is legally available. 3rd generation IVF has achieved success rates exceeding 75% at leading clinics."}
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* 優勢 2 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-xl border-l-4 border-blue-500"
+              >
+                <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4 flex items-start gap-3">
+                  <span className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                  {lang === "zh"
+                    ? "尊重人權，所有的需求均在法律規範下滿足客戶"
+                    : "Human Rights Focus - All Needs Met Within Legal Framework"}
+                </h4>
+                <div className="ml-11 space-y-3 text-slate-700 leading-relaxed">
+                  <p>
+                    {lang === "zh"
+                      ? "當很多國家還受限於倫理、道德與宗教的枷鎖，在試管嬰兒與代孕的法律規範有很多的限制或者禁止，而美國是世界上唯一以人權作為其試管嬰兒與代孕法律規範的唯一考量。因此在美國加州無論是夫妻、單身、同志伴侶等，各種試管嬰兒與代孕需求均能被充分滿足與獲得法律應有的保障，所有人均可以完成擁有自己的孩子夢想。"
+                      : "While many countries impose restrictions based on ethics, morals, or religion, the United States uniquely prioritizes human rights in its fertility legislation. In California, married couples, single individuals, and same-sex partners can all access comprehensive services with full legal protection."}
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* 優勢 3 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-green-50 to-white p-6 rounded-xl border-l-4 border-green-500"
+              >
+                <h4 className="text-xl font-bold text-[var(--brand-800)] mb-4 flex items-start gap-3">
+                  <span className="flex-shrink-0 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                  {lang === "zh"
+                    ? "完善的法律規範下，保障準父母與代理孕母的權利與義務"
+                    : "Comprehensive Legal Protection for All Parties"}
+                </h4>
+                <div className="ml-11 space-y-3 text-slate-700 leading-relaxed">
+                  <p>
+                    {lang === "zh"
+                      ? "美國的商業代孕可以追溯至 1976 年，當時一位名叫基恩（Noel Keane）的律師起草了首份代孕的法律協議開始，經過 40 多年的蓬勃發展，美國已經成為全世界最大的代孕市場。準父母與代理孕母的權利與義務均在完善的法律規範下獲得保障。透過代理孕母公司對孕母在孕期前中後進行全程管理，確保孕期的安全，充分保障準父母與孕母的權利與義務，所有的費用必須透過信託公司進行管理，費用支出項目詳細完整，保障代孕過程的費用支出的透明與受到安全的監管保障。"
+                      : "Commercial surrogacy in the US dates back to 1976. After over 40 years of development, comprehensive legal frameworks protect all parties' rights and obligations. Surrogacy agencies provide complete management throughout the journey, with all finances managed through trust companies ensuring transparency and security."}
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* 凍卵知識 */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-purple-50 via-white to-pink-50 rounded-2xl shadow-xl border border-purple-200 p-8 md:p-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--brand-800)] mb-6 text-center">
+              {lang === "zh" ? "凍卵，女性人生階段該考慮的事" : "Egg Freezing - An Important Life Decision for Women"}
+            </h3>
+            
+            <p className="text-slate-700 leading-relaxed mb-8 text-center max-w-4xl mx-auto text-lg">
+              {lang === "zh" 
+                ? "隨著晚婚晚育的年齡不斷地提高，凍卵視乎是每位現代女性人生階段都該提前考慮的事。"
+                : "With increasing age of marriage and childbearing, egg freezing has become an important consideration for modern women at every life stage."}
+            </p>
+
+            <div className="space-y-6 mb-8">
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <p className="text-slate-700 leading-relaxed">
+                  {lang === "zh"
+                    ? "女性的卵巢自青春期後就開始每個月固定排卵，卵巢的卵子數是固定的，自青春期後也就開始消耗至更年期終止排卵為止，卵子排出的數量與質量也在過程中變少與變差，因此當您還不確認自己是否會懷孕生子，那麼凍卵就變成女性在人生階段該考慮的事了。"
+                    : "Women's ovaries begin regular monthly ovulation after puberty. The number of eggs is fixed and depletes from puberty until menopause. Both quantity and quality decline over time. If you're uncertain about future pregnancy plans, egg freezing becomes an important consideration."}
+                </p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-300"
+              >
+                <h4 className="text-xl font-bold text-purple-900 mb-3 flex items-center gap-2">
+                  <span className="text-2xl">⏰</span>
+                  {lang === "zh" ? "最佳凍卵年齡：30-35 歲" : "Optimal Age for Egg Freezing: 30-35"}
+                </h4>
+                <p className="text-slate-700 leading-relaxed">
+                  {lang === "zh"
+                    ? "專家建議女性最好的凍卵年齡是在 30~35 歲，也是留下未來生機最好的階段。這個年紀取卵留下的數量與品質相對比較滿意，超過 35 歲後女性卵子的品質快速下降數量也變少，導致後續進行人工受精後的胚胎異常比例過高，試管嬰兒失敗率也隨之增加，40 歲的卵子胚胎正常比率已經低於 10%，因此強烈建議女性在 35 歲之就前完成凍卵。"
+                    : "Experts recommend egg freezing between ages 30-35 for optimal results. Egg quantity and quality are best during this period. After 35, egg quality rapidly declines, leading to higher embryo abnormality rates and lower IVF success rates. At age 40, normal embryo rate drops below 10%. Therefore, completing egg freezing before 35 is strongly recommended."}
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500"
+                >
+                  <h5 className="text-lg font-bold text-blue-900 mb-3 flex items-center gap-2">
+                    <span className="text-xl">📊</span>
+                    {lang === "zh" ? "AMH 指標監測" : "AMH Level Monitoring"}
+                  </h5>
+                  <p className="text-slate-700 leading-relaxed text-sm">
+                    {lang === "zh"
+                      ? "女性在 30 歲開始就該關注卵子庫存荷爾蒙指標 AMH 指標變化，年輕女性正常值都在 3~5 居多，當 AMH 下降至 2，也就是要立即考慮凍卵，每次取卵數也跟 AMH 指標有正相關，因此越早凍卵取得的有效卵子數目也是比較高。"
+                      : "Women should start monitoring AMH (Anti-Müllerian Hormone) levels from age 30. Normal levels for young women are typically 3-5. When AMH drops to 2, immediate egg freezing should be considered. Egg retrieval numbers correlate with AMH levels, so earlier freezing yields more viable eggs."}
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500"
+                >
+                  <h5 className="text-lg font-bold text-green-900 mb-3 flex items-center gap-2">
+                    <span className="text-xl">✨</span>
+                    {lang === "zh" ? "成功率數據" : "Success Rate Data"}
+                  </h5>
+                  <p className="text-slate-700 leading-relaxed text-sm">
+                    {lang === "zh"
+                      ? "臨床數據顯示 30 歲的卵子成胚胎後，通過 PGS 檢查的良率約 40%，這個數據很值的參考，也就是在年輕時一次凍卵就可能可以取到足夠的卵子，大部分超過 10 顆，這樣一次取卵未來留下的胚胎成功著床比例也會大大增加。"
+                      : "Clinical data shows that eggs frozen at age 30 have approximately 40% viability after PGS screening. One egg freezing cycle at a younger age typically yields 10+ eggs, significantly increasing future successful implantation rates."}
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md border-2 border-purple-200">
+              <h5 className="text-lg font-semibold text-purple-900 mb-4 text-center">
+                {lang === "zh" ? "凍卵重要提醒" : "Important Egg Freezing Reminders"}
+              </h5>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-purple-600 font-bold flex-shrink-0">•</span>
+                  <span>{lang === "zh" ? "建議在 35 歲前完成凍卵" : "Complete egg freezing before age 35"}</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-purple-600 font-bold flex-shrink-0">•</span>
+                  <span>{lang === "zh" ? "30 歲開始定期檢查 AMH 指標" : "Start regular AMH monitoring from age 30"}</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-purple-600 font-bold flex-shrink-0">•</span>
+                  <span>{lang === "zh" ? "AMH 降至 2 時立即考慮凍卵" : "Consider freezing immediately when AMH drops to 2"}</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-700">
+                  <span className="text-purple-600 font-bold flex-shrink-0">•</span>
+                  <span>{lang === "zh" ? "越早凍卵，取卵數量與品質越好" : "Earlier freezing means better quantity and quality"}</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+
         {/* HRC Knowledge Articles */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-8 text-center">
