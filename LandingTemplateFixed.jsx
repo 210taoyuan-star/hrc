@@ -3818,9 +3818,9 @@ export default function LandingTemplate() {
                   <FileText className="h-2 w-2 lg:h-2.5 lg:w-2.5 text-white" />
                 </div>
                 <h4 className="text-2xs lg:text-xs font-bold mb-0.5 leading-tight text-white drop-shadow-md">
-                  {lang === "zh" ? "請填寫下方表單" : "Fill Form"}
+                  {lang === "zh" ? "諮詢表單" : "Consultation"}
                 </h4>
-                <p className="text-2xs text-white/90 font-medium">{lang === "zh" ? "立即聯絡" : "Get in Touch"}</p>
+                <p className="text-2xs text-white/90 font-medium">{lang === "zh" ? "請填寫下方表單" : "Fill Form"}</p>
                 <p className="text-2xs text-white/70 mt-1">{lang === "zh" ? "24小時回" : "24h"}</p>
                 
                 {/* Arrow Indicator */}
