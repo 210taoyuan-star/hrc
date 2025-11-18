@@ -3784,14 +3784,14 @@ export default function LandingTemplate() {
                   <MessageCircle className="h-2 w-2 lg:h-2.5 lg:w-2.5 text-white" />
                 </div>
                 <h4 className="text-2xs lg:text-xs font-bold mb-0.5 leading-tight text-white drop-shadow-md">
-                  {lang === "zh" ? "加入 Line" : "Line"}
+                  {lang === "zh" ? "加入 Line 諮詢" : "Line Consultation"}
                 </h4>
-                <p className="text-2xs text-white/90 font-medium">{lang === "zh" ? "掃描 QR" : "Scan QR"}</p>
+                <p className="text-2xs text-white/90 font-medium">{lang === "zh" ? "掃描 QR Code" : "Scan QR Code"}</p>
                 <p className="text-2xs text-white/70 mt-1">@293mminh</p>
                 
                 {/* Arrow Indicator */}
                 <div className="mt-1.5 flex items-center justify-center gap-0.5 text-white/80 group-hover:text-white transition-colors">
-                  <span className="text-2xs">{lang === "zh" ? "點擊" : "Click"}</span>
+                  <span className="text-2xs">{lang === "zh" ? "點擊開啟" : "Click"}</span>
                   <svg className="w-1.5 h-1.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -3821,11 +3821,10 @@ export default function LandingTemplate() {
                   {lang === "zh" ? "諮詢表單" : "Consultation"}
                 </h4>
                 <p className="text-2xs text-white/90 font-medium">{lang === "zh" ? "請填寫下方表單" : "Fill Form"}</p>
-                <p className="text-2xs text-white/70 mt-1">{lang === "zh" ? "24小時回" : "24h"}</p>
                 
                 {/* Arrow Indicator */}
                 <div className="mt-1.5 flex items-center justify-center gap-0.5 text-white/80 group-hover:text-white transition-colors">
-                  <span className="text-2xs">{lang === "zh" ? "點擊填寫" : "Click"}</span>
+                  <span className="text-2xs">{lang === "zh" ? "點擊開啟" : "Click"}</span>
                   <svg className="w-1.5 h-1.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
