@@ -622,6 +622,13 @@ const ILLUSTRATIONS = {
     zhAlt: "聯絡我們專業服務背景",
     enAlt: "Contact us professional service background",
   },
+  about: {
+    src: "/images/gallery/gallery-3.webp",
+    srcSet: "/images/gallery/gallery-3-480.webp 480w, /images/gallery/gallery-3-960.webp 960w, /images/gallery/gallery-3-1600.webp 1600w",
+    sizes: "(min-width: 1024px) 450px, 90vw",
+    zhAlt: "祈孕顧問團隊介紹插圖",
+    enAlt: "Qiyun Consulting team illustration",
+  },
 };
 
 // NAV routes with anchor links for smooth scrolling
@@ -2535,6 +2542,74 @@ export default function LandingTemplate() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* About Qiyun Section */}
+      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white to-[var(--brand-50)]">
+        <div className="section-shell">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6 sm:space-y-8 order-2 md:order-1"
+            >
+              <div className="space-y-3 sm:space-y-4">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--brand-800)] leading-[1.2]">
+                  {lang === "zh" ? "關於祈孕顧問" : "About Qiyun Consulting"}
+                </h2>
+                <div className="w-12 h-1 bg-gradient-to-r from-[var(--brand)] to-purple-500 rounded-full"></div>
+              </div>
+              
+              <p className="text-base sm:text-lg text-slate-700 leading-[1.8]">
+                {lang === "zh" 
+                  ? "祈孕顧問致力於提供專業的美國試管與代孕諮詢服務，幫助無法自然懷孕的家庭實現生育夢想。我們擁有豐富的跨境服務經驗，精通美國及台灣相關法律規定。"
+                  : "Qiyun Consulting is dedicated to providing professional US surrogacy and IVF consulting services, helping families unable to conceive naturally achieve their dreams of parenthood. We have extensive cross-border service experience and deep knowledge of US and Taiwan regulations."
+                }
+              </p>
+
+              <p className="text-base sm:text-lg text-slate-700 leading-[1.8]">
+                {lang === "zh" 
+                  ? "我們提供線上與面對面雙軌服務模式，靈活滿足不同客戶的需求。從專業諮詢、醫療對接、法律協助到全程陪伴，每一步都有專業團隊的保障。"
+                  : "We offer both online and in-person service delivery options to accommodate diverse client needs. From professional consultation, medical liaison, legal assistance to comprehensive support throughout the journey, every step is backed by our expert team."
+                }
+              </p>
+
+              <div className="flex items-center gap-4 pt-4">
+                <a
+                  href="https://line.me/R/ti/p/@293mminh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--brand)] text-white rounded-xl font-semibold hover:bg-[var(--brand-800)] transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <span>{lang === "zh" ? "立即諮詢" : "Consult Now"}</span>
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="order-1 md:order-2"
+            >
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src={ILLUSTRATIONS.about.src}
+                  srcSet={ILLUSTRATIONS.about.srcSet}
+                  sizes={ILLUSTRATIONS.about.sizes}
+                  alt={lang === "zh" ? ILLUSTRATIONS.about.zhAlt : ILLUSTRATIONS.about.enAlt}
+                  className="w-full h-auto rounded-2xl sm:rounded-3xl object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
