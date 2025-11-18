@@ -590,9 +590,9 @@ const GALLERY_IMAGES = [
 // Section illustrations sourced from hero/gallery assets
 const ILLUSTRATIONS = {
   hero: {
-    src: "/images/gallery/ivf.webp",
-    zhAlt: "體外受精概念插圖",
-    enAlt: "IVF concept illustration",
+    src: "/images/gallery/Image.webp",
+    zhAlt: "祈孕顧問插圖",
+    enAlt: "Qiyun Consulting illustration",
   },
   knowledge: {
     src: "/images/gallery/iui.webp",
