@@ -648,10 +648,10 @@ const NAV = [
 ];
 
 const FEATURES = [
-  { id: "ivf-services", icon: ShieldCheck, zh: "夫妻或單身試管", en: "IVF Services", descZh: "提供夫妻或單身人士專業試管嬰兒服務，實現生育夢想。", descEn: "Professional IVF services for couples and single individuals to achieve fertility dreams.", image: "/images/gallery/son.webp", hasDetail: true },
+  { id: "ivf-services", icon: ShieldCheck, zh: "夫妻或單身試管", en: "IVF Services", descZh: "提供夫妻或單身人士專業試管嬰兒服務，實現生育夢想。", descEn: "Professional IVF services for couples and single individuals to achieve fertility dreams.", image: "/images/gallery/son1.webp", hasDetail: true },
   { id: "couple-surrogacy", icon: HeartHandshake, zh: "夫妻代孕", en: "Couple Surrogacy", descZh: "為已婚夫妻提供專業美國試管與代孕，圓滿家庭夢想。", descEn: "Professional US surrogacy services for married couples to fulfill their family dreams.", image: "/images/gallery/parent.webp", hasDetail: true },
   { id: "lgbtq-surrogacy", icon: Users2, zh: "同志代孕", en: "LGBTQ+ Surrogacy", descZh: "支援同志伴侶代孕需求，提供包容性專業服務。", descEn: "Supporting LGBTQ+ couples with inclusive and professional surrogacy services.", image: "/images/gallery/girls.webp", hasDetail: true },
-  { id: "single-surrogacy", icon: User, zh: "單身代孕", en: "Single Parent Surrogacy", descZh: "協助單身人士實現為人父母的夢想，提供全方位支援與陪伴。", descEn: "Helping single individuals achieve their dreams of becoming parents with comprehensive support and guidance.", image: "/images/gallery/son.webp", hasDetail: true }
+  { id: "single-surrogacy", icon: User, zh: "單身代孕", en: "Single Parent Surrogacy", descZh: "協助單身人士實現為人父母的夢想，提供全方位支援與陪伴。", descEn: "Helping single individuals achieve their dreams of becoming parents with comprehensive support and guidance.", image: "/images/gallery/son1.webp", hasDetail: true }
 ];
 
 // 夫妻代孕詳細內容
