@@ -3821,6 +3821,39 @@ export default function LandingTemplate() {
                 </button>
               </div>
             </motion.div>
+
+            {/* Phone Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10 p-2 lg:p-2.5 text-center text-white min-h-0">
+                <div className="inline-flex items-center justify-center w-4 h-4 lg:w-5 lg:h-5 bg-white/20 backdrop-blur-sm rounded-lg mb-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Phone className="h-2 w-2 lg:h-2.5 lg:w-2.5 text-white" />
+                </div>
+                <h4 className="text-xs lg:text-sm font-bold mb-0.5 leading-tight text-white drop-shadow-md">
+                  {lang === "zh" ? "聯絡電話" : "Phone"}
+                </h4>
+                <p className="text-3xs lg:text-2xs text-white/90 font-medium">02 6609-0980</p>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigator.clipboard.writeText("02 6609-0980");
+                    alert(lang === "zh" ? "已複製" : "Copied");
+                  }}
+                  className="mt-1.5 inline-flex items-center justify-center gap-0.5 px-1.5 py-0.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-md text-white text-3xs lg:text-2xs font-medium transition-all duration-300"
+                >
+                  <svg className="w-2 h-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              </div>
+            </motion.div>
           </div>
 
           <motion.div
@@ -4005,6 +4038,10 @@ export default function LandingTemplate() {
                 <div className="flex items-center gap-3 hover:text-blue-300 transition-colors duration-300">
                   <Mail className="h-5 w-5 flex-shrink-0 text-[var(--brand-200)]" />
                   <span className="responsive-text-sm break-all font-medium">{BRAND.email}</span>
+                </div>
+                <div className="flex items-center gap-3 hover:text-blue-300 transition-colors duration-300">
+                  <Phone className="h-5 w-5 flex-shrink-0 text-[var(--brand-200)]" />
+                  <span className="responsive-text-sm font-medium">02 6609-0980</span>
                 </div>
                 <div className="flex items-start gap-3 hover:text-blue-300 transition-colors duration-300">
                   <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5 text-[var(--brand-200)]" />
