@@ -643,7 +643,6 @@ const NAV = [
   { id: "process", path: "#process", zh: "詳細流程", en: "Process" },
   { id: "knowledge", path: "#knowledge", zh: "代孕知識與案例", en: "Knowledge & Cases" },
   { id: "team", path: "#team", zh: "團隊", en: "Team" },
-  { id: "faq", path: "#faq", zh: "FAQ", en: "FAQ" },
   { id: "contact", path: "#contact", zh: "聯絡", en: "Contact" },
 ];
 
@@ -1520,54 +1519,7 @@ const HRC_KNOWLEDGE_ARTICLES = [];
 // HRC Surrogacy Success Cases - Removed
 const HRC_SUCCESS_CASES = [];
 
-const FAQS = [
-  { qZh: "首次諮詢要費用嗎？", aZh: "線上初談免費，將為您評估適合的州別與流程。", qEn: "Is the first consultation free?", aEn: "Yes—it's free. We'll assess best-fit states and pathways." },
-  { qZh: "整體時間需要多久？", aZh: "平均 12–18 個月，視配對速度與州法文件而定。", qEn: "How long does it take?", aEn: "Typically 12–18 months depending on matching and legal timeline." },
-  { qZh: "費用大概多少？", aZh: "總費用約 $120K–$180K USD，詳細會依州別與需求而異。", qEn: "What are the costs?", aEn: "Total costs range $120K–$180K USD, varying by state and specific needs." },
-  
-  // Legal FAQs
-  { qZh: "哪些州最適合進行代孕？", aZh: "加州、伊利諾州、康州等為代孕友善州，法律明確且程序相對簡單。我們會根據您的具體情況推薦最適合的州別。", qEn: "Which states are best for surrogacy?", aEn: "California, Illinois, Connecticut are surrogacy-friendly states with clear laws and simpler procedures. We'll recommend the best state based on your specific situation." },
-  
-  { qZh: "代孕合約包含哪些重要條款？", aZh: "包括補償條款、醫療決策權、責任分擔、親權確立等。我們的法律團隊會詳細解釋每個條款，確保您的權益受到保障。", qEn: "What important clauses are in surrogacy contracts?", aEn: "Includes compensation terms, medical decision rights, liability distribution, parental rights establishment. Our legal team will explain each clause in detail to protect your interests." },
-  
-  { qZh: "如何確保親權歸屬？", aZh: "透過產前親權確認程序，在嬰兒出生前就法律上確立委託父母的親權，避免後續爭議。", qEn: "How are parental rights secured?", aEn: "Through pre-birth parental rights confirmation procedures, legally establishing intended parents' rights before birth to avoid future disputes." },
-  
-  { qZh: "代孕過程中的醫療費用誰負責？", aZh: "所有與懷孕相關的醫療費用均由委託父母承擔，包括產前檢查、分娩費用、併發症治療等。會在合約中明確規定。", qEn: "Who pays for medical expenses during surrogacy?", aEn: "All pregnancy-related medical expenses are covered by intended parents, including prenatal care, delivery costs, complication treatments. This is clearly specified in the contract." },
-  
-  { qZh: "如果代孕母親改變主意怎麼辦？", aZh: "在代孕友善州，法律明確規定代孕母親無法保留嬰兒的親權。合約簽署後，委託父母的權利受到法律保護。", qEn: "What if the surrogate changes her mind?", aEn: "In surrogacy-friendly states, laws clearly state surrogates cannot retain parental rights. After contract signing, intended parents' rights are legally protected." },
-  
-  { qZh: "需要多長時間找到合適的代孕母親？", aZh: "通常需要2-4個月找到合適的配對。我們有嚴格的篩選程序，包括健康檢查、心理評估和背景調查。", qEn: "How long to find a suitable surrogate?", aEn: "Typically takes 2-4 months to find a suitable match. We have strict screening procedures including health checks, psychological evaluations, and background investigations." },
-  
-  { qZh: "可以選擇代孕母親嗎？", aZh: "是的，您可以查看代孕母親的基本資料（去識別化），並參與配對過程。雙方都需要同意才能進行合作。", qEn: "Can we choose our surrogate?", aEn: "Yes, you can review surrogates' basic profiles (de-identified) and participate in the matching process. Both parties must agree to proceed with cooperation." },
-  
-  { qZh: "懷孕期間如何與代孕母親溝通？", aZh: "我們提供溝通指導和協調服務，幫助建立良好的溝通關係。頻率和方式會在合約中明確約定。", qEn: "How to communicate with surrogate during pregnancy?", aEn: "We provide communication guidance and coordination services to help establish good communication relationships. Frequency and methods are clearly agreed upon in the contract." },
-  
-  // Process FAQs
-  { qZh: "第一次配對不成功怎麼辦？", aZh: "我們會重新評估需求，調整配對標準，並安排新的配對。大部分客戶在2-3次配對內都能找到合適的代孕母親。", qEn: "What if the first match doesn't work?", aEn: "We'll reassess needs, adjust matching criteria, and arrange new matches. Most clients find suitable surrogates within 2-3 matching attempts." },
-  
-  { qZh: "需要親自到美國嗎？", aZh: "建議至少3次赴美：合約簽署、胚胎移植、嬰兒出生。我們可協助安排行程，減少不必要的往返。", qEn: "Do we need to travel to the US?", aEn: "Recommend at least 3 US trips: contract signing, embryo transfer, baby birth. We can help arrange itineraries to minimize unnecessary travel." },
-  
-  { qZh: "如果出現醫療併發症怎麼辦？", aZh: "合約會詳細規定各種醫療情況的處理方式。我們與頂級醫療機構合作，確保得到最好的醫療照護。", qEn: "What if medical complications arise?", aEn: "Contracts detail handling procedures for various medical situations. We partner with top medical institutions to ensure the best healthcare." },
-  
-  { qZh: "新生兒的國籍和證件如何辦理？", aZh: "嬰兒出生後，我們協助辦理美國出生證明和相關國籍手續。具體程序視父母國籍而定。", qEn: "How to handle newborn's nationality and documents?", aEn: "After birth, we assist with US birth certificates and related nationality procedures. Specific processes depend on parents' nationality." },
-  
-  // California & HRC Specific FAQs
-  { qZh: "為什麼選擇加州進行代孕？", aZh: "加州擁有全美最完善的代孕法律體系，支持Pre-Birth Orders，無居住要求，對國際客戶友善，且醫療資源豐富。我們的HRC合作夥伴更是業界頂尖。", qEn: "Why choose California for surrogacy?", aEn: "California has the most comprehensive surrogacy legal system in the US, supports Pre-Birth Orders, has no residency requirements, is international client-friendly, and has abundant medical resources. Our HRC partners are industry leaders." },
-  
-  { qZh: "什麼是Pre-Birth Order？", aZh: "Pre-Birth Order是加州法院在嬰兒出生前就確立委託父母親權的法律程序。這意味著您的姓名會直接出現在出生證明上，無需額外收養程序。", qEn: "What is a Pre-Birth Order?", aEn: "A Pre-Birth Order is a legal procedure where California courts establish intended parents' parental rights before the baby is born. This means your names appear directly on the birth certificate without additional adoption procedures." },
-  
-  { qZh: "HRC Fertility有什麼優勢？", aZh: "HRC成立於1988年，擁有30多年經驗，代孕成功率達85%以上。提供24/7醫療支援、多語言服務，與USC醫學院合作，是南加州最權威的生殖中心。", qEn: "What are HRC Fertility's advantages?", aEn: "HRC was established in 1988 with over 30 years of experience and surrogacy success rates above 85%. They provide 24/7 medical support, multilingual services, partner with USC Medical School, and are Southern California's most authoritative reproductive center." },
-  
-  { qZh: "加州代孕的法律程序複雜嗎？", aZh: "相對其他州，加州的程序最為簡化。有了Pre-Birth Order，嬰兒出生時您就是法定父母，無需經過複雜的收養程序或法院聽證會。", qEn: "Are California surrogacy legal procedures complex?", aEn: "Compared to other states, California's procedures are the most streamlined. With Pre-Birth Orders, you are the legal parents when the baby is born, without complex adoption procedures or court hearings." },
-  
-  { qZh: "HRC的醫師團隊如何？", aZh: "我們合作的HRC醫師都是USC醫學院的REI（生殖內分泌與不孕症）專家，包括Dr. Marisa Gigg、Dr. Chelsey Harris等，專精第三方生殖和代孕醫療管理。", qEn: "How is HRC's medical team?", aEn: "Our HRC partner physicians are all REI (Reproductive Endocrinology & Infertility) specialists from USC Medical School, including Dr. Marisa Gigg, Dr. Chelsey Harris, etc., specializing in third-party reproduction and surrogacy medical management." },
-  
-  { qZh: "在加州進行代孕需要居住在當地嗎？", aZh: "不需要。加州法律不要求委託父母是當地居民。您只需要在關鍵時刻（如合約簽署、胚胎移植、分娩）赴美即可。", qEn: "Do we need to live in California for surrogacy?", aEn: "No. California law does not require intended parents to be local residents. You only need to travel to the US for key moments (contract signing, embryo transfer, delivery)." },
-  
-  { qZh: "HRC的胚胎移植成功率如何？", aZh: "HRC的單次胚胎移植成功率超過85%，遠超全國平均水準。實驗室設備先進，胚胎學團隊經驗豐富，提供最優質的醫療服務。", qEn: "What is HRC's embryo transfer success rate?", aEn: "HRC's single embryo transfer success rate exceeds 85%, far above national averages. They have advanced laboratory equipment and experienced embryology teams, providing the highest quality medical services." },
-  
-  { qZh: "加州的代孕合約有什麼特殊保障？", aZh: "加州法律明確保護委託父母權益，合約條款受法院認可。包括補償保障、醫療決策權、親權確立等都有法律依據，是最安全的代孕司法管轄區。", qEn: "What special protections do California surrogacy contracts have?", aEn: "California law clearly protects intended parents' rights, with contract terms recognized by courts. Compensation guarantees, medical decision rights, parental rights establishment all have legal basis, making it the safest surrogacy jurisdiction." }
-];
+const FAQS = [];
 
 // Data
 const PHYSICIAN_DATA = [
@@ -1988,7 +1940,6 @@ export default function LandingTemplate() {
     knowledgeTitle: { zh: "祈孕顧問．代孕知識與案例", en: "Qiyun Consulting · Knowledge & Cases" },
     processTitle: { zh: "流程", en: "Process" },
     teamTitle: { zh: "團隊", en: "Team" },
-    faqTitle: { zh: "常見問題", en: "Frequently Asked Questions" },
     contactTitle: { zh: "聯絡我們", en: "Get In Touch" },
     formName: { zh: "您的姓名", en: "Your Name" },
     formEmail: { zh: "Email", en: "Email" },
@@ -3608,85 +3559,6 @@ export default function LandingTemplate() {
 
         {/* 團隊特色 */}
       </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="section-shell bg-gradient-to-r from-[var(--brand-50)]/30 to-white py-12 sm:py-16 md:py-20">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-5 sm:space-y-6"
-          >
-            <div className="space-y-2 sm:space-y-3">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--brand-800)] leading-[1.2]">
-                {t.faqTitle[lang]}
-              </h2>
-              <p className="text-slate-600 text-sm sm:text-base leading-[1.7]">
-                {lang === "zh" ? "以下是最常見的問題解答" : "Here are answers to commonly asked questions"}
-              </p>
-            </div>
-            
-            <div className="space-y-3 sm:space-y-4">
-              {FAQS.map((f, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-5 lg:p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300"
-                >
-                  <h4 className="font-semibold responsive-text-base text-[var(--brand-800)] mb-2.5 leading-snug">
-                    {lang === "zh" ? f.qZh : f.qEn}
-                  </h4>
-                  <p className="text-slate-600 responsive-text-sm leading-[1.7]">
-                    {lang === "zh" ? f.aZh : f.aEn}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <img
-              src={ILLUSTRATIONS.faq.src}
-              srcSet={ILLUSTRATIONS.faq.srcSet}
-              sizes={ILLUSTRATIONS.faq.sizes}
-              alt={lang === "zh" ? ILLUSTRATIONS.faq.zhAlt : ILLUSTRATIONS.faq.enAlt}
-              loading="lazy"
-              className="w-full rounded-2xl shadow-lg"
-            />
-          </motion.div>
-        </div>
-        
-        {/* FAQ Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": FAQS.map(faq => ({
-                "@type": "Question",
-                "name": lang === "zh" ? faq.qZh : faq.qEn,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": lang === "zh" ? faq.aZh : faq.aEn
-                }
-              }))
-            })
-          }}
-        />
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[var(--brand-50)] via-white to-purple-50 relative overflow-hidden">
         {/* 背景裝飾 */}
