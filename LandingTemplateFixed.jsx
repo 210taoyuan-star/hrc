@@ -1989,6 +1989,12 @@ export default function LandingTemplate() {
   const [loading, setLoading] = useState(false);
   const formRef = React.useRef(null);
 
+  useEffect(() => {
+    if (sent && typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "conversion", { send_to: "AW-17757916409/1TLRCPbFrsYbEPmZ0ZNC" });
+    }
+  }, [sent]);
+
   async function handleSubmit(e) {
     e.preventDefault();
     if (loading) return;
