@@ -1434,26 +1434,6 @@ const HRC_FERTILITY_INFO = {
       ]
     }
   ],
-  statistics: {
-    title: "HRC 成功率統計",
-    titleEn: "HRC Success Rate Statistics",
-    data: [
-      {
-        metric: "代孕成功率",
-        metricEn: "Surrogacy Success Rate",
-        value: "85%+",
-        description: "單次胚胎移植成功率",
-        descriptionEn: "Single embryo transfer success rate"
-      },
-      {
-        metric: "客戶滿意度",
-        metricEn: "Patient Satisfaction",
-        value: "96%+",
-        description: "整體服務滿意度評分",
-        descriptionEn: "Overall service satisfaction rating"
-      }
-    ]
-  },
   partnerships: {
     title: "合作機構",
     titleEn: "Partner Organizations", 
@@ -2744,36 +2724,7 @@ export default function LandingTemplate() {
               </h3>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-8">
-              {/* 第三方生殖醫學 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-[var(--brand-50)]"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-xl flex items-center justify-center mb-4">
-                  <Stethoscope className="h-6 w-6 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3">
-                  {lang === "zh" ? "第三方生殖醫學" : "Third-Party Reproductive Medicine"}
-                </h4>
-                <div className="space-y-2">
-                  {[
-                    { zh: "代孕醫療協調", en: "Surrogacy Medical Coordination" },
-                    { zh: "胚胎移植程序", en: "Embryo Transfer Procedures" },
-                    { zh: "代孕母健康監測", en: "Surrogate Health Monitoring" },
-                    { zh: "多胎妊娠管理", en: "Multiple Pregnancy Management" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-[var(--brand)] rounded-full"></div>
-                      <span className="text-sm text-slate-600">{item[lang]}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* 生殖內分泌學 */}
+              {/* 生殖內分泌學 */
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -2833,42 +2784,7 @@ export default function LandingTemplate() {
             </div>
           </div>
 
-          {/* Success Statistics */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-3xl p-8 text-white mb-16"
-          >
-            <div className="text-center mb-8">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-                {lang === "zh" ? "HRC 成功率統計" : "HRC Success Statistics"}
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">85%+</div>
-                <div className="text-xl font-semibold mb-2">
-                  {lang === "zh" ? "代孕成功率" : "Surrogacy Success Rate"}
-                </div>
-                <p className="text-[var(--brand-50)]">
-                  {lang === "zh" ? "單次胚胎移植成功率" : "Single Embryo Transfer Success Rate"}
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-bold mb-2">96%+</div>
-                <div className="text-xl font-semibold mb-2">
-                  {lang === "zh" ? "客戶滿意度" : "Customer Satisfaction"}
-                </div>
-                <p className="text-[var(--brand-50)]">
-                  {lang === "zh" ? "整體服務滿意度評分" : "Overall Service Satisfaction Rating"}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Partner Institutions */}
+          {/* Partner Institutions */
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
