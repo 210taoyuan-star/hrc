@@ -1400,22 +1400,7 @@ const HRC_FERTILITY_INFO = {
     }
   ],
   specialties: [
-    {
-      area: "第三方生殖醫學",
-      areaEn: "Third-Party Reproductive Medicine",
-      services: [
-        "代孕醫療協調",
-        "胚胎移植程序",
-        "代孕母健康監測",
-        "多胎妊娠管理"
-      ],
-      servicesEn: [
-        "Surrogacy medical coordination",
-        "Embryo transfer procedures", 
-        "Surrogate health monitoring",
-        "Multiple pregnancy management"
-      ]
-    },
+
     {
       area: "生殖內分泌學",
       areaEn: "Reproductive Endocrinology",
