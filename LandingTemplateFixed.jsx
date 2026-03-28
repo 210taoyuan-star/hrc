@@ -618,7 +618,6 @@ const NAV = [
       { id: "single-surrogacy", path: "#single-surrogacy", zh: "單身代孕", en: "Single Parent Surrogacy" }
     ]
   },
-  { id: "process", path: "#process", zh: "詳細流程", en: "Process" },
   { id: "contact", path: "#contact", zh: "聯絡", en: "Contact" },
 ];
 
