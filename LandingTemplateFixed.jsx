@@ -550,28 +550,7 @@ const BRAND = {
   address: "台北市松山區復興北路58號10樓",
 };
 
-// HRC Fertility 生育中心資訊
-const HRC_FERTILITY = {
-  name: {
-    zh: "HRC Fertility 生育中心",
-    en: "HRC Fertility Center"
-  },
-  description: {
-    zh: "美國領先的生殖醫學中心，我們的合作夥伴",
-    en: "Leading reproductive medicine center in the US, our trusted partner"
-  },
-  website: "https://www.hrcfertility.com",
-  locations: [
-    {
-      name: { zh: "洛杉磯中心", en: "Los Angeles Center" },
-      address: "Beverly Hills, CA"
-    },
-    {
-      name: { zh: "橙縣中心", en: "Orange County Center" },
-      address: "Newport Beach, CA"
-    }
-  ]
-};
+
 
 // Background hero images (provided)
 const HERO_IMAGES = [
@@ -639,10 +618,7 @@ const NAV = [
       { id: "single-surrogacy", path: "#single-surrogacy", zh: "單身代孕", en: "Single Parent Surrogacy" }
     ]
   },
-  { id: "hrc-fertility", path: "#hrc-fertility", zh: "HRC Fertility 生育中心", en: "HRC Fertility Center" },
   { id: "process", path: "#process", zh: "詳細流程", en: "Process" },
-  { id: "knowledge", path: "#knowledge", zh: "代孕知識與案例", en: "Knowledge & Cases" },
-  { id: "team", path: "#team", zh: "團隊", en: "Team" },
   { id: "contact", path: "#contact", zh: "聯絡", en: "Contact" },
 ];
 
@@ -1936,7 +1912,7 @@ export default function LandingTemplate() {
       zh: BRAND.tagline || "高信任、可落地的跨國生育顧問服務",
       en: BRAND.tagline || "Trusted, end‑to‑end cross‑border fertility consulting",
     },
-    servicesTitle: { zh: "祈孕顧問．美國試管與代孕", en: "Qiyun Consulting · Services" },
+    servicesTitle: { zh: "祈孕顧問．美國試管與代孕諮詢", en: "Qiyun Consulting · Services" },
     knowledgeTitle: { zh: "祈孕顧問．代孕知識與案例", en: "Qiyun Consulting · Knowledge & Cases" },
     processTitle: { zh: "流程", en: "Process" },
     teamTitle: { zh: "團隊", en: "Team" },
