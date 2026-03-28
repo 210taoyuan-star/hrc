@@ -2724,7 +2724,7 @@ export default function LandingTemplate() {
               </h3>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-8">
-              {/* 生殖內分泌學 */
+              {/* 生殖內分泌學 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -2784,7 +2784,7 @@ export default function LandingTemplate() {
             </div>
           </div>
 
-          {/* Partner Institutions */
+          {/* Partner Institutions */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
