@@ -2234,12 +2234,6 @@ export default function LandingTemplate() {
               
               {/* 品牌名稱 */}
               <span className="flex-shrink-0 font-bold text-sm bg-gradient-to-r from-[var(--brand-800)] to-[var(--brand-600)] bg-clip-text text-transparent">{BRAND.name}</span>
-              
-              {/* 分隔線 */}
-              <div className="flex-shrink-0 w-px h-3 bg-slate-300"></div>
-              
-              {/* HRC 合作 */}
-              <span className="flex-shrink-0 text-xs text-slate-600 font-medium">{lang === "zh" ? "HRC合作" : "HRC"}</span>
             </div>
             
             {/* 語言切換按鈕 - 桌面版保留 */}
