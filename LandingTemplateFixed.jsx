@@ -577,14 +577,14 @@ const ILLUSTRATIONS = {
     src: "/images/gallery/iui.webp",
     srcSet: "/images/gallery/iui-480.webp 480w, /images/gallery/iui-960.webp 960w, /images/gallery/iui-1600.webp 1600w",
     sizes: "(min-width: 1024px) 340px, 80vw",
-    zhAlt: "IUI 人工授精代孕知識插圖",
+    zhAlt: "IUI 人工授精代孕諮詢知識插圖",
     enAlt: "IUI artificial insemination surrogacy knowledge illustration",
   },
   process: {
     src: "/images/gallery/ABCDE.webp",
     srcSet: "/images/gallery/ABCDE-480.webp 480w, /images/gallery/ABCDE-960.webp 960w, /images/gallery/ABCDE-1600.webp 1600w",
     sizes: "(min-width: 1024px) 340px, 80vw",
-    zhAlt: "IVF 體外受精代孕流程插圖",
+    zhAlt: "IVF 體外受精代孕諮詢流程插圖",
     enAlt: "IVF surrogacy process illustration",
   },
   faq: {
@@ -609,29 +609,29 @@ const NAV = [
   { 
     id: "services", 
     path: "#services", 
-    zh: "美國試管與代孕", 
+    zh: "美國試管諮詢與代孕諮詢", 
     en: "US Surrogacy Services",
     subItems: [
-      { id: "ivf-services", path: "#ivf-services", zh: "夫妻或單身試管", en: "IVF Services" },
-      { id: "couple-surrogacy", path: "#couple-surrogacy", zh: "夫妻代孕", en: "Couple Surrogacy" },
-      { id: "lgbtq-surrogacy", path: "#lgbtq-surrogacy", zh: "同志代孕", en: "LGBTQ+ Surrogacy" },
-      { id: "single-surrogacy", path: "#single-surrogacy", zh: "單身代孕", en: "Single Parent Surrogacy" }
+      { id: "ivf-services", path: "#ivf-services", zh: "夫妻或單身試管諮詢", en: "IVF Services" },
+      { id: "couple-surrogacy", path: "#couple-surrogacy", zh: "夫妻代孕諮詢", en: "Couple Surrogacy" },
+      { id: "lgbtq-surrogacy", path: "#lgbtq-surrogacy", zh: "同志代孕諮詢", en: "LGBTQ+ Surrogacy" },
+      { id: "single-surrogacy", path: "#single-surrogacy", zh: "單身代孕諮詢", en: "Single Parent Surrogacy" }
     ]
   },
   { id: "contact", path: "#contact", zh: "聯絡", en: "Contact" },
 ];
 
 const FEATURES = [
-  { id: "ivf-services", icon: ShieldCheck, zh: "夫妻或單身試管", en: "IVF Services", descZh: "提供夫妻或單身人士專業試管嬰兒服務，實現生育夢想。", descEn: "Professional IVF services for couples and single individuals to achieve fertility dreams.", image: "/images/gallery/ABCDE.webp", hasDetail: true },
-  { id: "couple-surrogacy", icon: HeartHandshake, zh: "夫妻代孕", en: "Couple Surrogacy", descZh: "為已婚夫妻提供專業美國試管與代孕，圓滿家庭夢想。", descEn: "Professional US surrogacy services for married couples to fulfill their family dreams.", image: "/images/gallery/parent1.webp", hasDetail: true },
-  { id: "lgbtq-surrogacy", icon: Users2, zh: "同志代孕", en: "LGBTQ+ Surrogacy", descZh: "支援同志伴侶代孕需求，提供包容性專業服務。", descEn: "Supporting LGBTQ+ couples with inclusive and professional surrogacy services.", image: "/images/gallery/Boys.webp", hasDetail: true },
-  { id: "single-surrogacy", icon: User, zh: "單身代孕", en: "Single Parent Surrogacy", descZh: "協助單身人士實現為人父母的夢想，提供全方位支援與陪伴。", descEn: "Helping single individuals achieve their dreams of becoming parents with comprehensive support and guidance.", image: "/images/gallery/son2.webp", hasDetail: true }
+  { id: "ivf-services", icon: ShieldCheck, zh: "夫妻或單身試管諮詢", en: "IVF Services", descZh: "提供夫妻或單身人士專業試管諮詢服務，實現生育夢想。", descEn: "Professional IVF services for couples and single individuals to achieve fertility dreams.", image: "/images/gallery/ABCDE.webp", hasDetail: true },
+  { id: "couple-surrogacy", icon: HeartHandshake, zh: "夫妻代孕諮詢", en: "Couple Surrogacy", descZh: "為已婚夫妻提供專業美國試管諮詢與代孕諮詢，圓滿家庭夢想。", descEn: "Professional US surrogacy services for married couples to fulfill their family dreams.", image: "/images/gallery/parent1.webp", hasDetail: true },
+  { id: "lgbtq-surrogacy", icon: Users2, zh: "同志代孕諮詢", en: "LGBTQ+ Surrogacy", descZh: "支援同志伴侶代孕諮詢需求，提供包容性專業服務。", descEn: "Supporting LGBTQ+ couples with inclusive and professional surrogacy services.", image: "/images/gallery/Boys.webp", hasDetail: true },
+  { id: "single-surrogacy", icon: User, zh: "單身代孕諮詢", en: "Single Parent Surrogacy", descZh: "協助單身人士實現為人父母的夢想，提供全方位支援與陪伴。", descEn: "Helping single individuals achieve their dreams of becoming parents with comprehensive support and guidance.", image: "/images/gallery/son2.webp", hasDetail: true }
 ];
 
-// 夫妻代孕詳細內容
+// 夫妻代孕諮詢詳細內容
 const COUPLE_SURROGACY_DETAIL = {
   zh: {
-    title: "夫妻代孕（自精自卵、捐精自卵、自精捐卵+代孕）",
+    title: "夫妻代孕諮詢（自精自卵、捐精自卵、自精捐卵+代孕諮詢）",
     subtitle: "從評估到分娩，一站式陪伴",
     processOverview: {
       title: "流程總覽",
@@ -640,7 +640,7 @@ const COUPLE_SURROGACY_DETAIL = {
           phase: "準備階段",
           items: [
             "台灣醫療體檢評估：確認夫妻精子與卵子健康狀況。",
-            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管諮詢條件後簽約。",
             "美國精子與卵子銀行選擇捐贈精子或卵子。",
             "精子與卵子遺傳基因篩查，過濾可能的遺傳疾病基因。"
           ]
@@ -650,19 +650,19 @@ const COUPLE_SURROGACY_DETAIL = {
           items: [
             "孕母選擇、懷孕史與健康史評估。",
             "安排雙方視訊溝通、確認彼此認同與意向。",
-            "孕母通過醫療評估、心理評估，確認符合代孕條件。"
+            "孕母通過醫療評估、心理評估，確認符合代孕諮詢條件。"
           ]
         },
         {
           phase: "法律程序階段",
           items: [
-            "合同起草：代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+            "合同起草：代孕諮詢合同、補償金制度、應急處理、特殊醫療費用列表",
             "雙方律師審查、合約談判、確認合約",
-            "正式簽約:律師公證、支付代孕費用、信託管理"
+            "正式簽約:律師公證、支付代孕諮詢費用、信託管理"
           ]
         },
         {
-          phase: "試管（IVF）醫療階段",
+          phase: "試管諮詢（IVF）醫療階段",
           items: [
             "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
             "體外人工受精：受精與胚胎培養（一周）",
@@ -673,7 +673,7 @@ const COUPLE_SURROGACY_DETAIL = {
           ]
         },
         {
-          phase: "代孕階段",
+          phase: "代孕諮詢階段",
           items: [
             "定期產檢： 定期提供產檢狀況與報告、大排畸檢查與結果。",
             "親權判決：律師向法院提出親權認定，法院判決孩子歸屬准父母所有。",
@@ -689,8 +689,8 @@ const COUPLE_SURROGACY_DETAIL = {
           { phase: "準備階段", duration: "3~4個月" },
           { phase: "孕母配對階段", duration: "3~5個月" },
           { phase: "法律程序階段", duration: "1個月" },
-          { phase: "試管IVF階段", duration: "3~5個月" },
-          { phase: "代孕階段", duration: "10個月" }
+          { phase: "試管諮詢IVF階段", duration: "3~5個月" },
+          { phase: "代孕諮詢階段", duration: "10個月" }
         ]
       }
     }
@@ -780,10 +780,10 @@ const COUPLE_SURROGACY_DETAIL = {
   }
 };
 
-// 試管嬰兒服務詳細內容
+// 試管諮詢服務詳細內容
 const IVF_SERVICES_DETAIL = {
   zh: {
-    title: "夫妻試管（自精自卵、捐精自卵、自精捐卵）",
+    title: "夫妻試管諮詢（自精自卵、捐精自卵、自精捐卵）",
     subtitle: "單身女性（捐精自卵）",
     processOverview: {
       title: "流程總覽",
@@ -792,13 +792,13 @@ const IVF_SERVICES_DETAIL = {
           phase: "準備階段",
           items: [
             "台灣醫療體檢評估：確認精子與卵子健康狀況與子宮懷孕條件；單身女性卵子健康狀況與子宮懷孕條件。",
-            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管諮詢條件後簽約。",
             "美國精子與卵子銀行選擇捐贈精子或卵子。",
             "精子與卵子遺傳基因篩查（約4周），過濾可能的遺傳疾病基因。"
           ]
         },
         {
-          phase: "試管（IVF）階段",
+          phase: "試管諮詢（IVF）階段",
           items: [
             "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
             "體外受精與胚胎培養（一周）。",
@@ -813,7 +813,7 @@ const IVF_SERVICES_DETAIL = {
         title: "流程所需時間預估",
         phases: [
           { phase: "前期準備階段", duration: "3~4個月" },
-          { phase: "試管IVF階段", duration: "3-5個月", note: "（含胚胎準備與後續植入安排）" }
+          { phase: "試管諮詢IVF階段", duration: "3-5個月", note: "（含胚胎準備與後續植入安排）" }
         ]
       }
     }
@@ -856,10 +856,10 @@ const IVF_SERVICES_DETAIL = {
   }
 };
 
-// 同志代孕詳細內容
+// 同志代孕諮詢詳細內容
 const PARTNER_SURROGACY_DETAIL = {
   zh: {
-    title: "男同志伴侶代孕（自精+捐卵+代孕）\n女同志伴侶代孕（捐精+自卵+代孕）",
+    title: "男同志伴侶代孕諮詢（自精+捐卵+代孕諮詢）\n女同志伴侶代孕諮詢（捐精+自卵+代孕諮詢）",
     subtitle: "多元家庭的美國生育解決方案",
     overview: {
       title: "流程總覽",
@@ -868,7 +868,7 @@ const PARTNER_SURROGACY_DETAIL = {
           phase: "準備階段",
           items: [
             "台灣醫療體檢評估：確認精子與卵子健康狀況。",
-            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管諮詢條件後簽約。",
             "美國精子與卵子銀行選擇捐精或捐卵。",
             "精子與卵子遺傳基因篩查，過濾可能的遺傳疾病。"
           ]
@@ -878,19 +878,19 @@ const PARTNER_SURROGACY_DETAIL = {
           items: [
             "孕母選擇、懷孕史與健康史評估。",
             "安排雙方視訊溝通、確認彼此認同與意向。",
-            "孕母通過醫療評估、心理評估，確認符合代孕條件。"
+            "孕母通過醫療評估、心理評估，確認符合代孕諮詢條件。"
           ]
         },
         {
           phase: "法律程序階段",
           items: [
-            "合同起草：代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+            "合同起草：代孕諮詢合同、補償金制度、應急處理、特殊醫療費用列表",
             "雙方律師審查、合約談判、確認合約",
-            "正式簽約:律師公證、支付代孕費用、信託管理"
+            "正式簽約:律師公證、支付代孕諮詢費用、信託管理"
           ]
         },
         {
-          phase: "試管（IVF）醫療階段",
+          phase: "試管諮詢（IVF）醫療階段",
           items: [
             "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
             "體外人工受精：受精與胚胎培養（一周）",
@@ -901,7 +901,7 @@ const PARTNER_SURROGACY_DETAIL = {
           ]
         },
         {
-          phase: "代孕階段",
+          phase: "代孕諮詢階段",
           items: [
             "定期產檢： 定期提供產檢狀況與報告、大排畸檢查與結果。",
             "親權判決：律師向法院提出親權認定，法院判決孩子歸屬准父母所有。",
@@ -928,11 +928,11 @@ const PARTNER_SURROGACY_DETAIL = {
           duration: "1個月"
         },
         {
-          phase: "試管IVF階段",
+          phase: "試管諮詢IVF階段",
           duration: "3~5個月"
         },
         {
-          phase: "代孕階段",
+          phase: "代孕諮詢階段",
           duration: "10個月"
         }
       ]
@@ -1020,19 +1020,19 @@ const PARTNER_SURROGACY_DETAIL = {
   }
 };
 
-// 單身代孕詳細內容
+// 單身代孕諮詢詳細內容
 const SINGLE_SURROGACY_DETAIL = {
   zh: {
-    title: "單身男士（自精捐卵+代孕）\n單身女士（捐精自卵+代孕）",
+    title: "單身男士（自精捐卵+代孕諮詢）\n單身女士（捐精自卵+代孕諮詢）",
     subtitle: "為單身人士提供完整的生育解決方案",
     plans: [
       {
-        category: "單身男士（自精捐卵+代孕）",
-        description: "適合需要捐卵和代孕服務的單身男性"
+        category: "單身男士（自精捐卵+代孕諮詢）",
+        description: "適合需要捐卵和代孕諮詢服務的單身男性"
       },
       {
-        category: "單身女士（捐精自卵+代孕）",
-        description: "適合需要捐精和代孕服務的單身女性"
+        category: "單身女士（捐精自卵+代孕諮詢）",
+        description: "適合需要捐精和代孕諮詢服務的單身女性"
       }
     ],
     processOverview: {
@@ -1042,7 +1042,7 @@ const SINGLE_SURROGACY_DETAIL = {
           phase: "準備階段",
           items: [
             "台灣醫療體檢評估：確認精子與卵子健康狀況。",
-            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約。",
+            "美國醫院視訊問診：提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管諮詢條件後簽約。",
             "美國精子與卵子銀行選擇捐精或捐卵。",
             "精子與卵子遺傳基因篩查，過濾可能的遺傳疾病。"
           ]
@@ -1052,19 +1052,19 @@ const SINGLE_SURROGACY_DETAIL = {
           items: [
             "孕母選擇、懷孕史與健康史評估",
             "安排雙方視訊溝通、確認彼此認同與意向。",
-            "孕母通過醫療評估、心理評估，確認符合代孕條件。"
+            "孕母通過醫療評估、心理評估，確認符合代孕諮詢條件。"
           ]
         },
         {
           phase: "法律程序階段",
           items: [
-            "合同起草：代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+            "合同起草：代孕諮詢合同、補償金制度、應急處理、特殊醫療費用列表",
             "雙方律師審查、合約談判、確認合約",
-            "正式簽約:律師公證、支付代孕費用、信託管理"
+            "正式簽約:律師公證、支付代孕諮詢費用、信託管理"
           ]
         },
         {
-          phase: "試管（IVF）醫療階段",
+          phase: "試管諮詢（IVF）醫療階段",
           items: [
             "取精取卵：女性（自卵或捐卵）按醫師指示週期前赴美、自精男士需在卵子取出前2天赴美",
             "體外人工受精：受精與胚胎培養（一周）",
@@ -1075,7 +1075,7 @@ const SINGLE_SURROGACY_DETAIL = {
           ]
         },
         {
-          phase: "代孕階段",
+          phase: "代孕諮詢階段",
           items: [
             "定期產檢： 定期提供產檢狀況與報告、大排畸檢查與結果。",
             "親權判決：律師向法院提出親權認定，法院判決孩子歸屬准父母所有。",
@@ -1091,8 +1091,8 @@ const SINGLE_SURROGACY_DETAIL = {
           { phase: "準備階段", duration: "3~4個月" },
           { phase: "孕母配對階段", duration: "3~5個月" },
           { phase: "法律程序階段", duration: "1個月" },
-          { phase: "試管IVF階段", duration: "3~5個月" },
-          { phase: "代孕階段", duration: "10個月" }
+          { phase: "試管諮詢IVF階段", duration: "3~5個月" },
+          { phase: "代孕諮詢階段", duration: "10個月" }
         ]
       }
     },
@@ -1193,7 +1193,7 @@ const DETAILED_PROCESS = [
       {
         title: "美國醫院視訊問診",
         titleEn: "US Hospital Video Consultation",
-        description: "提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管條件後簽約",
+        description: "提供台灣體檢報告與完成美國醫療問卷、美國醫師確認符合美國試管諮詢條件後簽約",
         descriptionEn: "Provide Taiwan medical reports and complete US medical questionnaire, sign contract after US doctor confirms IVF eligibility"
       },
       {
@@ -1231,7 +1231,7 @@ const DETAILED_PROCESS = [
       {
         title: "資格確認",
         titleEn: "Qualification Confirmation", 
-        description: "孕母通過醫療評估、心理評估，確認符合代孕條件",
+        description: "孕母通過醫療評估、心理評估，確認符合代孕諮詢條件",
         descriptionEn: "Surrogate passes medical evaluation and psychological assessment, confirming suitability for surrogacy"
       }
     ]
@@ -1245,7 +1245,7 @@ const DETAILED_PROCESS = [
       {
         title: "合同起草",
         titleEn: "Contract Drafting",
-        description: "代孕合同、補償金制度、應急處理、特殊醫療費用列表",
+        description: "代孕諮詢合同、補償金制度、應急處理、特殊醫療費用列表",
         descriptionEn: "Surrogacy contract, compensation system, emergency handling, special medical expense list"
       },
       {
@@ -1257,13 +1257,13 @@ const DETAILED_PROCESS = [
       {
         title: "正式簽約",
         titleEn: "Contract Execution",
-        description: "律師公證、支付代孕費用、信託管理",
+        description: "律師公證、支付代孕諮詢費用、信託管理",
         descriptionEn: "Lawyer notarization, surrogacy payment, trust management"
       }
     ]
   },
   {
-    phase: "試管（IVF）醫療階段",
+    phase: "試管諮詢（IVF）醫療階段",
     phaseEn: "IVF Medical Phase", 
     duration: "3~5個月",
     durationEn: "3-5 months",
@@ -1307,7 +1307,7 @@ const DETAILED_PROCESS = [
     ]
   },
   {
-    phase: "代孕階段",
+    phase: "代孕諮詢階段",
     phaseEn: "Surrogacy Phase",
     duration: "10個月",
     durationEn: "10 months",
@@ -1400,7 +1400,7 @@ export default function LandingTemplate() {
       zh: BRAND.tagline || "高信任、可落地的跨國生育顧問服務",
       en: BRAND.tagline || "Trusted, end‑to‑end cross‑border fertility consulting",
     },
-    servicesTitle: { zh: "祈孕顧問．美國試管與代孕諮詢", en: "Qiyun Consulting · Services" },
+    servicesTitle: { zh: "祈孕顧問．美國試管諮詢與代孕諮詢", en: "Qiyun Consulting · Services" },
     processTitle: { zh: "流程", en: "Process" },
     contactTitle: { zh: "聯絡我們", en: "Get In Touch" },
     formName: { zh: "您的姓名", en: "Your Name" },
@@ -1428,7 +1428,7 @@ export default function LandingTemplate() {
     setActive("home");
 
     // Dynamic title & meta for single page
-    const pageTitle = lang === 'zh' ? `${BRAND.name}｜美國試管與代孕專家` : `${BRAND.name} | US Surrogacy Services`;
+    const pageTitle = lang === 'zh' ? `${BRAND.name}｜美國試管諮詢與代孕諮詢專家` : `${BRAND.name} | US Surrogacy Services`;
     document.title = pageTitle;
 
     const pageDesc = lang === 'zh' ? t.heroSub.zh : t.heroSub.en;
@@ -1526,7 +1526,7 @@ export default function LandingTemplate() {
     "@type": "Organization",
     "name": BRAND.name,
     "description": lang === 'zh' 
-      ? "祈孕顧問提供專業美國試管與代孕，包含夫妻代孕、同志代孕等，擁有合法醫療聯盟與一對一專屬顧問服務。"
+      ? "祈孕顧問提供專業美國試管諮詢與代孕諮詢，包含夫妻代孕諮詢、同志代孕諮詢等，擁有合法醫療聯盟與一對一專屬顧問服務。"
       : "Qi Yun Consulting provides professional US surrogacy services, including couple and LGBTQ+ surrogacy, with legal medical alliance and one-on-one dedicated consulting services.",
     "url": typeof window !== 'undefined' ? window.location.origin : 'https://qiyun.com.tw',
     "logo": typeof window !== 'undefined' ? `${window.location.origin}/images/logos/logo.png` : 'https://qiyun.com.tw/images/logos/logo.png',
@@ -1559,7 +1559,7 @@ export default function LandingTemplate() {
     "name": BRAND.name,
     "url": typeof window !== 'undefined' ? window.location.origin : 'https://qiyun.com.tw',
     "description": lang === 'zh' 
-      ? "以專業與信賴，圓您擁有孩子的夢想。提供美國合法代孕、一對一專屬顧問服務。"
+      ? "以專業與信賴，圓您擁有孩子的夢想。提供美國合法代孕諮詢、一對一專屬顧問服務。"
       : "With professionalism and warmth, we accompany you in welcoming new life. Providing legal US surrogacy and one-on-one dedicated consulting services.",
     "inLanguage": ["zh-TW", "en-US"],
     "publisher": {
@@ -1573,7 +1573,7 @@ export default function LandingTemplate() {
     "@type": "MedicalBusiness",
     "name": BRAND.name,
     "description": lang === 'zh' 
-      ? "專業代孕諮詢服務，提供美國合法代孕程序、醫療聯盟合作、法律諮詢等一站式服務。"
+      ? "專業代孕諮詢服務，提供美國合法代孕諮詢程序、醫療聯盟合作、法律諮詢等一站式服務。"
       : "Professional surrogacy consulting services, providing legal US surrogacy procedures, medical alliance cooperation, legal consultation and one-stop services.",
     "serviceType": [
       lang === 'zh' ? "代孕諮詢" : "Surrogacy Consultation",
@@ -1603,7 +1603,7 @@ export default function LandingTemplate() {
     "@type": "LocalBusiness",
     "name": BRAND.name,
     "description": lang === 'zh' 
-      ? "祈孕顧問位於台北，提供專業代孕諮詢服務，協助客戶完成美國合法代孕程序。"
+      ? "祈孕顧問位於台北，提供專業代孕諮詢服務，協助客戶完成美國合法代孕諮詢程序。"
       : "Qi Yun Consulting is located in Taipei, providing professional surrogacy consulting services to help clients complete legal US surrogacy procedures.",
     "address": {
       "@type": "PostalAddress",
@@ -2062,7 +2062,7 @@ export default function LandingTemplate() {
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": lang === "zh" ? "代孕服務項目" : "Surrogacy Service Catalog",
+                "name": lang === "zh" ? "代孕諮詢服務項目" : "Surrogacy Service Catalog",
                 "itemListElement": FEATURES.map((feature, index) => ({
                   "@type": "Offer",
                   "itemOffered": {
@@ -2485,7 +2485,7 @@ export default function LandingTemplate() {
         </div>
       </footer>
 
-      {/* 夫妻代孕詳細資訊 Modal */}
+      {/* 夫妻代孕諮詢詳細資訊 Modal */}
       {showCoupleDetail && (
         <div 
           className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
@@ -2591,7 +2591,7 @@ export default function LandingTemplate() {
         </div>
       )}
 
-      {/* 同志代孕詳細資訊 Modal */}
+      {/* 同志代孕諮詢詳細資訊 Modal */}
       {showPartnerDetail && (
         <div 
           className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
