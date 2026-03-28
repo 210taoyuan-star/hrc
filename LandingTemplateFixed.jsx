@@ -1351,113 +1351,7 @@ const DETAILED_PROCESS = [
 
 
 
-// HRC Fertility Detailed Information
-const HRC_FERTILITY_INFO = {
-  overview: {
-    title: "HRC Fertility 生育中心",
-    titleEn: "HRC Fertility Center",
-    established: "1988",
-    description: "南加州最權威的生殖醫學中心，30多年專業經驗",
-    descriptionEn: "Southern California's most authoritative reproductive medicine center with over 30 years of professional experience"
-  },
-  locations: [
-    {
-      name: "HRC Pasadena 帕薩迪納中心",
-      nameEn: "HRC Pasadena Center",
-      address: "55 S. Lake Ave, 9th Floor, Pasadena, CA 91101",
-      phone: "+1 (626) 440-9161",
-      features: [
-        "最新IVF實驗室設備",
-        "24/7醫療支援",
-        "多語言服務團隊",
-        "代孕專業協調"
-      ],
-      featuresEn: [
-        "State-of-the-art IVF laboratory equipment",
-        "24/7 medical support",
-        "Multilingual service team", 
-        "Professional surrogacy coordination"
-      ]
-    },
-    {
-      name: "HRC West LA 西洛杉磯中心",
-      nameEn: "HRC West LA Center", 
-      address: "1430 2nd Street, Suite 102, Santa Monica, CA 90401",
-      phone: "+1 (310) 566-1470",
-      features: [
-        "胚胎學專業實驗室",
-        "遺傳學諮詢服務",
-        "心理支援團隊",
-        "國際患者服務"
-      ],
-      featuresEn: [
-        "Professional embryology laboratory",
-        "Genetic counseling services",
-        "Psychological support team",
-        "International patient services"
-      ]
-    }
-  ],
-  specialties: [
 
-    {
-      area: "生殖內分泌學",
-      areaEn: "Reproductive Endocrinology",
-      services: [
-        "激素週期調節",
-        "卵巢刺激方案",
-        "子宮內膜準備",
-        "黃體期支持"
-      ],
-      servicesEn: [
-        "Hormonal cycle regulation",
-        "Ovarian stimulation protocols",
-        "Endometrial preparation",
-        "Luteal phase support"
-      ]
-    },
-    {
-      area: "胚胎學與遺傳學",
-      areaEn: "Embryology & Genetics",
-      services: [
-        "胚胎培養技術",
-        "胚胎基因篩檢",
-        "胚胎冷凍保存",
-        "植入前診斷"
-      ],
-      servicesEn: [
-        "Embryo culture techniques",
-        "Embryo genetic screening",
-        "Embryo cryopreservation",
-        "Preimplantation diagnosis"
-      ]
-    }
-  ],
-  partnerships: {
-    title: "合作機構",
-    titleEn: "Partner Organizations", 
-    institutions: [
-      "南加州大學凱克醫學院",
-      "加州大學洛杉磯分校醫學中心",
-      "Cedars-Sinai醫學中心",
-      "洛杉磯兒童醫院"
-    ],
-    institutionsEn: [
-      "USC Keck School of Medicine",
-      "UCLA Medical Center",
-      "Cedars-Sinai Medical Center",
-      "Children's Hospital Los Angeles"
-    ]
-  }
-};
-
-
-
-// HRC Knowledge Articles - Removed
-const HRC_KNOWLEDGE_ARTICLES = [];
-
-// HRC Surrogacy Success Cases - Removed
-const HRC_SUCCESS_CASES = [];
 
 const FAQS = [];
 
@@ -1471,7 +1365,7 @@ const PHYSICIAN_DATA = [
     locations: ["南加州（Pasadena）"],
     interests: ["試管嬰兒（IVF）", "第三方生殖", "生育力保存"],
     imageUrl: "/images/gallery/dr-marisa-gigg-360X480.webp",
-    bio: "USC Keck 醫學院之生殖內分泌與不孕症（REI）研究醫師，於 HRC Fertility Pasadena 執業；成長於 Pasadena。臨床與研究興趣包含肥胖與不孕、營養與不孕、癌症治療前/後的生育力保存（oncofertility）以及生殖醫療可近性。",
+    bio: "USC Keck 醫學院之生殖內分泌與不孕症（REI）研究醫師；成長於 Pasadena。臨床與研究興趣包含肥胖與不孕、營養與不孕、癌症治療前/後的生育力保存（oncofertility）以及生殖醫療可近性。",
     education: [
       "約翰霍普金斯大學 — 學士",
       "杜蘭大學醫學院 — 醫學博士（MD）",
@@ -1493,7 +1387,7 @@ const PHYSICIAN_DATA = [
     locations: ["南加州（Pasadena）"],
     interests: ["胚胎學", "多囊卵巢症（PCOS）", "人工受孕（IUI）／試管嬰兒（IVF）", "更年期管理", "第三方生殖"],
     imageUrl: "/images/gallery/Dr-Harris-Headshot-360X480.webp",
-    bio: "USC Keck 醫學院之 REI 研究醫師，於 HRC Fertility Pasadena 執業；成長於洛杉磯郡。研究興趣包含生殖醫療可近性、更年期照護與第三方生殖。",
+    bio: "USC Keck 醫學院之 REI 研究醫師；成長於洛杉磯郡。研究興趣包含生殖醫療可近性、更年期照護與第三方生殖。",
     education: [
       "加州大學爾灣分校（UCI）— 學士",
       "莫爾豪斯醫學院 — 醫學博士（MD；Magna Cum Laude；Alpha Omega Alpha）",
@@ -1513,7 +1407,7 @@ const PHYSICIAN_DATA = [
     locations: ["南加州（Pasadena）"],
     imageUrl: "/images/gallery/dr-andrew-rezk-360X480.webp",
     languages: ["英語", "西班牙語", "阿拉伯語"],
-    bio: "帕薩迪納 HRC Fertility 的 Andrew Rezk 醫師。Rezk 醫師是南加州大學凱克醫學院生殖內分泌和不孕症科的研究員，在南加州大學凱克醫學院附屬機構 HRC Pasadena 執業。他出生並成長於洛杉磯地區，很高興能回到家鄉，為家鄉的患者提供幫助。Rezk 醫師相信需要花時間傾聽每位患者的獨特故事，並共同制定基於循證護理的個人化方案。",
+    bio: "Andrew Rezk 醫師是南加州大學凱克醫學院生殖內分泌和不孕症科的研究員。他出生並成長於洛杉磯地區，很高興能為患者提供幫助。Rezk 醫師相信需要花時間傾聽每位患者的獨特故事，並共同制定基於循證護理的個人化方案。",
     education: [
       "加州大學爾灣分校（UCI）— 本科",
       "邁阿密大學 — 醫學博士（MD）",
@@ -1530,8 +1424,7 @@ const PHYSICIAN_DATA = [
       "代謝健康",
       "減重手術對生育能力的影響"
     ],
-    locationAddress: `HRC 生育中心 – 帕薩迪納
-55 S. Lake Ave, 9th Fl.
+    locationAddress: `55 S. Lake Ave, 9th Fl.
 Pasadena, CA 91101`,
     officeHours: "週一至週五 7:30–16:00",
     phoneExisting: "626-440-9161",
@@ -1547,7 +1440,7 @@ Pasadena, CA 91101`,
     imageUrl: "/images/gallery/dr-adriana-wong-360X480.webp",
     languages: ["英語", "西班牙語"],
     staffLanguages: ["英文", "西班牙文", "中文"],
-    bio: "帕薩迪納 HRC Fertility 醫學博士 Adriana Wong 醫師。Adriana Wong 醫師是南加州大學凱克醫學院生殖內分泌和不孕症科的研究員，執業於南加州大學凱克醫學院附屬機構 HRC Pasadena 中心。她在加州洛杉磯出生長大。黃醫師希望繼續為洛杉磯社區的患者提供高品質、個人化的醫療服務。",
+    bio: "Adriana Wong 醫師是南加州大學凱克醫學院生殖內分泌和不孕症科的研究員。她在加州洛杉磯出生長大。黃醫師希望繼續為洛杉磯社區的患者提供高品質、個人化的醫療服務。",
     education: [
       "康乃爾大學 — 本科",
       "邁阿密大學 — 醫學博士（MD）與公共衛生碩士（MPH）雙學位；金人文主義榮譽學會會員",
@@ -1555,8 +1448,7 @@ Pasadena, CA 91101`,
     ],
     affiliations: [],
     awards: ["SREI 國家住院醫師獎（2022）"],
-    locationAddress: `HRC 生育中心 – 帕薩迪納
-55 S. Lake Ave, 9th Fl.
+    locationAddress: `55 S. Lake Ave, 9th Fl.
 Pasadena, CA 91101`,
     officeHours: "週一至週五 7:30–16:00",
     phoneExisting: "626-440-9161",
@@ -2289,12 +2181,7 @@ export default function LandingTemplate() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 px-3 py-2 bg-white/70 rounded-xl border border-[var(--brand-200)] shadow-sm ml-1">
-                <svg className="w-4 h-4 text-[var(--brand)]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-sm text-slate-700 font-medium">{lang === "zh" ? "與 HRC Fertility 合作" : "Partner with HRC Fertility"}</span>
-              </div>
+
             </div>
             <button
               onClick={() => setMobileMenuOpen(false)}
@@ -2560,298 +2447,7 @@ export default function LandingTemplate() {
         />
       </section>
 
-      {/* HRC Fertility Center Section */}
-      <section id="hrc-fertility" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-[var(--brand-50)]/30 to-white">
-        <div className="section-shell">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-10 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4 px-4"
-          >
-            {/* Partner badge hidden */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[var(--brand-800)] via-[var(--brand)] to-purple-600 bg-clip-text text-transparent leading-[1.25] px-2">
-              {lang === "zh" ? "HRC Fertility 生育中心" : "HRC Fertility Center"}
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-[1.7] px-4">
-              {lang === "zh" 
-                ? "南加州最權威的生殖醫學中心，30多年專業經驗，成立於1988年"
-                : "Southern California's most authoritative reproductive medicine center with over 30 years of professional experience, established in 1988"}
-            </p>
-          </motion.div>
 
-          {/* Clinic Locations */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
-            {/* Pasadena Location */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-lg border border-[var(--brand-50)]"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-600)] rounded-xl flex items-center justify-center">
-                  <Building2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[var(--brand-800)]">
-                    {lang === "zh" ? "HRC Pasadena 帕薩迪納中心" : "HRC Pasadena Center"}
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    {lang === "zh" ? "主要醫療中心" : "Main Medical Center"}
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-[var(--brand)] mt-0.5" />
-                  <div>
-                    <p className="font-medium text-[var(--brand-800)]">
-                      {lang === "zh" ? "地址" : "Address"}
-                    </p>
-                    <p className="text-slate-600">
-                      55 S. Lake Ave, 9th Floor, Pasadena, CA 91101
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-[var(--brand)] mt-0.5" />
-                  <div>
-                    <p className="font-medium text-[var(--brand-800)]">
-                      {lang === "zh" ? "電話" : "Phone"}
-                    </p>
-                    <p className="text-slate-600">+1 (626) 440-9161</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-[var(--brand-800)] mb-3">
-                  {lang === "zh" ? "特色服務" : "Featured Services"}
-                </h4>
-                <div className="space-y-2">
-                  {[
-                    { zh: "最新IVF實驗室設備", en: "Latest IVF Laboratory Equipment" },
-                    { zh: "24/7醫療支援", en: "24/7 Medical Support" },
-                    { zh: "多語言服務團隊", en: "Multilingual Service Team" },
-                    { zh: "代孕專業協調", en: "Surrogacy Professional Coordination" }
-                  ].map((service, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-[var(--brand)] rounded-full"></div>
-                      <span className="text-sm text-slate-600">{service[lang]}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            {/* West LA Location */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 shadow-lg border border-[var(--brand-50)]"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <Building2 className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[var(--brand-800)]">
-                    {lang === "zh" ? "HRC West LA 西洛杉磯中心" : "HRC West LA Center"}
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    {lang === "zh" ? "專科醫療中心" : "Specialty Medical Center"}
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-purple-500 mt-0.5" />
-                  <div>
-                    <p className="font-medium text-[var(--brand-800)]">
-                      {lang === "zh" ? "地址" : "Address"}
-                    </p>
-                    <p className="text-slate-600">
-                      1430 2nd Street, Suite 102, Santa Monica, CA 90401
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-purple-500 mt-0.5" />
-                  <div>
-                    <p className="font-medium text-[var(--brand-800)]">
-                      {lang === "zh" ? "電話" : "Phone"}
-                    </p>
-                    <p className="text-slate-600">+1 (310) 566-1470</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-[var(--brand-800)] mb-3">
-                  {lang === "zh" ? "特色服務" : "Featured Services"}
-                </h4>
-                <div className="space-y-2">
-                  {[
-                    { zh: "胚胎學專業實驗室", en: "Embryology Professional Laboratory" },
-                    { zh: "遺傳學諮詢服務", en: "Genetic Counseling Services" },
-                    { zh: "心理支援團隊", en: "Psychological Support Team" },
-                    { zh: "國際患者服務", en: "International Patient Services" }
-                  ].map((service, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                      <span className="text-sm text-slate-600">{service[lang]}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Professional Expertise */}
-          <div className="mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--brand-800)] mb-4">
-                {lang === "zh" ? "專業領域" : "Professional Expertise"}
-              </h3>
-            </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* 生殖內分泌學 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-[var(--brand-50)]"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3">
-                  {lang === "zh" ? "生殖內分泌學" : "Reproductive Endocrinology"}
-                </h4>
-                <div className="space-y-2">
-                  {[
-                    { zh: "激素週期調節", en: "Hormone Cycle Regulation" },
-                    { zh: "卵巢刺激方案", en: "Ovarian Stimulation Protocols" },
-                    { zh: "子宮內膜準備", en: "Endometrial Preparation" },
-                    { zh: "黃體期支持", en: "Luteal Phase Support" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span className="text-sm text-slate-600">{item[lang]}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* 胚胎學與遺傳學 */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-[var(--brand-50)]"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
-                  <Baby className="h-6 w-6 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-[var(--brand-800)] mb-3">
-                  {lang === "zh" ? "胚胎學與遺傳學" : "Embryology & Genetics"}
-                </h4>
-                <div className="space-y-2">
-                  {[
-                    { zh: "胚胎培養技術", en: "Embryo Culture Technology" },
-                    { zh: "胚胎基因篩檢", en: "Embryo Genetic Screening" },
-                    { zh: "胚胎冷凍保存", en: "Embryo Cryopreservation" },
-                    { zh: "植入前診斷", en: "Preimplantation Diagnosis" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                      <span className="text-sm text-slate-600">{item[lang]}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* Partner Institutions */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <div className="text-center mb-12">
-              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--brand-800)] mb-4">
-                {lang === "zh" ? "合作機構" : "Partner Institutions"}
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { zh: "南加州大學凱克醫學院", en: "USC Keck School of Medicine" },
-                { zh: "加州大學洛杉磯分校醫學中心", en: "UCLA Medical Center" },
-                { zh: "Cedars-Sinai醫學中心", en: "Cedars-Sinai Medical Center" },
-                { zh: "洛杉磯兒童醫院", en: "Children's Hospital Los Angeles" }
-              ].map((partner, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-[var(--brand-50)] text-center"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Building2 className="h-6 w-6 text-white" />
-                  </div>
-                  <p className="font-medium text-[var(--brand-800)]">
-                    {partner[lang]}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Contact CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <div className="bg-gradient-to-br from-white to-[var(--brand-50)]/30 rounded-3xl p-8 border border-[var(--brand-50)]">
-              <h3 className="text-2xl font-bold text-[var(--brand-800)] mb-4">
-                {lang === "zh" ? "準備開始您的生育之旅？" : "Ready to Start Your Fertility Journey?"}
-              </h3>
-              <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                {lang === "zh" 
-                  ? "聯繫 HRC Fertility 的專業團隊，我們將為您提供個人化的生育治療方案和全方位的支援服務。"
-                  : "Contact HRC Fertility's professional team for personalized fertility treatment plans and comprehensive support services."}
-              </p>
-              <div className="flex justify-center">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[var(--brand)] text-[var(--brand-800)] font-semibold rounded-xl hover:bg-[var(--brand-50)] transition-all duration-300"
-                >
-                  <Mail className="h-5 w-5" />
-                  <span>{lang === "zh" ? "線上諮詢" : "Online Consultation"}</span>
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="knowledge" className="section-shell bg-gradient-to-r from-[var(--brand-50)]/30 to-white">
@@ -3091,8 +2687,8 @@ export default function LandingTemplate() {
             >
               <p className="text-blue-900 font-semibold text-center">
                 {lang === "zh" 
-                  ? "🎯 了解這些因素有助於您制定更好的治療計畫，與 HRC 專業醫療團隊合作可以最大化您的成功機率。"
-                  : "🎯 Understanding these factors helps create a better treatment plan. Working with HRC's professional team can maximize your success potential."}
+                  ? "🎯 了解這些因素有助於您制定更好的治療計畫，與專業醫療團隊合作可以最大化您的成功機率。"
+                  : "🎯 Understanding these factors helps create a better treatment plan. Working with professional medical specialists can maximize your success potential."}
               </p>
             </motion.div>
           </motion.div>
@@ -3261,13 +2857,6 @@ export default function LandingTemplate() {
             <div className="w-24 h-24 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-800)] rounded-full flex items-center justify-center mx-auto mb-6">
               <Users2 className="h-12 w-12 text-white" />
             </div>
-            {/* HRC 介紹影片 */}
-            <div className="mb-4 sm:mb-6">
-              <video controls className="w-full rounded-lg sm:rounded-xl shadow-lg" preload="metadata" controlsList="nodownload" playsInline>
-                <source src="/videos/HRC.mp4" type="video/mp4" />
-                {lang === "zh" ? "您的瀏覽器不支援影片播放。" : "Your browser does not support video playback."}
-              </video>
-            </div>
             <h3 className="text-xl font-semibold text-[var(--brand-800)] mb-3">
               {lang === "zh" ? "醫療顧問團" : "Medical Advisory Team"}
             </h3>
@@ -3292,13 +2881,6 @@ export default function LandingTemplate() {
           >
             <div className="w-24 h-24 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-800)] rounded-full flex items-center justify-center mx-auto mb-6">
               <ShieldCheck className="h-12 w-12 text-white" />
-            </div>
-            {/* HRC 醫生影片 1 */}
-            <div className="mb-4 sm:mb-6">
-              <video controls className="w-full rounded-lg sm:rounded-xl shadow-lg" preload="metadata" controlsList="nodownload" playsInline>
-                <source src="/videos/HRCDR.mp4" type="video/mp4" />
-                {lang === "zh" ? "您的瀏覽器不支援影片播放。" : "Your browser does not support video playback."}
-              </video>
             </div>
             <h3 className="text-xl font-semibold text-[var(--brand-800)] mb-3">
               {lang === "zh" ? "法律顧問團" : "Legal Advisory Team"}
@@ -3325,16 +2907,8 @@ export default function LandingTemplate() {
             <div className="w-24 h-24 bg-gradient-to-br from-[var(--brand)] to-[var(--brand-800)] rounded-full flex items-center justify-center mx-auto mb-6">
               <HeartHandshake className="h-12 w-12 text-white" />
             </div>
-            {/* HRC 醫生影片 2 */}
-            <div className="mb-4 sm:mb-6">
-              <video controls className="w-full rounded-lg sm:rounded-xl shadow-lg" preload="metadata" controlsList="nodownload" playsInline>
-                <source src="/videos/HRCDR2.mp4" type="video/mp4" />
-                {lang === "zh" ? "您的瀏覽器不支援影片播放。" : "Your browser does not support video playback."}
-              </video>
-            </div>
-
             <h3 className="text-xl font-semibold text-[var(--brand-800)] mb-3">
-              {lang === "zh" ? "專案管理團" : "Project Management Team"}
+              {lang === "zh" ? "專案管理團隊" : "Project Management Team"}
             </h3>
             <p className="text-slate-600 leading-relaxed mb-4">
               {lang === "zh" 
